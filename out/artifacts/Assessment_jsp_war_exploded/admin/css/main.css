@@ -1,0 +1,85 @@
+.top{
+    margin: 20px auto 0px;
+    width: 500px;
+    height: 200px;
+    background-color: pink;
+    text-align: center;
+}
+#title{
+    position: relative;
+    bottom: 20px;
+}
+#subtitle{
+    color: aquamarine;
+    position: relative;
+    bottom: 20px;
+}
+.circle{
+    position: relative;
+    top: 10px;
+    border-radius: 50%;
+    width: 100px;
+}
+.left{
+    position: relative;
+    /*top: 20px;*/
+    margin: 20px 0px 20px 20px;
+    background-color: antiquewhite;
+    float: left;
+    width: 10%;
+    height: 1000px;
+    text-align: center;
+}
+.main{
+    position: relative;
+    margin: 20px;
+    background-color: antiquewhite;
+    float: left;
+    width: 80%;
+    height: 1000px;
+}
+.post{
+    background-color: aquamarine;
+    /*position: relative;*/
+    /*left: 20px;*/
+    margin: 20px 20px 0px;
+    width: 80%;
+}
+/*.test{*/
+    /*position: relative;*/
+    /*float: left;*/
+    /*left: 20px;*/
+/*}*/
+.buy_head{
+    position: relative;
+    /*float: left;*/
+    /*left: 20px;*/
+    /*top: 20px;*/
+    margin: 20px 20px 0px;
+
+}
+.ad{
+    position: relative;
+    float: left;
+    margin: 20px 20px 0px;
+}
+.vid{
+    position: relative;
+    float: left;
+    margin: 20px 20px 0px;
+}
+.aud{
+    position: relative;
+    float: left;
+    top: -56px;
+    margin: 20px 20px 0px;
+}
+.footer{
+    /*position: relative;*/
+    background-color: pink;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    clear: both;
+    width: 90%;
+}
