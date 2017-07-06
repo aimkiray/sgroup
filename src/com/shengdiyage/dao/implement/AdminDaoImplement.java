@@ -59,6 +59,22 @@ public class AdminDaoImplement extends BaseDao implements AdminDao{
     }
 
     @Override
+    public Admin queryAdminByName(String aname) {
+        String sql = "SELECT * FROM admin WHERE aname = ?";
+        Object[] objects = {aname};
+        ResultSet rs = super.executeQuery(sql, objects);
+        Admin admin = null;
+        try {
+            if (rs.next()) {
+                admin = new Admin(rs.getInt("aid"), rs.getString("aname"), rs.getString("apassword"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return admin;
+    }
+
+    @Override
     public boolean verifyAdmin(Admin admin) {
         boolean result = false;
         String sql = "SELECT aname FROM admin WHERE aname = ? AND apassword = ?";

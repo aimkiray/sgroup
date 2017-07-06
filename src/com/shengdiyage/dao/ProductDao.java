@@ -34,7 +34,7 @@ public interface ProductDao {
      * @param pid
      * @return
      */
-    Product getProduct(int pid);
+    Product queryProduct(int pid);
 
     /**
      * 查询全部产品

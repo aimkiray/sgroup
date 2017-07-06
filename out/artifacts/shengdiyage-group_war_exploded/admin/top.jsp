@@ -1,3 +1,4 @@
+<%@ page import="com.shengdiyage.model.Admin" %>
 <%--
   Created by IntelliJ IDEA.
   User: Akari
@@ -6,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ include file="checklogin.jsp" %>
 <html>
 <head>
     <link href="/admin/css/frame.css" rel="stylesheet" type="text/css">
@@ -19,7 +21,7 @@
 <div class="top-logo">
     <table>
         <tr>
-            <td><img src="/logo/mainlogo.jpg" style="width: 50%"></td><td class="title">您好～！欢迎来到美国圣地亚戈国际农业集团！</td>
+            <td><img src="/logo/mainlogo.jpg" style="width: 50%"></td><td class="title">您好～<%=admin.getAname() %>！欢迎光临美国圣地亚戈国际农业集团！</td>
         </tr>
     </table>
 </div>

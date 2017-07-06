@@ -9,6 +9,16 @@ public class Product {
     private int pprice;
     private int number;
     private int ptype;
+    private int id;
+
+    public Product(int pid, String pname, int pprice, int number, int ptype, int id) {
+        this.pid = pid;
+        this.pname = pname;
+        this.pprice = pprice;
+        this.number = number;
+        this.ptype = ptype;
+        this.id = id;
+    }
 
     public Product() {};
 
@@ -65,6 +75,14 @@ public class Product {
 
     public void setPtype(int ptype) {
         this.ptype = ptype;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

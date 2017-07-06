@@ -6,10 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<script>
+    if(top != self) {
+        top.location.href = "/index.jsp";
+    }
+</script>
 <html>
 <head>
     <title>美国圣地亚戈</title>
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
 </head>
 <body>
 <form class="login-content" name="login" action="doLogin.jsp" method="post">

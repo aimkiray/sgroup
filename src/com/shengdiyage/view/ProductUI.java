@@ -38,7 +38,7 @@ public class ProductUI {
         System.out.println("产品列表：");
         List<Product> products = productserviceimplement.queryProduct();
         for(int i = 0; i < products.size(); i++) {
-            System.out.println("序号："+products.get(i).getPid()+products.get(i)+", 类别："+productserviceimplement.getTypeNameByTypeId(products.get(i).getPtype()).getTypename());
+            System.out.println("序号："+products.get(i).getPid()+products.get(i)+", 类别："+productserviceimplement.queryTypeNameByTypeId(products.get(i).getPtype()).getTypename());
         }
         System.out.println("请选择要删除的产品序号：");
         int input = Integer.parseInt(scan.next());
@@ -52,7 +52,7 @@ public class ProductUI {
         System.out.println("产品列表：");
         List<Product> products = productserviceimplement.queryProduct();
         for(int i = 0; i < products.size(); i++) {
-            System.out.println("序号："+products.get(i).getPid()+products.get(i)+", 类别："+productserviceimplement.getTypeNameByTypeId(products.get(i).getPtype()).getTypename());
+            System.out.println("序号："+products.get(i).getPid()+products.get(i)+", 类别："+productserviceimplement.queryTypeNameByTypeId(products.get(i).getPtype()).getTypename());
         }
         System.out.println("请输入要修改的产品序号：");
         int input = Integer.parseInt(scan.next());
@@ -81,7 +81,7 @@ public class ProductUI {
             List<Product> products = productserviceimplement.queryProduct(start, count);
             System.out.println("-------------------------------------");
             for(int i = 0; i < products.size(); i++) {
-                System.out.println("序号："+products.get(i).getPid()+products.get(i)+", 类别："+productserviceimplement.getTypeNameByTypeId(products.get(i).getPtype()).getTypename());
+                System.out.println("序号："+products.get(i).getPid()+products.get(i)+", 类别："+productserviceimplement.queryTypeNameByTypeId(products.get(i).getPtype()).getTypename());
             }
             System.out.println("-------------------------------------");
             System.out.println("当前是第"+flag+"页");

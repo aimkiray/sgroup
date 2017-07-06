@@ -23,11 +23,11 @@ public interface AdminService {
     int deleteAdmin(int aid);
 
     /**
-     * 查询管理员
-     * @param aid
+     * 通过名字查询管理员
+     * @param aname
      * @return
      */
-    List<Admin> queryAdmin(int aid);
+    Admin queryAdminByName(String aname);
 
     /**
      * 管理员列表

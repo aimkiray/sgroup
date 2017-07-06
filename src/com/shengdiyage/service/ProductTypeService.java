@@ -31,6 +31,13 @@ public interface ProductTypeService {
     int updateProductTypeByTypeId(ProductType productType);
 
     /**
+     * 通过typeid查询type类
+     * @param typeid
+     * @return
+     */
+    ProductType queryTypeByTypeId(int typeid);
+
+    /**
      * 查询该类别下的所有产品
      * @param typeid
      * @return

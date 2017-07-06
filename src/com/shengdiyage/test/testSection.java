@@ -16,7 +16,7 @@ public class testSection {
 //        Product product1 = new Product("路西法",100,1,"勇者");
 //        result = product.addProductTypeByType(product1);
 //        System.out.println(result);
-//        Product product2 = product.getProduct(3);
+//        Product product2 = product.queryProduct(3);
 //        System.out.println(product2);
 //        System.out.println("---------------------");
         List<Product> products = product.queryProduct();

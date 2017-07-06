@@ -1,3 +1,4 @@
+<%@ page import="com.shengdiyage.model.Admin" %>
 <%--
   Created by IntelliJ IDEA.
   User: Akari
@@ -5,10 +6,11 @@
   Time: 8:52
   To change this template use File | Settings | File Templates.
 --%>
+<%@ include file="checklogin.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 <html>
 <head>
-    <link href="css/one.css" rel="stylesheet" type="text/css">
+    <link href="/admin/css/one.css" rel="stylesheet" type="text/css">
 </head>
 <frameset rows="22%,*" noresize frameborder="no" >
     <frame src="/admin/top.jsp" scrolling="no"/>

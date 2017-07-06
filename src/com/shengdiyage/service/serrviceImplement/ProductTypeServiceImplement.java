@@ -34,6 +34,11 @@ public class ProductTypeServiceImplement implements ProductTypeService {
         return productTypeDao.updateProductTypeByTypeId(productType);
     }
 
+    @Override
+    public ProductType queryTypeByTypeId(int typeid) {
+        return productTypeDao.queryProductTypeByTypeId(typeid);
+    }
+
 
     @Override
     public List<Product> queryProductByTypeId(int typeid) {

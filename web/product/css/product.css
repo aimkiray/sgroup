@@ -1,0 +1,24 @@
+/*添加产品框*/
+.add-product {
+    display: inline-block;
+    margin-right: 4px;
+    width: 120px;
+}
+.add-product-text {
+    display: inline-block;
+    margin-right: 8px;
+    width: 240px;
+}
+
+/*表格默认样式*/
+
+.table-head td{
+    width: 120px;
+    background-color: pink;
+}
+
+.table-body td{
+    width: 120px;
+    background-color: rgb(238, 238, 238);
+    color: rgb(111, 111, 111);
+}

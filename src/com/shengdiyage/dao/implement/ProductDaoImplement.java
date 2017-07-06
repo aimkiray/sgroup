@@ -41,7 +41,7 @@ public class ProductDaoImplement extends BaseDao implements ProductDao {
     }
 
     @Override
-    public Product getProduct(int pid) {
+    public Product queryProduct(int pid) {
         Product product = null;
         String sql = "SELECT * FROM product WHERE pid = ?";
         Object[] objects = {pid};

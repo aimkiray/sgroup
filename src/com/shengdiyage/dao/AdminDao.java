@@ -36,6 +36,13 @@ public interface AdminDao {
     List<Admin> queryAdmin();
 
     /**
+     * 通过名字查找管理员
+     * @param aname
+     * @return
+     */
+    Admin queryAdminByName(String aname);
+
+    /**
      * 管理员登陆验证
      * @return
      */

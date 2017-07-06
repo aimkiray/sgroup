@@ -35,14 +35,14 @@ public interface ProductService {
      * @param pid
      * @return
      */
-    Product getProduct(int pid);
+    Product queryProduct(int pid);
 
     /**
      * 通过typeid获得typename
      * @param typeid
      * @return ProductType
      */
-    ProductType getTypeNameByTypeId(int typeid);
+    ProductType queryTypeNameByTypeId(int typeid);
 
     /**
      * 查询全部产品

@@ -38,12 +38,12 @@ public class ProductServiceImplement implements ProductService {
     }
 
     @Override
-    public Product getProduct(int pid) {
-        return productDao.getProduct(pid);
+    public Product queryProduct(int pid) {
+        return productDao.queryProduct(pid);
     }
 
     @Override
-    public ProductType getTypeNameByTypeId(int typeid) {
+    public ProductType queryTypeNameByTypeId(int typeid) {
         return productTypeDao.queryProductTypeByTypeId(typeid);
     }
 
