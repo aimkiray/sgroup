@@ -1,23 +1,20 @@
 /**
  * Created by Akari on 2017/7/5.
  */
+// 显示添加产品的单元格
 function addTableTail() {
-    var tr = document.getElementById("all-product-list");
-    var newtr = tr.insertRow(tr.rows.length-1);
-    newtr.innerHTML = "" +
-        "<td colspan='7'>" +
-        "<form action='/product/product_add.jsp' method='post'>" +
-        "<span class='add-product-text'>请按类别输入：</span>" +
-        "<input class='add-product' id='add-product' type='text' name='pname'>" +
-        "<input class='add-product' id='add-product' type='text' name='pprice'>" +
-        "<input class='add-product' id='add-product' type='text' name='pnumber'>" +
-        "<input class='add-product' id='add-product' type='text' name='ptype'>" +
-        "<input type='submit' value='确认'>" +
-        "</form>" +
-        "</td>";
-    // newtr.insertCell(0).innerHTML = "<form action='/product/product_add.jsp' method='post'>";
-    // for (var i = 1; i < tr.rows[0].cells.length-1; i++) {
-    //     newtr.insertCell(i).innerHTML = "<input class='add-product' id='add-product' type='text' name='"+i+"'>";
-    // }
-    // newtr.insertCell(tr.rows[0].cells.length-1).innerHTML = "<input type='submit' value='确认'></form>";
+    var addTable = document.getElementById("add-product-table");
+    addTable.setAttribute("class","table-body");
+}
+// 显示修改产品的单元格
+function updateProduct() {
+    // 获取当前行数
+    var thisLine = arguments[0];
+    // 删除当前行
+    var allProduct = document.getElementById("all-product-list");
+    allProduct.deleteRow(thisLine);
+    // 显示隐藏的产品修改单元格
+    var updateProduct = document.getElementById("update-product-table"+arguments[0]);
+    updateProduct.setAttribute("class","table-body");
+
 }

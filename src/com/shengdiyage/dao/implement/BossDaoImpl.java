@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by Akari on 2017/6/29.
  */
-public class BossDaoImplement extends BaseDao implements BossDao {
+public class BossDaoImpl extends BaseDao implements BossDao {
     @Override
     public int addBoss(Boss boss) {
         int result = 0;

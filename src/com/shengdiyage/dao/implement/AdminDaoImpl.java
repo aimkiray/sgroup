@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by Akari on 2017/6/27.
  */
-public class AdminDaoImplement extends BaseDao implements AdminDao{
+public class AdminDaoImpl extends BaseDao implements AdminDao{
     @Override
     public int addAdmin(Admin admin) {
         int result = 0;

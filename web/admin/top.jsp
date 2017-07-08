@@ -26,7 +26,7 @@
     </table>
 </div>
 <div class="subtitle">
-    <span style="text-shadow: blue 2px 2px 5px;margin-bottom: 0px">上帝中心</span><br/>
+    <span style="text-shadow: blue 2px 2px 5px;margin-bottom: 0px">上帝中心</span><a href="/admin/logout.jsp" style="position: fixed; right: 10px;">退出</a><br/>
     <hr style="border-bottom: solid blue;box-shadow:2px 2px 5px blue;margin-top: 2px"/>
 </div>
 </body>

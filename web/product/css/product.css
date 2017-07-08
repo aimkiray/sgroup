@@ -1,24 +1,32 @@
 /*添加产品框*/
-.add-product {
-    display: inline-block;
-    margin-right: 4px;
-    width: 120px;
-}
-.add-product-text {
-    display: inline-block;
-    margin-right: 8px;
-    width: 240px;
-}
+/*.add-product {*/
+    /*display: inline-block;*/
+    /*margin-right: 2px;*/
+    /*width: 115px;*/
+    /*!*height: 220px;*!*/
+/*}*/
+/*.add-product-text {*/
+    /*display: inline-block;*/
+    /*margin-right: 4px;*/
+    /*width: 230px;*/
+    /*!*height: 220px;*!*/
+/*}*/
 
 /*表格默认样式*/
 
 .table-head td{
-    width: 120px;
+    width: 150px;
     background-color: pink;
 }
 
 .table-body td{
-    width: 120px;
+    width: 150px;
     background-color: rgb(238, 238, 238);
     color: rgb(111, 111, 111);
+}
+
+/*添加和修改单元格是否显示*/
+
+.hide-update-table {
+    display: none;
 }

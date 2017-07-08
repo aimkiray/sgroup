@@ -24,6 +24,13 @@ public interface ProductService {
     int deleteProduct(int pid);
 
     /**
+     * 批量删除产品
+     * @param pid
+     * @return
+     */
+    int delMulProduct(Integer[] pid);
+
+    /**
      * 修改产品
      * @param product
      * @return
@@ -36,13 +43,6 @@ public interface ProductService {
      * @return
      */
     Product queryProduct(int pid);
-
-    /**
-     * 通过typeid获得typename
-     * @param typeid
-     * @return ProductType
-     */
-    ProductType queryTypeNameByTypeId(int typeid);
 
     /**
      * 查询全部产品

@@ -38,6 +38,13 @@ public interface ProductTypeService {
     ProductType queryTypeByTypeId(int typeid);
 
     /**
+     * 通过typeid获得typename
+     * @param typeid
+     * @return ProductType
+     */
+    ProductType queryTypeNameByTypeId(int typeid);
+
+    /**
      * 查询该类别下的所有产品
      * @param typeid
      * @return

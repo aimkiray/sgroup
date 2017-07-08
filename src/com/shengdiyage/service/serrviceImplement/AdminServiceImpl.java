@@ -1,7 +1,7 @@
 package com.shengdiyage.service.serrviceImplement;
 
 import com.shengdiyage.dao.AdminDao;
-import com.shengdiyage.dao.implement.AdminDaoImplement;
+import com.shengdiyage.dao.implement.AdminDaoImpl;
 import com.shengdiyage.model.Admin;
 import com.shengdiyage.service.AdminService;
 
@@ -10,9 +10,9 @@ import java.util.List;
 /**
  * Created by Akari on 2017/6/28.
  */
-public class AdminServiceImplement implements AdminService {
+public class AdminServiceImpl implements AdminService {
 
-    AdminDao adminDao = new AdminDaoImplement();
+    AdminDao adminDao = new AdminDaoImpl();
 
     /**
      * 添加管理员

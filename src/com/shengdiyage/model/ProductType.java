@@ -5,35 +5,35 @@ package com.shengdiyage.model;
  */
 public class ProductType {
 
-    private int typeid;
-    private String typename;
+    private int typeId;
+    private String typeName;
 
-    public ProductType(String typename) {
-        this.typename = typename;
+    public ProductType(String typeName) {
+        this.typeName = typeName;
     }
 
-    public ProductType(int typeid, String typename) {
-        this.typeid = typeid;
-        this.typename = typename;
+    public ProductType(int typeId, String typeName) {
+        this.typeId = typeId;
+        this.typeName = typeName;
     }
 
     public ProductType() {
 
     }
 
-    public int getTypeid() {
-        return typeid;
+    public int getTypeId() {
+        return typeId;
     }
 
-    public void setTypeid(int typeid) {
-        this.typeid = typeid;
+    public void setTypeId(int typeId) {
+        this.typeId = typeId;
     }
 
-    public String getTypename() {
-        return typename;
+    public String getTypeName() {
+        return typeName;
     }
 
-    public void setTypename(String typename) {
-        this.typename = typename;
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
     }
 }

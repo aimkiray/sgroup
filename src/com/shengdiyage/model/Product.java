@@ -1,64 +1,87 @@
 package com.shengdiyage.model;
 
+import java.util.Date;
+
 /**
  * Created by Akari on 2017/6/27.
  */
 public class Product {
-    private int pid;
-    private String pname;
-    private int pprice;
+    private int productId;
+    private String productName;
+    private int productPrice;
     private int number;
-    private int ptype;
-    private int id;
+    private ProductType productType;
+    private Date productTime;
+    private int id = 0;
 
-    public Product(int pid, String pname, int pprice, int number, int ptype, int id) {
-        this.pid = pid;
-        this.pname = pname;
-        this.pprice = pprice;
+    public Product(int productId, String productName, int productPrice, int number, ProductType productType, Date productTime) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productPrice = productPrice;
         this.number = number;
-        this.ptype = ptype;
-        this.id = id;
+        this.productType = productType;
+        this.productTime = productTime;
     }
 
-    public Product() {};
-
-    public Product(String pname, int pprice, int number, int ptype) {
-        this.pname = pname;
-        this.pprice = pprice;
+    public Product(String productName, int productPrice, int number, ProductType productType, Date productTime) {
+        this.productName = productName;
+        this.productPrice = productPrice;
         this.number = number;
-        this.ptype = ptype;
+        this.productType = productType;
+        this.productTime = productTime;
     }
 
-    public Product(int pid, String pname, int pprice, int number, int ptype) {
-        this.pid = pid;
-        this.pname = pname;
-        this.pprice = pprice;
-        this.number = number;
-        this.ptype = ptype;
+    public Product() {
     }
 
-    public int getPid() {
-        return pid;
+    //    public Product(int productId, String productName, int productPrice, int number, ProductType productType, int id) {
+//        this.productId = productId;
+//        this.productName = productName;
+//        this.productPrice = productPrice;
+//        this.number = number;
+//        this.productType = productType;
+//        this.id = id;
+//    }
+//
+//    public Product() {};
+//
+//    public Product(String productName, int productPrice, int number, ProductType productType) {
+//        this.productName = productName;
+//        this.productPrice = productPrice;
+//        this.number = number;
+//        this.productType = productType;
+//    }
+//
+//    public Product(int productId, String productName, int productPrice, int number, ProductType productType) {
+//        this.productId = productId;
+//        this.productName = productName;
+//        this.productPrice = productPrice;
+//        this.number = number;
+//        this.productType = productType;
+//    }
+
+    public int getProductId() {
+        return productId;
     }
 
-    public void setPid(int pid) {
-        this.pid = pid;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
-    public String getPname() {
-        return pname;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setPname(String pname) {
-        this.pname = pname;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public int getPprice() {
-        return pprice;
+    public int getProductPrice() {
+        return productPrice;
     }
 
-    public void setPprice(int pprice) {
-        this.pprice = pprice;
+    public void setProductPrice(int productPrice) {
+        this.productPrice = productPrice;
     }
 
     public int getNumber() {
@@ -69,12 +92,12 @@ public class Product {
         this.number = number;
     }
 
-    public int getPtype() {
-        return ptype;
+    public ProductType getProductType() {
+        return productType;
     }
 
-    public void setPtype(int ptype) {
-        this.ptype = ptype;
+    public void setProductType(ProductType productType) {
+        this.productType = productType;
     }
 
     public int getId() {
@@ -87,8 +110,17 @@ public class Product {
 
     @Override
     public String toString() {
-        return  ", 名称='" + pname + '\'' +
-                ", 价格=" + pprice +
-                ", 库存=" + number;
+        return  "名称=" + productName +
+                ", 价格=" + productPrice +
+                ", 库存=" + number +
+                ", 类别=" + productType.getTypeName();
+    }
+
+    public Date getProductTime() {
+        return productTime;
+    }
+
+    public void setProductTime(Date productTime) {
+        this.productTime = productTime;
     }
 }
