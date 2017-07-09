@@ -30,7 +30,7 @@
     Product product = new Product(productName,productPrice,number,productType,date);
     int result = productService.addProduct(product);
     if (result > 0) {
-        response.sendRedirect("/product/productlist.jsp");
+        response.sendRedirect("/product/product.jsp");
     } else if (result == 0) {
         out.print("<script>alert('添加失败！请检查是否重名。');history.back();</script>");
     } else {

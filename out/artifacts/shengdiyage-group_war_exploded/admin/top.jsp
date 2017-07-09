@@ -21,7 +21,7 @@
 <div class="top-logo">
     <table>
         <tr>
-            <td><img src="/logo/mainlogo.jpg" style="width: 50%"></td><td class="title">您好～<%=admin.getAname() %>！欢迎光临美国圣地亚戈国际农业集团！</td>
+            <td><img src="/logo/mainlogo.jpg" style="width: 50%"></td><td class="title">您好～<%=admin.getAdminName() %>！欢迎光临美国圣地亚戈国际农业集团！</td>
         </tr>
     </table>
 </div>

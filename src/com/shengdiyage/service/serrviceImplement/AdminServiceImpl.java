@@ -26,22 +26,22 @@ public class AdminServiceImpl implements AdminService {
 
     /**
      * 通过id删除管理员
-     * @param aid
+     * @param adminId
      * @return
      */
     @Override
-    public int deleteAdmin(int aid) {
-        return adminDao.deleteAdmin(aid);
+    public int deleteAdmin(int adminId) {
+        return adminDao.deleteAdmin(adminId);
     }
 
     /**
      * 通过名字获得管理员
-     * @param aname
+     * @param adminName
      * @return
      */
     @Override
-    public Admin queryAdminByName(String aname) {
-        return adminDao.queryAdminByName(aname);
+    public Admin queryAdminByName(String adminName) {
+        return adminDao.queryAdminByName(adminName);
     }
 
     /**

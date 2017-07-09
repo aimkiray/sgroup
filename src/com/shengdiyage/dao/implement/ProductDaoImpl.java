@@ -71,7 +71,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
     public List<Product> queryProduct() {
         List<Product> products = new ArrayList<Product>();
 //        以id增序查询全部产品
-        String sql = "SELECT * FROM product ORDER BY id ASC";
+        String sql = "SELECT * FROM product ORDER BY pid ASC";
         Object[] objects = {};
         ResultSet rs = super.executeQuery(sql, objects);
         try {
@@ -101,7 +101,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
 
     public List<Product> queryProduct(int start, int conut) {
         List<Product> products = new ArrayList<Product>();
-        String sql = "SELECT * FROM product ORDER BY id ASC LIMIT ?,?";
+        String sql = "SELECT * FROM product ORDER BY pid ASC LIMIT ?,?";
         Object[] objects = {start,conut};
         ResultSet rs = super.executeQuery(sql, objects);
         try {

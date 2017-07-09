@@ -35,7 +35,7 @@
     Product product = new Product(productId,productName,productPrice,number,productType,date);
     int result = productService.updateProduct(product);
     if (result > 0) {
-        response.sendRedirect("/product/productlist.jsp");
+        response.sendRedirect("/product/product.jsp");
     } else {
         out.print("<script>alert('修改失败！');history.back();</script>");
     }

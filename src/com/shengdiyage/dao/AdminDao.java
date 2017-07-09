@@ -24,10 +24,10 @@ public interface AdminDao {
 
     /**
      * 删除管理员
-     * @param aid
+     * @param adminId
      * @return
      */
-    int deleteAdmin(int aid);
+    int deleteAdmin(int adminId);
 
     /**
      * 管理员列表
@@ -37,10 +37,10 @@ public interface AdminDao {
 
     /**
      * 通过名字查找管理员
-     * @param aname
+     * @param adminName
      * @return
      */
-    Admin queryAdminByName(String aname);
+    Admin queryAdminByName(String adminName);
 
     /**
      * 管理员登陆验证

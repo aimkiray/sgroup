@@ -10,15 +10,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%
-//    String aname = new String(request.getParameter("userName").getBytes("iso-8859-1"),"utf-8");
+//    String adminName = new String(request.getParameter("userName").getBytes("iso-8859-1"),"utf-8");
     request.setCharacterEncoding("utf-8");
-    String aname = request.getParameter("userName");
-    String apassword = request.getParameter("userPassword");
-    Admin admin = new Admin(aname, apassword);
+    String adminName = request.getParameter("userName");
+    String adminPassword = request.getParameter("userPassword");
+    Admin admin = new Admin(adminName, adminPassword);
     AdminService adminService = new AdminServiceImpl();
 
     if (adminService.verifyAdmin(admin)) {
-        admin = adminService.queryAdminByName(aname);
+        admin = adminService.queryAdminByName(adminName);
         session.setAttribute("loginadmin",admin);
         response.sendRedirect("/admin/index.jsp");
     } else {

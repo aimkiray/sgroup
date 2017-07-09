@@ -21,7 +21,7 @@
     ProductService productService = new ProductServiceImpl();
     int result = productService.deleteProduct(productId);
     if (result > 0) {
-        response.sendRedirect("/product/productlist.jsp");
+        response.sendRedirect("/product/product.jsp");
     } else {
         out.print("<script>alert('删除失败！');history.back();</script>");
     }

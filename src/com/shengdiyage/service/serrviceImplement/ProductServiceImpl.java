@@ -28,6 +28,7 @@ public class ProductServiceImpl implements ProductService {
         Product realProduct = productDao.queryProductByName(product.getProductName());
         if(realProduct == null) {
             List<Product> products = productDao.queryProduct();
+            // 按id从小到大输入，如有空缺则填补空缺（不完善，应改成删除某元素，之后的元素id依次递增一位，不过id一行暂且无用）。
             for (int i = 0; i < products.size(); i++) {
                 if ((i+1) != products.get(i).getId()){
                     product.setId(i+1);

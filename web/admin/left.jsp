@@ -21,7 +21,7 @@
 <div class="left-option">
     <table>
         <tr>
-            <td><a href="/product/productlist.jsp" target="right">产品管理</a></td>
+            <td><a href="/product/product.jsp" target="right">产品管理</a></td>
         </tr>
         <tr>
             <td><a href="###">集中销毁</a></td>

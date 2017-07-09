@@ -4,42 +4,42 @@ package com.shengdiyage.model;
  * Created by Akari on 2017/6/29.
  */
 public class Boss {
-    private int bid;
-    private String bname;
-    private String bpassword;
+    private int bossId;
+    private String bossName;
+    private String bossPassword;
 
-    public Boss(String bname, String bpassword) {
-        this.bname = bname;
-        this.bpassword = bpassword;
+    public Boss(String bossName, String bossPassword) {
+        this.bossName = bossName;
+        this.bossPassword = bossPassword;
     }
 
-    public Boss(int bid, String bname, String bpassword) {
-        this.bid = bid;
-        this.bname = bname;
-        this.bpassword = bpassword;
+    public Boss(int bossId, String bossName, String bossPassword) {
+        this.bossId = bossId;
+        this.bossName = bossName;
+        this.bossPassword = bossPassword;
     }
 
-    public int getBid() {
-        return bid;
+    public int getBossId() {
+        return bossId;
     }
 
-    public void setBid(int bid) {
-        this.bid = bid;
+    public void setBossId(int bossId) {
+        this.bossId = bossId;
     }
 
-    public String getBname() {
-        return bname;
+    public String getBossName() {
+        return bossName;
     }
 
-    public void setBname(String bname) {
-        this.bname = bname;
+    public void setBossName(String bossName) {
+        this.bossName = bossName;
     }
 
-    public String getBpassword() {
-        return bpassword;
+    public String getBossPassword() {
+        return bossPassword;
     }
 
-    public void setBpassword(String bpassword) {
-        this.bpassword = bpassword;
+    public void setBossPassword(String bossPassword) {
+        this.bossPassword = bossPassword;
     }
 }

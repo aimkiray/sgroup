@@ -22,5 +22,4 @@
 <noframes>
     <div>(ノ｀Д)ノ</div>
 </noframes>
-<script type="text/javascript" src="js/one.js"></script>
 </html>
