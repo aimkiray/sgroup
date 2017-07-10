@@ -2,58 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8339405-8ef6-4312-9858-8457bed7e671" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/servlet/LoginServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/login_do.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/product/product_add.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/product/product_del.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/product/product_update.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/product/producttype_add.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/product/producttype_del.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/product/producttype_update.jsp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/artifacts/shengdiyage_group_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/shengdiyage_group_Web_exploded.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/shengdiyage/model/Admin.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/Admin.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/shengdiyage/model/Boss.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/Boss.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/shengdiyage/model/Product.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/Product.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/shengdiyage/model/ProductType.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/ProductType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/admin/checklogin.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/admin/checklogin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/admin/css/frame.css" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/admin/css/frame.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/admin/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/admin/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/admin/top.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/admin/top.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/login_do.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/login_do.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/product.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/product.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/product_add.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/product_add.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/product_del.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/product_del.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/product_update.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/product_update.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/producttype_add.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/producttype_add.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/producttype_del.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/producttype_del.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/producttype_update.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage-group_war_exploded/product/producttype_update.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/AdminDao.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/AdminDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/BossDao.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/BossDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/ProductDao.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/ProductDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/ProductTypeDao.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/ProductTypeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/AdminDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/AdminDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/BossDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/BossDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductTypeDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductTypeDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/AdminService.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/AdminService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/BossService.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/BossService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/ProductService.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/ProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/ProductTypeService.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/ProductTypeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/AdminServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/AdminServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/BossServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/BossServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductTypeServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductTypeServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/checklogin.jsp" afterPath="$PROJECT_DIR$/web/admin/checklogin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/css/frame.css" afterPath="$PROJECT_DIR$/web/admin/css/frame.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/index.jsp" afterPath="$PROJECT_DIR$/web/admin/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/left.jsp" afterPath="$PROJECT_DIR$/web/admin/left.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/top.jsp" afterPath="$PROJECT_DIR$/web/admin/top.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/product/product.jsp" afterPath="$PROJECT_DIR$/web/product/product.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -120,7 +72,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="product.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="product.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/product/product.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
@@ -130,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="155" column="62" lean-forward="false" selection-start-line="155" selection-start-column="62" selection-end-line="155" selection-end-column="62" />
+            <state relative-caret-position="387">
+              <caret line="51" column="44" lean-forward="false" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,8 +97,8 @@
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            <state relative-caret-position="171">
+              <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -241,10 +193,10 @@
         <option value="$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductTypeServlet.java" />
         <option value="$PROJECT_DIR$/web/admin/left.jsp" />
         <option value="$PROJECT_DIR$/src/com/shengdiyage/servlet/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/product/product.jsp" />
         <option value="$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -1141,12 +1093,12 @@
       <workItem from="1499662091439" duration="119000" />
       <workItem from="1499662437081" duration="16474000" />
       <workItem from="1499685537320" duration="6275000" />
-      <workItem from="1499692105966" duration="598000" />
+      <workItem from="1499692105966" duration="1588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175712000" />
+    <option name="totallyTimeSpent" value="176702000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1158,7 +1110,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1320" height="784" extended-state="7" />
+    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1183,7 +1135,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20634921" sideWeight="0.49078342" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20634921" sideWeight="0.49078342" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1984127" sideWeight="0.5092166" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1984127" sideWeight="0.5092166" order="2" side_tool="true" content_ui="tabs" />
@@ -1207,14 +1159,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java</url>
-          <line>182</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
@@ -1429,14 +1373,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/product/jsp_method_undo/product_add.jsp" />
     <entry file="file://$PROJECT_DIR$/web/product/jsp_method_undo/producttype_del.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/product/jsp_method_undo/login_do.jsp" />
     <entry file="file://$PROJECT_DIR$/web/product/jsp_method_undo/producttype_update.jsp" />
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
@@ -1461,21 +1397,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/product/product.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+        <state relative-caret-position="171">
+          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="155" column="62" lean-forward="false" selection-start-line="155" selection-start-column="62" selection-end-line="155" selection-end-column="62" />
+        <state relative-caret-position="387">
+          <caret line="51" column="44" lean-forward="false" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/product/product.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

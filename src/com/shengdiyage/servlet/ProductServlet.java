@@ -22,13 +22,33 @@ import java.util.List;
  * Created by Akari on 2017/7/10.
  */
 public class ProductServlet extends HttpServlet {
+
+    private ProductTypeService productTypeService = null;
+    private ProductService productService = null;
+    private String charset = "";
+
     public ProductServlet() {
         super();
+//    新建产品类别和产品の实现类
+        productTypeService = new ProductTypeServiceImpl();
+        productService = new ProductServiceImpl();
+    }
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        charset = config.getInitParameter("charset");
+
+    }
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
+        req.setCharacterEncoding(charset);
         String operate = req.getParameter("operate");
         switch (operate) {
             case "addtype":
@@ -71,8 +91,6 @@ public class ProductServlet extends HttpServlet {
      * @throws IOException
      */
     protected void queryProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ProductService productService = new ProductServiceImpl();
-        ProductTypeService productTypeService = new ProductTypeServiceImpl();
         List<ProductType> productTypes = productTypeService.queryAllProductType();
         List<Product> products = productService.queryProduct();
         req.setAttribute("products", products);
@@ -88,7 +106,6 @@ public class ProductServlet extends HttpServlet {
      */
     protected void addType(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String productTypeName = req.getParameter("productTypeName");
-        ProductTypeService productTypeService = new ProductTypeServiceImpl();
         ProductType productType = new ProductType(productTypeName);
         int result = productTypeService.addProductTypeByType(productType);
         PrintWriter out = resp.getWriter();
@@ -110,7 +127,6 @@ public class ProductServlet extends HttpServlet {
     protected void delType(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 //    获取用户输入
         int typeId = Integer.parseInt(req.getParameter("typeId"));
-        ProductTypeService productTypeService = new ProductTypeServiceImpl();
         int result = productTypeService.deleteProductTypeByTypeId(typeId);
         PrintWriter out = resp.getWriter();
         if (result > 0) {
@@ -131,7 +147,6 @@ public class ProductServlet extends HttpServlet {
     protected void updateType(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String productTypeName = req.getParameter("productTypeName");
         int productTypeId = Integer.parseInt(req.getParameter("productTypeId"));
-        ProductTypeService productTypeService = new ProductTypeServiceImpl();
         ProductType productType = new ProductType(productTypeId,productTypeName);
         int result = productTypeService.updateProductTypeByType(productType);
         PrintWriter out = resp.getWriter();
@@ -154,8 +169,6 @@ public class ProductServlet extends HttpServlet {
         int productPrice = Integer.parseInt(req.getParameter("productPrice"));
         int number = Integer.parseInt(req.getParameter("number"));
         int productTypeId = Integer.parseInt(req.getParameter("productTypeId"));
-        ProductService productService = new ProductServiceImpl();
-        ProductTypeService productTypeService = new ProductTypeServiceImpl();
 //    通过typeId获得Type对象
         ProductType productType = productTypeService.queryTypeByTypeId(productTypeId);
 //    获取当前时间
@@ -181,7 +194,6 @@ public class ProductServlet extends HttpServlet {
     private void delProduct(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 //    获取用户输入
         int productId = Integer.parseInt(req.getParameter("productId"));
-        ProductService productService = new ProductServiceImpl();
         int result = productService.deleteProduct(productId);
         PrintWriter out = resp.getWriter();
         if (result > 0) {
@@ -208,8 +220,7 @@ public class ProductServlet extends HttpServlet {
         String productTime = req.getParameter("producttime");
         int productId = Integer.parseInt(req.getParameter("productId"));
 //    新建产品类别和产品の实现类
-        ProductService productService = new ProductServiceImpl();
-        ProductTypeService productTypeService = new ProductTypeServiceImpl();
+
 //    通过typeId获得Type对象
         ProductType productType = productTypeService.queryTypeByTypeId(productTypeId);
 //    获取当前时间
@@ -223,16 +234,6 @@ public class ProductServlet extends HttpServlet {
             PrintWriter out = resp.getWriter();
             out.print("<script>alert('修改失败！');history.back();</script>");
         }
-    }
-
-    @Override
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-    }
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
     }
 
     @Override

@@ -6,6 +6,10 @@
     <servlet>
         <servlet-name>ProductServlet</servlet-name>
         <servlet-class>com.shengdiyage.servlet.ProductServlet</servlet-class>
+        <init-param>
+            <param-name>charset</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>ProductServlet</servlet-name>
