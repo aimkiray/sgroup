@@ -1,6 +1,6 @@
 package com.shengdiyage.service;
 
-import com.shengdiyage.model.Boss;
+import com.shengdiyage.entity.Boss;
 
 /**
  * Created by Akari on 2017/6/29.

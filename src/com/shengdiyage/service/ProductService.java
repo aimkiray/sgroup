@@ -1,7 +1,6 @@
 package com.shengdiyage.service;
 
-import com.shengdiyage.model.Product;
-import com.shengdiyage.model.ProductType;
+import com.shengdiyage.entity.Product;
 
 import java.util.List;
 

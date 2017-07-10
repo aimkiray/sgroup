@@ -1,5 +1,5 @@
 package com.shengdiyage.dao;
-import com.shengdiyage.model.Boss;
+import com.shengdiyage.entity.Boss;
 
 import java.util.List;
 

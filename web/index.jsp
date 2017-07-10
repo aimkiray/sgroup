@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="/css/login.css">
 </head>
 <body>
-<form class="login-content" name="login" action="login_do.jsp" method="post">
+<form class="login-content" name="login" action="/loginservlet.do" method="post">
     <table class="login-table">
         <tr>
             <td colspan="4" class="title">欢迎访问美国圣地亚戈国际集团</td>

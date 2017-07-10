@@ -1,6 +1,6 @@
 package com.shengdiyage.dao;
 
-import com.shengdiyage.model.Product;
+import com.shengdiyage.entity.Product;
 
 import java.util.List;
 

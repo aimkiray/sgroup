@@ -1,7 +1,7 @@
 package com.shengdiyage.dao.implement;
 
 import com.shengdiyage.dao.BossDao;
-import com.shengdiyage.model.Boss;
+import com.shengdiyage.entity.Boss;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

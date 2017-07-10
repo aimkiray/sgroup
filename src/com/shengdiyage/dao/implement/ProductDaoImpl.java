@@ -1,8 +1,8 @@
 package com.shengdiyage.dao.implement;
 
 import com.shengdiyage.dao.ProductDao;
-import com.shengdiyage.model.Product;
-import com.shengdiyage.model.ProductType;
+import com.shengdiyage.entity.Product;
+import com.shengdiyage.entity.ProductType;
 import com.shengdiyage.service.ProductTypeService;
 import com.shengdiyage.service.serrviceImplement.ProductTypeServiceImpl;
 

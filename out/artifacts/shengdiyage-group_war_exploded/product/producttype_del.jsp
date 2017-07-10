@@ -1,4 +1,4 @@
-<%@ page import="com.shengdiyage.model.ProductType" %>
+<%@ page import="com.shengdiyage.entity.ProductType" %>
 <%@ page import="com.shengdiyage.service.ProductTypeService" %>
 <%@ page import="com.shengdiyage.service.serrviceImplement.ProductTypeServiceImpl" %>
 <%--

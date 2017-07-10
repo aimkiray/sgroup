@@ -1,6 +1,6 @@
 package com.shengdiyage.dao;
 
-import com.shengdiyage.model.Admin;
+import com.shengdiyage.entity.Admin;
 
 import java.util.List;
 

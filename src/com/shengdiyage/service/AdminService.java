@@ -1,6 +1,6 @@
 package com.shengdiyage.service;
 
-import com.shengdiyage.model.Admin;
+import com.shengdiyage.entity.Admin;
 
 import java.util.List;
 

@@ -2,7 +2,7 @@ package com.shengdiyage.service.serrviceImplement;
 
 import com.shengdiyage.dao.BossDao;
 import com.shengdiyage.dao.implement.BossDaoImpl;
-import com.shengdiyage.model.Boss;
+import com.shengdiyage.entity.Boss;
 import com.shengdiyage.service.BossService;
 
 /**

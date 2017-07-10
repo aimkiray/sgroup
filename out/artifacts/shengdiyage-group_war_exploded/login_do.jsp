@@ -1,4 +1,4 @@
-<%@ page import="com.shengdiyage.model.Admin" %>
+<%@ page import="com.shengdiyage.entity.Admin" %>
 <%@ page import="com.shengdiyage.service.AdminService" %>
 <%@ page import="com.shengdiyage.service.serrviceImplement.AdminServiceImpl" %>
 <%--

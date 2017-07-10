@@ -1,7 +1,7 @@
 package com.shengdiyage.dao.implement;
 
 import com.shengdiyage.dao.AdminDao;
-import com.shengdiyage.model.Admin;
+import com.shengdiyage.entity.Admin;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

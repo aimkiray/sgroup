@@ -2,7 +2,7 @@ package com.shengdiyage.service.serrviceImplement;
 
 import com.shengdiyage.dao.AdminDao;
 import com.shengdiyage.dao.implement.AdminDaoImpl;
-import com.shengdiyage.model.Admin;
+import com.shengdiyage.entity.Admin;
 import com.shengdiyage.service.AdminService;
 
 import java.util.List;

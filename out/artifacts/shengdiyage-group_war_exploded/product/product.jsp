@@ -1,10 +1,10 @@
 <%@ page import="com.shengdiyage.service.ProductService" %>
 <%@ page import="com.shengdiyage.service.serrviceImplement.ProductServiceImpl" %>
-<%@ page import="com.shengdiyage.model.Product" %>
+<%@ page import="com.shengdiyage.entity.Product" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.shengdiyage.service.ProductTypeService" %>
 <%@ page import="com.shengdiyage.service.serrviceImplement.ProductTypeServiceImpl" %>
-<%@ page import="com.shengdiyage.model.ProductType" %>
+<%@ page import="com.shengdiyage.entity.ProductType" %>
 <%@ page import="com.shengdiyage.utils.DateTools" %>
 <%--
   Created by IntelliJ IDEA.

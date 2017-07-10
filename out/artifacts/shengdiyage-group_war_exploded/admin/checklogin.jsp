@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.shengdiyage.model.Admin" %>
+<%@ page import="com.shengdiyage.entity.Admin" %>
 <%--
   Created by IntelliJ IDEA.
   User: Akari

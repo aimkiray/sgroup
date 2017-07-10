@@ -1,4 +1,4 @@
-<%@ page import="com.shengdiyage.model.Admin" %>
+<%@ page import="com.shengdiyage.entity.Admin" %>
 <%--
   Created by IntelliJ IDEA.
   User: Akari

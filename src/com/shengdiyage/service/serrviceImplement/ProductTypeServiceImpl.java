@@ -2,8 +2,8 @@ package com.shengdiyage.service.serrviceImplement;
 
 import com.shengdiyage.dao.ProductTypeDao;
 import com.shengdiyage.dao.implement.ProductTypeDaoImpl;
-import com.shengdiyage.model.Product;
-import com.shengdiyage.model.ProductType;
+import com.shengdiyage.entity.Product;
+import com.shengdiyage.entity.ProductType;
 import com.shengdiyage.service.ProductTypeService;
 
 import java.util.List;
