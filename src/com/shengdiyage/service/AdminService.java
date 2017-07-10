@@ -17,17 +17,17 @@ public interface AdminService {
 
     /**
      * 删除鹳狸猿
-     * @param aid
+     * @param adminId
      * @return
      */
-    int deleteAdmin(int aid);
+    int deleteAdmin(int adminId);
 
     /**
      * 通过名字查询管理员
-     * @param aname
+     * @param adminName
      * @return
      */
-    Admin queryAdminByName(String aname);
+    Admin queryAdminByName(String adminName);
 
     /**
      * 管理员列表

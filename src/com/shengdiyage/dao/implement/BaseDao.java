@@ -17,12 +17,18 @@ public class BaseDao {
 
     public BaseDao() {
         try {
+            // 加载数据库驱动
             Class.forName(JDBC_DRIVER);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * 使用DriverManager获得数据库连接
+     * @return
+     * @throws SQLException
+     */
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL,USER,PASSWORD);
     }
@@ -38,6 +44,7 @@ public class BaseDao {
     public int executeUpdate(String sql,Object[] values) {
         int result = 0;
         try {
+            // 使用Connection来创建一个预编译Statment对象
             c = getConnection();
             ps = c.prepareStatement(sql);
             if (values != null) {
@@ -45,6 +52,7 @@ public class BaseDao {
                     ps.setObject(i+1, values[i]);
                 }
             }
+            // 获取结果集
             result = ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

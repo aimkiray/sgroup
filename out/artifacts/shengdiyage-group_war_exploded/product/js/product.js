@@ -1,23 +1,34 @@
 /**
  * Created by Akari on 2017/7/5.
  */
+// 显示添加产品的单元格
 function addTableTail() {
-    var tr = document.getElementById("all-product-list");
-    var newtr = tr.insertRow(tr.rows.length-1);
-    newtr.innerHTML = "" +
-        "<td colspan='7'>" +
-        "<form action='/product/product_add.jsp' method='post'>" +
-        "<span class='add-product-text'>请按类别输入：</span>" +
-        "<input class='add-product' id='add-product' type='text' name='pname'>" +
-        "<input class='add-product' id='add-product' type='text' name='pprice'>" +
-        "<input class='add-product' id='add-product' type='text' name='pnumber'>" +
-        "<input class='add-product' id='add-product' type='text' name='ptype'>" +
-        "<input type='submit' value='确认'>" +
-        "</form>" +
-        "</td>";
-    // newtr.insertCell(0).innerHTML = "<form action='/product/product_add.jsp' method='post'>";
-    // for (var i = 1; i < tr.rows[0].cells.length-1; i++) {
-    //     newtr.insertCell(i).innerHTML = "<input class='add-product' id='add-product' type='text' name='"+i+"'>";
-    // }
-    // newtr.insertCell(tr.rows[0].cells.length-1).innerHTML = "<input type='submit' value='确认'></form>";
+    var addTable = document.getElementById("add-product-table");
+    addTable.setAttribute("class","table-body");
+}
+// 显示修改产品的单元格
+function updateProduct() {
+    // 获取当前的tr
+    var thisLine = document.getElementById("table-body"+arguments[0]);
+    // 隐藏当前行
+    thisLine.setAttribute("class","hide-update-table");
+    // 显示产品修改单元格
+    var updateProduct = document.getElementById("update-product-table"+arguments[0]);
+    updateProduct.setAttribute("class","table-body");
+}
+// 显示添加产品的单元格
+function addProductType() {
+    var addTypeTable = document.getElementById("add-type-table");
+    addTypeTable.setAttribute("class","type-list-body");
+}
+// 显示修改产品类别的输入框
+function updateType() {
+    // 获得当前的span
+    var thisType = document.getElementById("type-list"+arguments[0]);
+    // 隐藏这个span
+    thisType.setAttribute("class","hide-update-table");
+    // 获得修改框
+    var updateType = document.getElementById("update-type-input"+arguments[0]);
+    // 显示修改框
+    updateType.setAttribute("class","type-list");
 }

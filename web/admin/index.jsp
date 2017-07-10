@@ -6,8 +6,8 @@
   Time: 8:52
   To change this template use File | Settings | File Templates.
 --%>
-<%@ include file="checklogin.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
+<%@ include file="checklogin.jsp" %>
 <html>
 <head>
     <link href="/admin/css/one.css" rel="stylesheet" type="text/css">
@@ -22,5 +22,4 @@
 <noframes>
     <div>(ノ｀Д)ノ</div>
 </noframes>
-<script type="text/javascript" src="js/one.js"></script>
 </html>

@@ -11,12 +11,12 @@ import java.util.List;
 /**
  * Created by Akari on 2017/6/27.
  */
-public class AdminDaoImplement extends BaseDao implements AdminDao{
+public class AdminDaoImpl extends BaseDao implements AdminDao{
     @Override
     public int addAdmin(Admin admin) {
         int result = 0;
         String sql = "INSERT INTO admin(aname, apassword) VALUES (?,?)";
-        Object[] objects = {admin.getAname(),admin.getApassword()};
+        Object[] objects = {admin.getAdminName(),admin.getAdminPassword()};
         result = super.executeUpdate(sql,objects);
         return result;
     }
@@ -25,16 +25,16 @@ public class AdminDaoImplement extends BaseDao implements AdminDao{
     public int UpdateAdmin(Admin admin) {
         int result = 0;
         String sql = "UPDATE admin set aname = ?, apassword = ? WHERE aid = ?";
-        Object[] objects = {admin.getAname(),admin.getApassword()};
+        Object[] objects = {admin.getAdminName(),admin.getAdminPassword()};
         result = super.executeUpdate(sql,objects);
         return result;
     }
 
     @Override
-    public int deleteAdmin(int aid) {
+    public int deleteAdmin(int adminId) {
         int result = 0;
         String sql = "DELETE FROM admin WHERE aid = ?";
-        Object[] objects = {aid};
+        Object[] objects = {adminId};
         result = super.executeUpdate(sql,objects);
         return result;
     }
@@ -59,9 +59,9 @@ public class AdminDaoImplement extends BaseDao implements AdminDao{
     }
 
     @Override
-    public Admin queryAdminByName(String aname) {
+    public Admin queryAdminByName(String adminName) {
         String sql = "SELECT * FROM admin WHERE aname = ?";
-        Object[] objects = {aname};
+        Object[] objects = {adminName};
         ResultSet rs = super.executeQuery(sql, objects);
         Admin admin = null;
         try {
@@ -78,7 +78,7 @@ public class AdminDaoImplement extends BaseDao implements AdminDao{
     public boolean verifyAdmin(Admin admin) {
         boolean result = false;
         String sql = "SELECT aname FROM admin WHERE aname = ? AND apassword = ?";
-        Object[] objects = {admin.getAname(), admin.getApassword()};
+        Object[] objects = {admin.getAdminName(), admin.getAdminPassword()};
         ResultSet rs = super.executeQuery(sql, objects);
         try {
             if(rs.next()) {

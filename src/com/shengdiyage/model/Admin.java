@@ -4,51 +4,51 @@ package com.shengdiyage.model;
  * Created by Akari on 2017/6/27.
  */
 public class Admin {
-    private int aid;
-    private String aname;
-    private String apassword;
+    private int adminId;
+    private String adminName;
+    private String adminPassword;
 
-    public Admin(String aname, String apassword) {
-        this.aname = aname;
-        this.apassword = apassword;
+    public Admin(String adminName, String adminPassword) {
+        this.adminName = adminName;
+        this.adminPassword = adminPassword;
     }
 
-    public Admin(int aid, String aname, String apassword) {
-        this.aid = aid;
-        this.aname = aname;
-        this.apassword = apassword;
+    public Admin(int adminId, String adminName, String adminPassword) {
+        this.adminId = adminId;
+        this.adminName = adminName;
+        this.adminPassword = adminPassword;
     }
 
-    public int getAid() {
-        return aid;
+    public int getAdminId() {
+        return adminId;
     }
 
-    public void setAid(int aid) {
-        this.aid = aid;
+    public void setAdminId(int adminId) {
+        this.adminId = adminId;
     }
 
-    public String getAname() {
-        return aname;
+    public String getAdminName() {
+        return adminName;
     }
 
-    public void setAname(String aname) {
-        this.aname = aname;
+    public void setAdminName(String adminName) {
+        this.adminName = adminName;
     }
 
-    public String getApassword() {
-        return apassword;
+    public String getAdminPassword() {
+        return adminPassword;
     }
 
-    public void setApassword(String apassword) {
-        this.apassword = apassword;
+    public void setAdminPassword(String adminPassword) {
+        this.adminPassword = adminPassword;
     }
 
     @Override
     public String toString() {
         return "Admin{" +
-                "aid=" + aid +
-                ", aname='" + aname + '\'' +
-                ", apassword='" + apassword + '\'' +
+                "adminId=" + adminId +
+                ", adminName='" + adminName + '\'' +
+                ", adminPassword='" + adminPassword + '\'' +
                 '}';
     }
 }

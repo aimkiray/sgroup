@@ -16,27 +16,27 @@
 </head>
 <body class="left-body">
 <div class="left-logo">
-    <img src="/logo/2.jpg">
+    <img src="/logo/left_logo.png">
 </div>
 <div class="left-option">
     <table>
         <tr>
-            <td><a href="/product/productlist.jsp" target="right">产品管理</a></td>
+            <td><a href="/product/product.jsp" target="right">产品管理</a></td>
         </tr>
         <tr>
-            <td><a href="#">集中销毁</a></td>
+            <td><a href="###">集中销毁</a></td>
         </tr>
         <tr>
-            <td><a href="#" target="right">零售&批发</a></td>
+            <td><a href="###" target="right">零售&批发</a></td>
         </tr>
         <tr>
-            <td><a href="#" target="right">使用方法</a></td>
+            <td><a href="###" target="right">使用方法</a></td>
         </tr>
         <tr>
-            <td><a href="#" target="right">食用方法?</a></td>
+            <td><a href="###" target="right">食用方法?</a></td>
         </tr>
         <tr>
-            <td><a href="buy.html" target="right">禁止事项</a></td>
+            <td><a href="###" target="right">禁止事项</a></td>
         </tr>
     </table>
 </div>

@@ -18,10 +18,10 @@ public interface ProductTypeDao {
 
     /**
      * 删除产品类别
-     * @param typeid
+     * @param typeId
      * @return
      */
-    int deleteProductTypeByTypeId(int typeid);
+    int deleteProductTypeByTypeId(int typeId);
 
     /**
      * 输入productType修改产品
@@ -32,17 +32,17 @@ public interface ProductTypeDao {
 
     /**
      * 查询该类别下的所有产品
-     * @param typeid
+     * @param typeId
      * @return
      */
-    List<Product> queryProductByTypeId(int typeid);
+    List<Product> queryProductByTypeId(int typeId);
 
     /**
      * 通过typeid查询ProductType类
-     * @param typeid
+     * @param typeId
      * @return
      */
-    ProductType queryProductTypeByTypeId(int typeid);
+    ProductType queryProductTypeByTypeId(int typeId);
 
     /**
      * 显示所有类别
@@ -52,10 +52,10 @@ public interface ProductTypeDao {
 
     /**
      * 通过名字查询类别
-     * @param typename
+     * @param typeName
      * @return
      */
-    ProductType queryProductTypeByTypeName(String typename);
+    ProductType queryProductTypeByTypeName(String typeName);
 
 
 //    /**

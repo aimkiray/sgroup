@@ -18,31 +18,38 @@ public interface ProductTypeService {
 
     /**
      * 删除产品类别
-     * @param typeid
+     * @param typeId
      * @return
      */
-    int deleteProductTypeByTypeId(int typeid);
+    int deleteProductTypeByTypeId(int typeId);
 
     /**
      * 通过typeid查询产品
      * @param productType
      * @return
      */
-    int updateProductTypeByTypeId(ProductType productType);
+    int updateProductTypeByType(ProductType productType);
 
     /**
      * 通过typeid查询type类
-     * @param typeid
+     * @param typeId
      * @return
      */
-    ProductType queryTypeByTypeId(int typeid);
+    ProductType queryTypeByTypeId(int typeId);
+
+    /**
+     * 通过typeid获得typename
+     * @param typeId
+     * @return ProductType
+     */
+    ProductType queryTypeNameByTypeId(int typeId);
 
     /**
      * 查询该类别下的所有产品
-     * @param typeid
+     * @param typeId
      * @return
      */
-    List<Product> queryProductByTypeId(int typeid);
+    List<Product> queryProductByTypeId(int typeId);
 
     /**
      * 显示所有类别

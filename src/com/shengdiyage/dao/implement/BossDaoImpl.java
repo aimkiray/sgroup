@@ -10,12 +10,12 @@ import java.util.List;
 /**
  * Created by Akari on 2017/6/29.
  */
-public class BossDaoImplement extends BaseDao implements BossDao {
+public class BossDaoImpl extends BaseDao implements BossDao {
     @Override
     public int addBoss(Boss boss) {
         int result = 0;
         String sql = "INSERT INTO boss(bname, bpassword) VALUES (?,?)";
-        Object[] objects = {boss.getBname(),boss.getBpassword()};
+        Object[] objects = {boss.getBossName(),boss.getBossPassword()};
         result = super.executeUpdate(sql,objects);
         return result;
     }
@@ -34,7 +34,7 @@ public class BossDaoImplement extends BaseDao implements BossDao {
     public boolean verifyBoss(Boss boss) {
         boolean result = false;
         String sql = "SELECT bname FROM boss WHERE bname = ? AND bpassword = ?";
-        Object[] objects = {boss.getBname(), boss.getBpassword()};
+        Object[] objects = {boss.getBossName(), boss.getBossPassword()};
         ResultSet rs = super.executeQuery(sql, objects);
         try {
             if(rs.next()) {
