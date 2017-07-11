@@ -23,6 +23,13 @@ public interface ProductDao {
     int deleteProduct(int pid);
 
     /**
+     * 批量删除产品
+     * @param pids 要删除的产品id数组
+     * @return
+     */
+    int delMulProduct(Integer[] pids);
+
+    /**
      * 修改产品
      * @param product
      * @return
@@ -35,6 +42,12 @@ public interface ProductDao {
      * @return
      */
     Product queryProduct(int pid);
+
+    /**
+     * 查询产品总数
+     * @return 产品总数
+     */
+    int queryProductNum();
 
     /**
      * 查询全部产品

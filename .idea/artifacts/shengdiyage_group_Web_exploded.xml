@@ -9,6 +9,8 @@
         </element>
         <element id="directory" name="lib">
           <element id="file-copy" path="$PROJECT_DIR$/../drives/mariadb-java-client-2.0.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../drives/standard-1.1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../drives/jstl-1.2.jar" />
         </element>
       </element>
     </root>

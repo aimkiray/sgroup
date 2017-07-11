@@ -32,3 +32,57 @@ function updateType() {
     // 显示修改框
     updateType.setAttribute("class","type-list");
 }
+
+// 产品全选框
+function checkAll() {
+    // 获得所有checkbox
+    var check = document.getElementsByName("check_product");
+    // 如果全选框被选中
+    if (check[0].checked) {
+        // 选中所有checkbox
+        for (var i = 1; i < check.length; i++) {
+            check[i].checked = true;
+        }
+    }
+    // 如果除全选框外的checkbox全部选中
+    var temp = true;
+    for (i = 1;i < check.length;i++){
+        temp = (temp && check[i].checked)
+    }
+    // 选中全选框
+    if(temp){
+        check[0].checked = true;
+    }
+}
+
+// 产品单选框
+function checkOne() {
+    var check = document.getElementsByName("check_product");
+    if(check[0].checked){
+        check[0].checked = false;
+    }
+    var temp = true;
+    for (var i = 1;i < check.length;i++){
+        temp = (temp && check[i].checked)
+    }
+    if(temp){
+        check[0].checked = true;
+    }
+}
+
+// 切换form表单的提交动作
+// 修改产品
+function updateProductAction() {
+    var form = document.getElementById("products");
+    form.action = "/productservlet.do?operate=updateproduct"
+}
+
+// 批量删除
+function delMulAction() {
+    if (confirm('确认删除选中项？')){
+        var form = document.getElementById("products");
+        form.action = "/productservlet.do?operate=muldel";
+    } else {
+        return false;
+    }
+}

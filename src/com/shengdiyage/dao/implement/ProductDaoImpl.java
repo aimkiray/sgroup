@@ -36,7 +36,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
     @Override
     public int updateProduct(Product product) {
         int result = 0;
-        String sql = "UPDATE product set pname = ?, pprice = ?, pnumber = ?,ptype = ?,producttime = ?,id = ? WHERE pid = ?";
+        String sql = "UPDATE product SET pname = ?, pprice = ?, pnumber = ?,ptype = ?,producttime = ?,id = ? WHERE pid = ?";
         Object[] objects = {product.getProductName(),product.getProductPrice(),product.getNumber(),product.getProductType().getTypeId(),product.getProductTime(),product.getId(),product.getProductId()};
         result = super.executeUpdate(sql,objects);
         return result;
@@ -66,6 +66,54 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         }
         super.closeAll();
         return product;
+    }
+
+    /**
+     * 批量删除产品
+     * @param pids 要删除的产品id数组
+     * @return
+     */
+    @Override
+    public int delMulProduct(Integer[] pids) {
+        int result = 0;
+        String sql = "DELETE FROM product WHERE 1=1";
+        if (pids != null && pids.length > 0) {
+            sql += " AND pid IN (";
+            for (int i = 0; i < pids.length; i++){
+                if (i == 0) {
+                    sql += "?";
+                } else {
+                    sql += ",?";
+                }
+            }
+            sql += ")";
+        }
+        System.out.println(pids);
+        for(Integer pid:pids){
+            System.out.println(pid);
+        }
+        result = super.executeUpdate(sql,pids);
+        return result;
+    }
+
+    /**
+     * 查询产品总数
+     * @return 产品总数
+     */
+    @Override
+    public int queryProductNum() {
+        int result = 0;
+        String sql = "SELECT COUNT(*) FROM product";
+        Object[] objects = {};
+        ResultSet rs = super.executeQuery(sql, objects);
+        try {
+            while (rs.next()) {
+                result = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
     public List<Product> queryProduct() {
@@ -126,6 +174,8 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         }
     return products;
     }
+
+
 
     @Override
     public Product queryProductByName(String pname) {

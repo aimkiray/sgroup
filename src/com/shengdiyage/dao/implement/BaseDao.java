@@ -52,7 +52,7 @@ public class BaseDao {
                     ps.setObject(i+1, values[i]);
                 }
             }
-            // 获取结果集
+            // 获取结果
             result = ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

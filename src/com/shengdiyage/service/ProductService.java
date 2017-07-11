@@ -24,10 +24,10 @@ public interface ProductService {
 
     /**
      * 批量删除产品
-     * @param pid
+     * @param pids
      * @return
      */
-    int delMulProduct(Integer[] pid);
+    int delMulProduct(Integer[] pids);
 
     /**
      * 修改产品
@@ -56,4 +56,10 @@ public interface ProductService {
      * @return
      */
     List<Product> queryProduct(int start, int conut);
+
+    /**
+     * 查询产品总数
+     * @return 产品总数
+     */
+    int queryProductNum();
 }

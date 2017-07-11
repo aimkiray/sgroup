@@ -23,6 +23,7 @@ import java.util.List;
  */
 public class ProductServlet extends HttpServlet {
 
+//    定义全局变量
     private ProductTypeService productTypeService = null;
     private ProductService productService = null;
     private String charset = "";
@@ -34,20 +35,38 @@ public class ProductServlet extends HttpServlet {
         productService = new ProductServiceImpl();
     }
 
+    /**
+     * 带参数的初始化，只执行一次
+     * @param config web.xml的配置
+     * @throws ServletException
+     */
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
+//        读取编码格式
         charset = config.getInitParameter("charset");
 
     }
 
+    /**
+     * 无参的初始化，只执行一次
+     * @throws ServletException
+     */
     @Override
     public void init() throws ServletException {
         super.init();
     }
 
+    /**
+     * get方式传递的数据，包括连接后面用？传过来的数据
+     * @param req 客户端发送的数据封装类
+     * @param resp 服务器发送的数据封装类（大概）
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        设置post提交方式的编码格式，在web.xml中设置
         req.setCharacterEncoding(charset);
         String operate = req.getParameter("operate");
         switch (operate) {
@@ -72,29 +91,87 @@ public class ProductServlet extends HttpServlet {
             case "product":
                 queryProduct(req, resp);
                 break;
+            case "muldel":
+                mulDel(req, resp);
+                break;
             default:
-//                安心吧，一般不会触发的（学下过滤器）。
+//                安心吧，一般不会触发的（学下过滤器先）。
                 break;
         }
     }
 
+    /**
+     * post方式提交的数据
+     * @param req 客户端发送的数据封装类
+     * @param resp 服务器发送的数据封装类（大概）
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doGet(req, resp);
     }
 
     /**
-     * 查询所有产品和所有产品类别
+     * 分页查询产品&查询所有产品类别
      * @param req 客户端发送的数据封装类
      * @param resp 服务器发送的数据封装类（大概）
      * @throws ServletException
      * @throws IOException
      */
     protected void queryProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        查询产品总数
+        int productNum = productService.queryProductNum();
+//        每页默认显示5条数据
+        int count = 5;
+//        每页第一条数据条目数
+        int start = 0;
+//        当前页
+        int page = 1;
+//        默认首页
+        String input = "firstpage";
+        if (req.getParameter("input") != null && req.getParameter("page") != null && req.getParameter("start") != null) {
+            input = req.getParameter("input");
+            page = Integer.parseInt(req.getParameter("page").toString());
+            start = Integer.parseInt(req.getParameter("start").toString());
+//            count = Integer.parseInt(req.getParameter("count"));
+        }
+        switch (input) {
+            case "firstpage":
+                start = 0;
+                page = 1;
+                break;
+            case "previous":
+                if(start > count) {
+                    start -= count;
+                    page--;
+                } else {
+                    start = 0;
+                    page = 1;
+                }
+                break;
+            case "next":
+                if (start < productNum-count) {
+                    start += count;
+                    page++;
+                }
+                break;
+            case "lastpage":
+                while (start < productNum-count) {
+                    start +=count;
+                    page++;
+                }
+                break;
+            default:
+                break;
+        }
         List<ProductType> productTypes = productTypeService.queryAllProductType();
-        List<Product> products = productService.queryProduct();
+        List<Product> products = productService.queryProduct(start, count);
         req.setAttribute("products", products);
         req.setAttribute("producttypes", productTypes);
+        req.setAttribute("page",page);
+        req.setAttribute("start",start);
+//        req.setAttribute("count",count);
         req.getRequestDispatcher("/product/product.jsp").forward(req, resp);
     }
 
@@ -198,8 +275,26 @@ public class ProductServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         if (result > 0) {
             resp.sendRedirect("/productservlet.do?operate=product");
-        } else if (result == 0) {
-            out.print("<script>alert('删除失败！请检查该类别下是否存在产品');history.back();</script>");
+        } else {
+            out.print("<script>alert('删除失败！');history.back();</script>");
+        }
+    }
+
+    /**
+     * 批量删除功能
+     * @param req 客户端发送的数据封装类
+     * @param resp 服务器发送的数据封装类（大概）
+     */
+    private void mulDel(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String[] strPids = req.getParameterValues("check_product");
+        Integer[] pids = new Integer[strPids.length];
+        for (int i = 0; i<pids.length; i++) {
+            pids[i] = Integer.parseInt(strPids[i]);
+        }
+        int result = productService.delMulProduct(pids);
+        PrintWriter out = resp.getWriter();
+        if (result > 0) {
+            resp.sendRedirect("/productservlet.do?operate=product");
         } else {
             out.print("<script>alert('删除失败！');history.back();</script>");
         }
@@ -229,7 +324,7 @@ public class ProductServlet extends HttpServlet {
         Product product = new Product(productId,productName,productPrice,number,productType,date);
         int result = productService.updateProduct(product);
         if (result > 0) {
-            resp.sendRedirect("/product/product.jsp");
+            resp.sendRedirect("/productservlet.do?operate=product");
         } else {
             PrintWriter out = resp.getWriter();
             out.print("<script>alert('修改失败！');history.back();</script>");

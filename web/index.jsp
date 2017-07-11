@@ -13,7 +13,7 @@
 </script>
 <html>
 <head>
-    <title>美国圣地亚戈</title>
+    <title>美国圣地亚戈集团</title>
     <link rel="stylesheet" type="text/css" href="/css/login.css">
 </head>
 <body>

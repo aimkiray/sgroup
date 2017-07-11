@@ -52,12 +52,12 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 删除多个产品
-     * @param pid 传入多个产品的productId数组
+     * @param pids 传入多个产品的productId数组
      * @return 返回修改的表单数量，返回0表示修改失败
      */
     @Override
-    public int delMulProduct(Integer[] pid) {
-        return 0;
+    public int delMulProduct(Integer[] pids) {
+        return productDao.delMulProduct(pids);
     }
 
     @Override
@@ -89,5 +89,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> queryProduct(int start, int conut) {
         return productDao.queryProduct(start, conut);
+    }
+
+    @Override
+    public int queryProductNum() {
+        return productDao.queryProductNum();
     }
 }
