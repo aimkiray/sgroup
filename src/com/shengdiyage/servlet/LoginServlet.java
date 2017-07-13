@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
         if (adminService.verifyAdmin(admin)) {
             HttpSession session = req.getSession();
             admin = adminService.queryAdminByName(adminName);
-            session.setAttribute("loginadmin",admin);
+            session.setAttribute("admin",admin);
             resp.sendRedirect("/admin/main.jsp");
         } else {
             PrintWriter out = resp.getWriter();

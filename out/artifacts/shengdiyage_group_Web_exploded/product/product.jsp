@@ -1,7 +1,3 @@
-<%@ page import="com.shengdiyage.entity.Product" %>
-<%@ page import="java.util.List" %>
-<%@ page import="com.shengdiyage.entity.ProductType" %>
-<%@ page import="com.shengdiyage.utils.DateTools" %>
 <%--
   Created by IntelliJ IDEA.
   User: Akari
@@ -16,6 +12,7 @@
 <html>
 <head>
     <title>product</title>
+    <c:set var="root" value="${pageContext.request.contextPath}" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="/product/css/product.css">
 </head>
@@ -28,7 +25,7 @@
         <tr class="product-table-bottom">
             <td colspan="7">
                 <select name="typeId">
-                    <option value="${requestScope.product.productType.typeId}">请选择类别</option>
+                    <option value="0">请选择类别</option>
                     <c:forEach items="${requestScope.producttypes}" var="productTypes">
                     <option value="${productTypes.typeId}" <c:if test="${productTypes.typeId == requestScope.product.productType.typeId}">selected</c:if>>${productTypes.typeName}</option>
                     </c:forEach>
@@ -105,7 +102,7 @@
                        value="${products.productPrice}"></td>
             <td><input class="add-product" type="text" name="number" value="${products.number}"></td>
             <td><select class="add-product" name="productTypeId">
-                <option value="">请选择</option>
+                <option value="">请选择类别</option>
                 <%--<%--%>
                     <%--for (int j = 0; j < productTypes.size(); j++) {--%>
                         <%--// 默认选中该类别--%>
@@ -148,7 +145,7 @@
     </tr>
 
     <%--分页功能--%>
-    <form id="pageForm" action="/productservlet.do?operate=product&typeId=${requestScope.product.productType.typeId}&productName=${requestScope.product.productName}" method="post">
+    <form id="pageForm" action="/productservlet.do?operate=product&curPage=1&typeId=${requestScope.product.productType.typeId}&productName=${requestScope.product.productName}" method="post">
         <tr>
             <td colspan="7">
                 <c:if test="${requestScope.curPage != 1}">

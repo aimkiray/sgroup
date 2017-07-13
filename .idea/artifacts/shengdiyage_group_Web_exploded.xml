@@ -11,6 +11,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/../drives/mariadb-java-client-2.0.2.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../drives/standard-1.1.2.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../drives/jstl-1.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/junit-4.12.jar" />
         </element>
       </element>
     </root>

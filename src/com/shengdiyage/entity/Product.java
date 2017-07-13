@@ -1,11 +1,14 @@
 package com.shengdiyage.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Akari on 2017/6/27.
  */
-public class Product {
+public class Product implements Serializable {
+
+    // 当前类的版本，修改此类的同时也要修改版本号。
     private int productId;
     private String productName;
     private int productPrice;
@@ -28,6 +31,13 @@ public class Product {
         this.productPrice = productPrice;
         this.number = number;
         this.productType = productType;
+        this.productTime = productTime;
+    }
+
+    public Product(String productName, int productPrice, int number, Date productTime) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.number = number;
         this.productTime = productTime;
     }
 

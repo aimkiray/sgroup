@@ -22,7 +22,7 @@ public class LogFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
-        String adminName = ((Admin)request.getSession().getAttribute("loginadmin")).getAdminName();
+        String adminName = ((Admin)request.getSession().getAttribute("admin")).getAdminName();
         String url = request.getRequestURL().toString();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String date = sdf.format(new Date());

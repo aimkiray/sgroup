@@ -152,6 +152,13 @@ public class ProductServlet extends HttpServlet {
         } else {
             pages = (productNum/pageSize);
         }
+//        避免超出数据范围
+        if (curPage > pages) {
+            curPage = pages;
+        }
+        if (curPage < 1) {
+            curPage = 1;
+        }
 //        查询符合条件的产品和产品类别
         List<ProductType> productTypes = productTypeService.queryAllProductType();
         List<Product> products = productService.queryProduct(product, curPage, pageSize);

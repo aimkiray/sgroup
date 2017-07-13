@@ -122,7 +122,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         String sql = "SELECT COUNT(*) FROM product WHERE 1=1 ";
         List values = new ArrayList();
         if (product != null) {
-            if (product.getProductType() != null && product.getProductType().getTypeId() != 0) {
+            if (product.getProductType() != null && product.getProductType().getTypeId() > 0) {
                 sql += "AND ptype = ? ";
                 values.add(product.getProductType().getTypeId());
             }
