@@ -87,8 +87,13 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> queryProduct(int start, int conut) {
-        return productDao.queryProduct(start, conut);
+    public int queryProductNum(Product product) {
+        return productDao.queryProductNum(product);
+    }
+
+    @Override
+    public List<Product> queryProduct(Product product, int curPage, int pageSize) {
+        return productDao.queryProduct(product,(curPage-1)*pageSize, pageSize);
     }
 
     @Override

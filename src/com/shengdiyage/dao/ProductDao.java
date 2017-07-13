@@ -50,6 +50,12 @@ public interface ProductDao {
     int queryProductNum();
 
     /**
+     * 查询搜素目标产品的总数
+     * @return 产品总数
+     */
+    int queryProductNum(Product product);
+
+    /**
      * 查询全部产品
      * @return
      */
@@ -64,7 +70,16 @@ public interface ProductDao {
     List<Product> queryProduct(int start, int conut);
 
     /**
-     * 按名字查询类别
+     * 按类别模糊搜索查询
+     * @param product 要查询的产品
+     * @param start 从第几条开始查询
+     * @param conut 每次查询的数量
+     * @return
+     */
+    List<Product> queryProduct(Product product, int start, int conut);
+
+    /**
+     * 根据名字查询产品
      * @param pname
      * @return
      */

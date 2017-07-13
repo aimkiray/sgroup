@@ -88,10 +88,6 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
             }
             sql += ")";
         }
-        System.out.println(pids);
-        for(Integer pid:pids){
-            System.out.println(pid);
-        }
         result = super.executeUpdate(sql,pids);
         return result;
     }
@@ -106,6 +102,36 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         String sql = "SELECT COUNT(*) FROM product";
         Object[] objects = {};
         ResultSet rs = super.executeQuery(sql, objects);
+        try {
+            while (rs.next()) {
+                result = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    /**
+     * 查询搜素目标产品的总数
+     * @return 产品总数
+     */
+    @Override
+    public int queryProductNum(Product product) {
+        int result = 0;
+        String sql = "SELECT COUNT(*) FROM product WHERE 1=1 ";
+        List values = new ArrayList();
+        if (product != null) {
+            if (product.getProductType() != null && product.getProductType().getTypeId() != 0) {
+                sql += "AND ptype = ? ";
+                values.add(product.getProductType().getTypeId());
+            }
+            if (product.getProductName() != null && !"请输入产品名称".equals(product.getProductName())) {
+                sql += "AND pname like ? ";
+                values.add("%"+product.getProductName()+"%");
+            }
+        }
+        ResultSet rs = super.executeQuery(sql, values.toArray());
         try {
             while (rs.next()) {
                 result = rs.getInt(1);
@@ -175,6 +201,47 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
     return products;
     }
 
+    @Override
+    public List<Product> queryProduct(Product product, int start, int conut) {
+        List<Product> products = new ArrayList<Product>();
+        List values = new ArrayList();
+        String sql = "SELECT * FROM product WHERE 1=1 ";
+        if (product != null) {
+            if (product.getProductType() != null && product.getProductType().getTypeId() != 0) {
+                sql += "AND ptype = ? ";
+                values.add(product.getProductType().getTypeId());
+            }
+            if (product.getProductName() != null && !"请输入产品名称".equals(product.getProductName())) {
+                sql += "AND pname like ? ";
+                values.add("%"+product.getProductName()+"%");
+            }
+        }
+        sql += "ORDER BY pid ASC LIMIT ?,?";
+        values.add(start);
+        values.add(conut);
+        ResultSet rs = super.executeQuery(sql, values.toArray());
+        try {
+            while (rs.next()) {
+                Product realproduct = new Product();
+                realproduct.setProductId(rs.getInt("pid"));
+                realproduct.setProductName(rs.getString("pname"));
+                realproduct.setProductPrice(rs.getInt("pprice"));
+                realproduct.setNumber(rs.getInt("pnumber"));
+                realproduct.setProductTime(rs.getTime("producttime"));
+                realproduct.setId(rs.getInt("id"));
+                ProductTypeService productTypeService = new ProductTypeServiceImpl();
+                ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
+                realproduct.setProductType(productType);
+                products.add(realproduct);
+            }
+            super.closeAll();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
 
 
     @Override

@@ -1,3 +1,13 @@
+/*页面边距*/
+.product-body {
+    margin: 20px;
+}
+/*导航栏*/
+.product-navigate {
+    display: inline-block;
+    color: blue;
+    margin-bottom: 20px;
+}
 /*添加产品框*/
 /*.add-product {*/
     /*display: inline-block;*/
@@ -24,6 +34,18 @@
     background-color: rgb(238, 238, 238);
     color: rgb(111, 111, 111);
 }
+/*产品列表底部的功能*/
+/*.product-table-bottom td {*/
+    /*background-color: rgb(238, 238, 238);*/
+    /*color: rgb(111, 111, 111);*/
+/*}*/
+
+/*.product-table-bottom input {*/
+    /*height: 23px;*/
+/*}*/
+/*.product-table-bottom select {*/
+    /*height: 22px;*/
+/*}*/
 
 /*添加和修改单元格是否显示*/
 

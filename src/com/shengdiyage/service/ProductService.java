@@ -51,15 +51,22 @@ public interface ProductService {
 
     /**
      * 分页查询
-     * @param start
+     * @param curPage
      * @param conut
      * @return
      */
-    List<Product> queryProduct(int start, int conut);
+    List<Product> queryProduct(Product product, int curPage, int conut);
 
     /**
      * 查询产品总数
      * @return 产品总数
      */
     int queryProductNum();
+
+    /**
+     * 查询匹配的产品总数
+     * @param product 匹配用的product类
+     * @return 产品总数
+     */
+    int queryProductNum(Product product);
 }

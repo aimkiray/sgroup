@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <script>
     if(top != self) {
-        top.location.href = "/index.jsp";
+        top.location.href = "/login.jsp";
     }
 </script>
 <html>

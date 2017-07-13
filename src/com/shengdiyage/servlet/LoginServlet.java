@@ -23,7 +23,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
+//        req.setCharacterEncoding("utf-8");
         String adminName = req.getParameter("userName");
         String adminPassword = req.getParameter("userPassword");
         Admin admin = new Admin(adminName, adminPassword);
@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = req.getSession();
             admin = adminService.queryAdminByName(adminName);
             session.setAttribute("loginadmin",admin);
-            resp.sendRedirect("/admin/index.jsp");
+            resp.sendRedirect("/admin/main.jsp");
         } else {
             PrintWriter out = resp.getWriter();
             out.print("<script>alert('登陆失败，请检查用户名和密码！');history.back();</script>");

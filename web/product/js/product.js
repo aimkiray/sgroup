@@ -86,3 +86,8 @@ function delMulAction() {
         return false;
     }
 }
+
+// 产品搜索功能
+// function searchProduct() {
+//
+// }

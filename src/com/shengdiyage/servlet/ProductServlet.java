@@ -26,7 +26,7 @@ public class ProductServlet extends HttpServlet {
 //    定义全局变量
     private ProductTypeService productTypeService = null;
     private ProductService productService = null;
-    private String charset = "";
+//    private String charset = "";
 
     public ProductServlet() {
         super();
@@ -44,7 +44,7 @@ public class ProductServlet extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
 //        读取编码格式
-        charset = config.getInitParameter("charset");
+//        charset = config.getInitParameter("charset");
 
     }
 
@@ -66,8 +66,8 @@ public class ProductServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        设置post提交方式的编码格式，在web.xml中设置
-        req.setCharacterEncoding(charset);
+//        设置post提交方式的编码格式，在web.xml中设置（已改用Filter）
+//        req.setCharacterEncoding(charset);
         String operate = req.getParameter("operate");
         switch (operate) {
             case "addtype":
@@ -94,6 +94,9 @@ public class ProductServlet extends HttpServlet {
             case "muldel":
                 mulDel(req, resp);
                 break;
+//            case "search":
+//                searchProduct(req, resp);
+//                break;
             default:
 //                安心吧，一般不会触发的（学下过滤器先）。
                 break;
@@ -113,67 +116,81 @@ public class ProductServlet extends HttpServlet {
     }
 
     /**
-     * 分页查询产品&查询所有产品类别
+     * 分页查询产品&查询所有产品类别&产品模糊搜素
      * @param req 客户端发送的数据封装类
      * @param resp 服务器发送的数据封装类（大概）
      * @throws ServletException
      * @throws IOException
      */
     protected void queryProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        查询产品总数
-        int productNum = productService.queryProductNum();
 //        每页默认显示5条数据
-        int count = 5;
-//        每页第一条数据条目数
-        int start = 0;
+        String size = req.getParameter("pageSize");
+
+        int pageSize = size == null ? 5 : Integer.parseInt(size);
 //        当前页
-        int page = 1;
-//        默认首页
-        String input = "firstpage";
-        if (req.getParameter("input") != null && req.getParameter("page") != null && req.getParameter("start") != null) {
-            input = req.getParameter("input");
-            page = Integer.parseInt(req.getParameter("page").toString());
-            start = Integer.parseInt(req.getParameter("start").toString());
-//            count = Integer.parseInt(req.getParameter("count"));
+        String pageIndex = req.getParameter("curPage");
+        int curPage = pageIndex == null ? 1 : Integer.parseInt(pageIndex);
+//        产品名称，默认为"请输入产品名称"
+        String realProductName = req.getParameter("productName");
+        String productName = realProductName == null ? "请输入产品名称" : realProductName;
+//        产品类别Id，默认为"0"
+        String realTypeId = req.getParameter("typeId");
+        int typeId = realTypeId == null ? 0 : Integer.parseInt(realTypeId);
+
+        Product product = new Product();
+        product.setProductName(productName);
+        ProductType productType = new ProductType();
+        productType.setTypeId(typeId);
+        product.setProductType(productType);
+
+//        查询产品总数
+        int productNum = productService.queryProductNum(product);
+//        计算总页数
+        int pages;
+        if (productNum%pageSize != 0) {
+            pages = (productNum/pageSize) + 1;
+        } else {
+            pages = (productNum/pageSize);
         }
-        switch (input) {
-            case "firstpage":
-                start = 0;
-                page = 1;
-                break;
-            case "previous":
-                if(start > count) {
-                    start -= count;
-                    page--;
-                } else {
-                    start = 0;
-                    page = 1;
-                }
-                break;
-            case "next":
-                if (start < productNum-count) {
-                    start += count;
-                    page++;
-                }
-                break;
-            case "lastpage":
-                while (start < productNum-count) {
-                    start +=count;
-                    page++;
-                }
-                break;
-            default:
-                break;
-        }
+//        查询符合条件的产品和产品类别
         List<ProductType> productTypes = productTypeService.queryAllProductType();
-        List<Product> products = productService.queryProduct(start, count);
+        List<Product> products = productService.queryProduct(product, curPage, pageSize);
         req.setAttribute("products", products);
         req.setAttribute("producttypes", productTypes);
-        req.setAttribute("page",page);
-        req.setAttribute("start",start);
-//        req.setAttribute("count",count);
+        req.setAttribute("curPage",curPage);
+        req.setAttribute("pageSize",pageSize);
+        req.setAttribute("pages",pages);
+        req.setAttribute("product",product);
         req.getRequestDispatcher("/product/product.jsp").forward(req, resp);
     }
+
+//    protected void searchProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+////        每页默认显示2条数据
+//        String size = req.getParameter("pageSize");
+//
+//        int pageSize = size == null ? 2 : Integer.parseInt(size);
+////        查询产品总数
+//        int productNum = productService.queryProductNum();
+////        计算总页数
+//        int pages;
+//        if (productNum%pageSize != 0) {
+//            pages = (productNum/pageSize) + 1;
+//        } else {
+//            pages = (productNum/pageSize);
+//        }
+////        当前页
+//        String pageIndex = req.getParameter("curPage");
+//        int curPage = pageIndex == null ? 1 : Integer.parseInt(pageIndex);
+//
+//        List<ProductType> productTypes = productTypeService.queryAllProductType();
+//        List<Product> products = productService.queryProduct(curPage, pageSize);
+//        req.setAttribute("products", products);
+//        req.setAttribute("producttypes", productTypes);
+//        req.setAttribute("curPage",curPage);
+//        req.setAttribute("pageSize",pageSize);
+//        req.setAttribute("pages",pages);
+//        req.getRequestDispatcher("/product/product.jsp").forward(req, resp);
+//    }
 
     /**
      * 添加产品类别
