@@ -35,4 +35,19 @@ public class DateTools {
         }
         return date;
     }
+
+    /**
+     * 生成当前精确到毫秒的时间加四位随机数组成的文件名
+     * @param ext 文件后缀
+     * @return
+     */
+    public static String getFileName (String ext) {
+        String fileName = getStrByDate(new Date(),"yyyyMMddHHmmss");
+        for (int i = 0; i< 4; i++) {
+            fileName += (int)(Math.random()*10);
+        }
+        fileName += ".";
+        fileName += ext;
+        return fileName;
+    }
 }

@@ -9,12 +9,15 @@ import java.util.Date;
 public class Product implements Serializable {
 
     // 当前类的版本，修改此类的同时也要修改版本号。
+    private static final long serialVersionUID = 1L;
+
     private int productId;
     private String productName;
     private int productPrice;
     private int number;
     private ProductType productType;
     private Date productTime;
+    private String fileName;
     private int id = 0;
 
     public Product(int productId, String productName, int productPrice, int number, ProductType productType, Date productTime) {
@@ -39,6 +42,25 @@ public class Product implements Serializable {
         this.productPrice = productPrice;
         this.number = number;
         this.productTime = productTime;
+    }
+
+    public Product(int productId, String productName, int productPrice, int number, ProductType productType, Date productTime, String fileName) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.number = number;
+        this.productType = productType;
+        this.productTime = productTime;
+        this.fileName = fileName;
+    }
+
+    public Product(String productName, int productPrice, int number, ProductType productType, Date productTime, String fileName) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.number = number;
+        this.productType = productType;
+        this.productTime = productTime;
+        this.fileName = fileName;
     }
 
     public Product() {
@@ -116,6 +138,14 @@ public class Product implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
     @Override

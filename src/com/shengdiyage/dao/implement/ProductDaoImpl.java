@@ -18,8 +18,8 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
     @Override
     public int addProduct(Product product) {
         int result = 0;
-        String sql = "INSERT INTO product(pname, pprice, pnumber, ptype, producttime, id) VALUES (?,?,?,?,?,?)";
-        Object[] objects = {product.getProductName(),product.getProductPrice(),product.getNumber(),product.getProductType().getTypeId(),product.getProductTime(),product.getId()};
+        String sql = "INSERT INTO product(pname, pprice, pnumber, ptype, producttime, id, filename) VALUES (?,?,?,?,?,?,?)";
+        Object[] objects = {product.getProductName(),product.getProductPrice(),product.getNumber(),product.getProductType().getTypeId(),product.getProductTime(),product.getId(),product.getFileName()};
         result = super.executeUpdate(sql,objects);
         return result;
     }
@@ -36,8 +36,8 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
     @Override
     public int updateProduct(Product product) {
         int result = 0;
-        String sql = "UPDATE product SET pname = ?, pprice = ?, pnumber = ?,ptype = ?,producttime = ?,id = ? WHERE pid = ?";
-        Object[] objects = {product.getProductName(),product.getProductPrice(),product.getNumber(),product.getProductType().getTypeId(),product.getProductTime(),product.getId(),product.getProductId()};
+        String sql = "UPDATE product SET pname = ?, pprice = ?, pnumber = ?,ptype = ?,producttime = ?,id = ?,filename = ? WHERE pid = ?";
+        Object[] objects = {product.getProductName(),product.getProductPrice(),product.getNumber(),product.getProductType().getTypeId(),product.getProductTime(),product.getId(),product.getFileName(),product.getProductId()};
         result = super.executeUpdate(sql,objects);
         return result;
     }
@@ -60,6 +60,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
                 ProductTypeService productTypeService = new ProductTypeServiceImpl();
                 ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
                 product.setProductType(productType);
+                product.setFileName(rs.getString("filename"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -160,6 +161,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
                 ProductTypeService productTypeService = new ProductTypeServiceImpl();
                 ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
                 product.setProductType(productType);
+                product.setFileName(rs.getString("filename"));
 //                循环添加产品到List
                 products.add(product);
             }
@@ -190,6 +192,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
                 ProductTypeService productTypeService = new ProductTypeServiceImpl();
                 ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
                 product.setProductType(productType);
+                product.setFileName(rs.getString("filename"));
                 products.add(product);
             }
             super.closeAll();
@@ -201,6 +204,13 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
     return products;
     }
 
+    /**
+     * 根据产品信息分页搜索符合条件的产品
+     * @param product 要查询的产品
+     * @param start 从第几条开始查询
+     * @param conut 每次查询的数量
+     * @return
+     */
     @Override
     public List<Product> queryProduct(Product product, int start, int conut) {
         List<Product> products = new ArrayList<Product>();
@@ -213,6 +223,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
             }
             if (product.getProductName() != null && !"请输入产品名称".equals(product.getProductName())) {
                 sql += "AND pname like ? ";
+//                模糊搜索
                 values.add("%"+product.getProductName()+"%");
             }
         }
@@ -232,6 +243,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
                 ProductTypeService productTypeService = new ProductTypeServiceImpl();
                 ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
                 realproduct.setProductType(productType);
+                realproduct.setFileName(rs.getString("filename"));
                 products.add(realproduct);
             }
             super.closeAll();
@@ -262,6 +274,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
                 ProductTypeService productTypeService = new ProductTypeServiceImpl();
                 ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
                 product.setProductType(productType);
+                product.setFileName(rs.getString("filename"));
             }
         } catch (SQLException e) {
             e.printStackTrace();

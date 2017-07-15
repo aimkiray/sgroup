@@ -1,0 +1,1 @@
+INSERT INTO shengdiyage.boss (bname, bpassword) VALUES ('boss', '123456');

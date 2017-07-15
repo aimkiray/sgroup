@@ -14,6 +14,23 @@ function updateProduct() {
     thisLine.setAttribute("class","hide-update-table");
     // 显示产品修改单元格
     var updateProduct = document.getElementById("update-product-table"+arguments[0]);
+    // alert(updateProduct.ownerDocument);
+    // var list = updateProduct.getElementsByTagName("td");
+    // alert(list);
+    // for (var i = 0; i < list.length; i++) {
+    //     updateForm.appendChild(list[i]);
+    // }
+    // alert(updateProduct.ownerDocument);
+    // var updateForm = document.createElement("form");
+    // updateForm.appendChild(updateProduct.ownerDocument);
+    // alert(updateForm.innerHTML);
+    // updateProduct.innerHTML = "";
+    // updateProduct.appendChild(updateForm);
+
+    // 在外面加上form表单用于提交
+    // updateProduct.innerHTML = "<form id='products'>" +
+    //     updateProduct.innerHTML +
+    //     "</form>";
     updateProduct.setAttribute("class","table-body");
 }
 // 显示添加产品的单元格
@@ -35,6 +52,7 @@ function updateType() {
 
 // 产品全选框
 function checkAll() {
+    addFormToMulDel();
     // 获得所有checkbox
     var check = document.getElementsByName("check_product");
     // 如果全选框被选中
@@ -57,6 +75,8 @@ function checkAll() {
 
 // 产品单选框
 function checkOne() {
+    // 切换到批量删除模式
+    addFormToMulDel();
     var check = document.getElementsByName("check_product");
     if(check[0].checked){
         check[0].checked = false;
@@ -70,11 +90,18 @@ function checkOne() {
     }
 }
 
+// 添加用于批量删除的form表单
+function addFormToMulDel() {
+    var mainTable = document.getElementById("");
+}
+
 // 切换form表单的提交动作
 // 修改产品
 function updateProductAction() {
+    // 获得修改框
     var form = document.getElementById("products");
-    form.action = "/productservlet.do?operate=updateproduct"
+    form.action = "/productservlet.do?operate=updateproduct&what="+arguments[0];
+    form.enctype = "multipart/form-data";
 }
 
 // 批量删除
@@ -82,6 +109,7 @@ function delMulAction() {
     if (confirm('确认删除选中项？')){
         var form = document.getElementById("products");
         form.action = "/productservlet.do?operate=muldel";
+        form.enctype = "application/x-www-form-urlencoded";
     } else {
         return false;
     }

@@ -81,3 +81,9 @@ a:link{text-decoration:none ; color: deeppink;}
 a:visited {text-decoration:none ; color: deeppink;}
 a:hover {text-decoration:underline ; color: deeppink;}
 a:active {text-decoration:none ; color: deeppink;}
+
+/*产品图片样式*/
+.product-picture {
+    width: 80px;
+    height: 80px;
+}

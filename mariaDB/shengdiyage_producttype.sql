@@ -1,0 +1,10 @@
+INSERT INTO shengdiyage.producttype (typename) VALUES ('勇者');
+INSERT INTO shengdiyage.producttype (typename) VALUES ('魔王');
+INSERT INTO shengdiyage.producttype (typename) VALUES ('大神');
+INSERT INTO shengdiyage.producttype (typename) VALUES ('化肥');
+INSERT INTO shengdiyage.producttype (typename) VALUES ('可以吃的');
+INSERT INTO shengdiyage.producttype (typename) VALUES ('不能吃的');
+INSERT INTO shengdiyage.producttype (typename) VALUES ('饮料');
+INSERT INTO shengdiyage.producttype (typename) VALUES ('游戏机');
+INSERT INTO shengdiyage.producttype (typename) VALUES ('公主');
+INSERT INTO shengdiyage.producttype (typename) VALUES ('王子');

@@ -7,21 +7,37 @@ import com.shengdiyage.service.ProductTypeService;
 import com.shengdiyage.service.serrviceImplement.ProductServiceImpl;
 import com.shengdiyage.service.serrviceImplement.ProductTypeServiceImpl;
 import com.shengdiyage.utils.DateTools;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.io.FilenameUtils;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Akari on 2017/7/10.
  */
 public class ProductServlet extends HttpServlet {
+    // 当前类的版本，修改此类的同时也要修改版本号。
+    private static final long serialVersionUID = 1L;
+
+//    上传文件储存目录
+    private static final String UPLOAD_DIRECTORY = "uploads";
+
+//    上传配置
+    private static final int MEMORY_THRESHOLD   = 1024 * 1024 * 3;  // 3MB
+    private static final int MAX_FILE_SIZE      = 1024 * 1024 * 40; // 40MB
+    private static final int MAX_REQUEST_SIZE   = 1024 * 1024 * 50; // 50MB
 
 //    定义全局变量
     private ProductTypeService productTypeService = null;
@@ -123,9 +139,9 @@ public class ProductServlet extends HttpServlet {
      * @throws IOException
      */
     protected void queryProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
 //        每页默认显示5条数据
         String size = req.getParameter("pageSize");
-
         int pageSize = size == null ? 5 : Integer.parseInt(size);
 //        当前页
         String pageIndex = req.getParameter("curPage");
@@ -265,16 +281,108 @@ public class ProductServlet extends HttpServlet {
      * @throws IOException
      */
     private void addProduct(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+
+//        配置上传参数
+        DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
+//        配置临时目录
+        diskFileItemFactory.setRepository(new File("D:\\test"));
+//        设置内存临界值，超过后生成临时文件
+        diskFileItemFactory.setSizeThreshold(MEMORY_THRESHOLD);
+//        处理form中多文件上传的类，继承自FileUpload
+        ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
+//        设置文件上传的最大值，用异常提醒（待填坑）
+        servletFileUpload.setFileSizeMax(MAX_FILE_SIZE);
+//        设置文件请求的最大值，用异常提醒（待填坑）
+        servletFileUpload.setSizeMax(MAX_REQUEST_SIZE);
+//        设置编码
+        servletFileUpload.setHeaderEncoding("utf-8");
+//        获取根目录地址
+        String uploadPath = getServletContext().getRealPath("/");
+//        获取上传目录地址，自动判断分隔符（windows&linux）
+        uploadPath = uploadPath + File.separator + UPLOAD_DIRECTORY;
+//        如果目录不存在，自动创建
+        File uploadDir = new File(uploadPath);
+        if (!uploadDir.exists()) {
+            uploadDir.mkdir();
+        }
+//        储存表单数据
+        Map<String, Object> values = new HashMap<String, Object>();
+//        文件上传时的原名
+        String realFileName = "";
+//        修改后的名称
+        String fileName = "";
+//        检测是否为多媒体上传
+        if (ServletFileUpload.isMultipartContent(req)) {
+//            表单数据列表
+            List<FileItem> fileItems = null;
+            InputStream inputStream = null;
+            OutputStream outputStream = null;
+            try {
+//                将多媒体转换为request
+                fileItems = servletFileUpload.parseRequest(req);
+//                循环所有request
+                for (FileItem fileItem : fileItems) {
+//                    如果该项是表单数据
+                    if (fileItem.isFormField()) {
+//                        获取表单Name
+                        String fieldName = fileItem.getFieldName();
+//                        获取表单Value
+                        String itemValue = fileItem.getString();
+//                        中文乱码处理
+                        itemValue = new String(itemValue.getBytes("iso-8859-1"),"utf-8");
+//                        将数据存入Map
+                        values.put(fieldName,itemValue);
+                    } else {
+                        inputStream = fileItem.getInputStream();
+//                          判断有没有传文件
+                        if (inputStream != null && inputStream.available() > 0) {
+//                            获取上传的文件名称（new File用于去除可能存在的路径）
+                            realFileName = new File(fileItem.getName()).getName();
+//                            获取文件后缀名
+                            String ext = FilenameUtils.getExtension(realFileName);
+//                            随机生成文件名
+                            fileName = DateTools.getFileName(ext);
+//                            获取文件路径
+                            String filePath = uploadPath + File.separator + fileName;
+//                            创建文件
+                            File storeFile = new File(filePath);
+//                            写入文件
+                            outputStream = new FileOutputStream(storeFile);
+                            byte[] bytes = new byte[1024];
+                            int len = 0;
+                            while ((len = inputStream.read(bytes)) > 0) {
+                                outputStream.write(bytes, 0, len);
+                            }
+//                            没执行则是空值，避免空指针
+                            values.put(fileItem.getFieldName(),fileName);
+                        }
+                    }
+                }
+            } catch (FileUploadException e) {
+                e.printStackTrace();
+            } finally {
+                // 关闭输入输出流
+                if (inputStream != null) {
+                    inputStream.close();
+                }
+                if (outputStream != null) {
+                    outputStream.close();
+                }
+            }
+        }
+
 //    获取用户输入
-        String productName = req.getParameter("productName");
-        int productPrice = Integer.parseInt(req.getParameter("productPrice"));
-        int number = Integer.parseInt(req.getParameter("number"));
-        int productTypeId = Integer.parseInt(req.getParameter("productTypeId"));
+        String what = req.getParameter("what");
+        String productName = values.get("productName"+what).toString();
+        int productPrice = Integer.parseInt(values.get("productPrice"+what).toString());
+        int number = Integer.parseInt(values.get("number"+what).toString());
+        int productTypeId = Integer.parseInt(values.get("productTypeId"+what).toString());
+        String picName = values.get("uploadPic"+what).toString();
 //    通过typeId获得Type对象
         ProductType productType = productTypeService.queryTypeByTypeId(productTypeId);
 //    获取当前时间
         Date date = new Date();
-        Product product = new Product(productName,productPrice,number,productType,date);
+        Product product = new Product(productName,productPrice,number,productType,date,picName);
         int result = productService.addProduct(product);
         PrintWriter out = resp.getWriter();
         if (result > 0) {
@@ -331,21 +439,111 @@ public class ProductServlet extends HttpServlet {
      * @throws IOException
      */
     private void updateProduct(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-//    获取用户输入
-        String productName = req.getParameter("productName");
-        int productPrice = Integer.parseInt(req.getParameter("productPrice"));
-        int number = Integer.parseInt(req.getParameter("number"));
-        int productTypeId = Integer.parseInt(req.getParameter("productTypeId"));
-        String productTime = req.getParameter("producttime");
-        int productId = Integer.parseInt(req.getParameter("productId"));
-//    新建产品类别和产品の实现类
 
+//        配置上传参数
+        DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
+//        配置临时目录
+        diskFileItemFactory.setRepository(new File("D:\\test"));
+//        设置内存临界值，超过后生成临时文件
+        diskFileItemFactory.setSizeThreshold(MEMORY_THRESHOLD);
+//        处理form中多文件上传的类，继承自FileUpload
+        ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
+//        设置文件上传的最大值，用异常提醒（待填坑）
+        servletFileUpload.setFileSizeMax(MAX_FILE_SIZE);
+//        设置文件请求的最大值，用异常提醒（待填坑）
+        servletFileUpload.setSizeMax(MAX_REQUEST_SIZE);
+//        设置编码
+        servletFileUpload.setHeaderEncoding("utf-8");
+//        获取根目录地址
+        String uploadPath = getServletContext().getRealPath("/");
+//        获取上传目录地址，自动判断分隔符（windows&linux）
+        uploadPath = uploadPath + File.separator + UPLOAD_DIRECTORY;
+//        如果目录不存在，自动创建
+        File uploadDir = new File(uploadPath);
+        if (!uploadDir.exists()) {
+            uploadDir.mkdir();
+        }
+//        储存表单数据
+        Map<String, Object> values = new HashMap<String, Object>();
+//        文件上传时的原名
+        String realFileName = "";
+//        修改后的名称
+        String fileName = "";
+//        检测是否为多媒体上传
+        if (ServletFileUpload.isMultipartContent(req)) {
+//            表单数据列表
+            List<FileItem> fileItems = null;
+            InputStream inputStream = null;
+            OutputStream outputStream = null;
+            try {
+//                将多媒体转换为request
+                fileItems = servletFileUpload.parseRequest(req);
+//                循环所有request
+                for (FileItem fileItem : fileItems) {
+//                    如果该项是表单数据
+                    if (fileItem.isFormField()) {
+//                        获取表单Name
+                        String fieldName = fileItem.getFieldName();
+//                        获取表单Value
+                        String itemValue = fileItem.getString();
+//                        中文乱码处理
+                        itemValue = new String(itemValue.getBytes("iso-8859-1"),"utf-8");
+//                        将数据存入Map
+                        values.put(fieldName,itemValue);
+                    } else {
+                        inputStream = fileItem.getInputStream();
+//                          判断有没有传文件
+                        if (inputStream != null && inputStream.available() > 0) {
+//                            获取上传的文件名称（new File用于去除可能存在的路径）
+                            realFileName = new File(fileItem.getName()).getName();
+//                            获取文件后缀名
+                            String ext = FilenameUtils.getExtension(realFileName);
+//                            随机生成文件名
+                            fileName = DateTools.getFileName(ext);
+//                            获取文件路径
+                            String filePath = uploadPath + File.separator + fileName;
+//                            创建文件
+                            File storeFile = new File(filePath);
+//                            写入文件
+                            outputStream = new FileOutputStream(storeFile);
+                            byte[] bytes = new byte[1024];
+                            int len = 0;
+                            while ((len = inputStream.read(bytes)) > 0) {
+                                outputStream.write(bytes, 0, len);
+                            }
+//                            如果没加就是空的
+                            values.put(fileItem.getFieldName(),fileName);
+                        }
+                    }
+                }
+            } catch (FileUploadException e) {
+                e.printStackTrace();
+            } finally {
+                // 关闭输入输出流
+                if (inputStream != null) {
+                    inputStream.close();
+                }
+                if (outputStream != null) {
+                    outputStream.close();
+                }
+            }
+        }
+
+//        由于提交了全部表单，需要判断修改哪个
+        String what = req.getParameter("what");
+        int productId = Integer.parseInt(values.get("productId"+what).toString());
+        String productName = values.get("productName"+what).toString();
+        int productPrice = Integer.parseInt(values.get("productPrice"+what).toString());
+        int number = Integer.parseInt(values.get("number"+what).toString());
+        int productTypeId = Integer.parseInt(values.get("productTypeId"+what).toString());
+        String productTime = values.get("productTime"+what).toString();
+        String picName = values.get("uploadPic"+what).toString();
 //    通过typeId获得Type对象
         ProductType productType = productTypeService.queryTypeByTypeId(productTypeId);
 //    获取当前时间
         Date date = DateTools.getDateByStr(productTime,"yyyy-MM-dd HH-mm-ss");
 //    用更新后的信息创建一个产品类
-        Product product = new Product(productId,productName,productPrice,number,productType,date);
+        Product product = new Product(productId,productName,productPrice,number,productType,date,picName);
         int result = productService.updateProduct(product);
         if (result > 0) {
             resp.sendRedirect("/productservlet.do?operate=product");
