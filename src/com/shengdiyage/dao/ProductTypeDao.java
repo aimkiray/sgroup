@@ -35,7 +35,7 @@ public interface ProductTypeDao {
      * @param typeId
      * @return
      */
-    List<Product> queryProductByTypeId(int typeId);
+    List<Product> queryProductsByTypeId(int typeId);
 
     /**
      * 通过typeid查询ProductType类

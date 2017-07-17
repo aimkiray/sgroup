@@ -26,8 +26,8 @@
             <td>${fileDemo.name}</td>
             <td>${fileDemo.date}</td>
             <td>
-                <a href="###">删除</a>
-                <a href="###">下载</a>
+                <a href="/filemanageservlet.do?operate=delFile&fileId=${fileDemo.id}">删除</a>
+                <a href="/filemanageservlet.do?operate=downloadFile&fileName=${fileDemo.name}">下载</a>
             </td>
         </tr>
     </c:forEach>

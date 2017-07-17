@@ -244,6 +244,10 @@ public class FileManageServlet extends HttpServlet {
     }
 
     protected void downloadFile(HttpServletRequest req, HttpServletResponse resp) {
+//        获得要下载的文件名
+        String fileName = req.getParameter("fileName");
+//        获取文件真实路径
+        String realFilePath = getServletContext().getRealPath("/") +File.separator+ UPLOAD_DIRECTORY + File.separator + fileName;
 
     }
 

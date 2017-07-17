@@ -123,6 +123,10 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         String sql = "SELECT COUNT(*) FROM product WHERE 1=1 ";
         List values = new ArrayList();
         if (product != null) {
+            if (product.getProductId() > 0) {
+                sql += "AND pid = ? ";
+                values.add(product.getProductId());
+            }
             if (product.getProductType() != null && product.getProductType().getTypeId() > 0) {
                 sql += "AND ptype = ? ";
                 values.add(product.getProductType().getTypeId());
@@ -218,6 +222,10 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         List values = new ArrayList();
         String sql = "SELECT * FROM product WHERE 1=1 ";
         if (product != null) {
+            if (product.getProductId() > 0) {
+                sql += "AND pid = ? ";
+                values.add(product.getProductId());
+            }
             if (product.getProductType() != null && product.getProductType().getTypeId() != 0) {
                 sql += "AND ptype = ? ";
                 values.add(product.getProductType().getTypeId());

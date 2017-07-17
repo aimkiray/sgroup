@@ -1,5 +1,7 @@
 package com.shengdiyage.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -16,6 +18,7 @@ public class Product implements Serializable {
     private int productPrice;
     private int number;
     private ProductType productType;
+    @JSONField(format = "yyyy-MM-dd")
     private Date productTime;
     private String fileName;
     private int id = 0;
