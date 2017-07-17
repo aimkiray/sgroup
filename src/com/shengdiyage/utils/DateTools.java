@@ -46,8 +46,7 @@ public class DateTools {
         for (int i = 0; i< 4; i++) {
             fileName += (int)(Math.random()*10);
         }
-        fileName += ".";
-        fileName += ext;
+        fileName += "." + ext;
         return fileName;
     }
 }

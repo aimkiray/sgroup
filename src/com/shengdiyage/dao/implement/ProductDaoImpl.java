@@ -195,11 +195,12 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
                 product.setFileName(rs.getString("filename"));
                 products.add(product);
             }
-            super.closeAll();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            super.closeAll();
         }
     return products;
     }

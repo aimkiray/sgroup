@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <welcome-file-list>
-        <welcome-file>/login.jsp</welcome-file>
-    </welcome-file-list>
+    <welcome-fileDemo-list>
+        <welcome-fileDemo>/admin/login.jsp</welcome-fileDemo>
+    </welcome-fileDemo-list>
     <filter>
         <filter-name>AuthFilter</filter-name>
         <filter-class>com.shengdiyage.filter.AuthFilter</filter-class>
@@ -38,6 +38,10 @@
             <param-value>utf-8</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>FileManageServlet</servlet-name>
+        <servlet-class>com.shengdiyage.servlet.FileManageServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProductServlet</servlet-name>
         <url-pattern>/productservlet.do</url-pattern>
@@ -49,5 +53,9 @@
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/loginservlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileManageServlet</servlet-name>
+        <url-pattern>/filemanageservlet.do</url-pattern>
     </servlet-mapping>
 </web-app>

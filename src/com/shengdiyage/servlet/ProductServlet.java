@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Akari on 2017/7/10.
+ * Created by nekuata on 2017/7/10.
  */
 public class ProductServlet extends HttpServlet {
     // 当前类的版本，修改此类的同时也要修改版本号。
@@ -290,9 +290,9 @@ public class ProductServlet extends HttpServlet {
         diskFileItemFactory.setSizeThreshold(MEMORY_THRESHOLD);
 //        处理form中多文件上传的类，继承自FileUpload
         ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
-//        设置文件上传的最大值，用异常提醒（待填坑）
+//        设置文件上传的最大值，异常提醒（待填坑）
         servletFileUpload.setFileSizeMax(MAX_FILE_SIZE);
-//        设置文件请求的最大值，用异常提醒（待填坑）
+//        设置文件请求的最大值，异常提醒（待填坑）
         servletFileUpload.setSizeMax(MAX_REQUEST_SIZE);
 //        设置编码
         servletFileUpload.setHeaderEncoding("utf-8");
@@ -372,12 +372,11 @@ public class ProductServlet extends HttpServlet {
         }
 
 //    获取用户输入
-        String what = req.getParameter("what");
-        String productName = values.get("productName"+what).toString();
-        int productPrice = Integer.parseInt(values.get("productPrice"+what).toString());
-        int number = Integer.parseInt(values.get("number"+what).toString());
-        int productTypeId = Integer.parseInt(values.get("productTypeId"+what).toString());
-        String picName = values.get("uploadPic"+what).toString();
+        String productName = values.get("productName").toString();
+        int productPrice = Integer.parseInt(values.get("productPrice").toString());
+        int number = Integer.parseInt(values.get("number").toString());
+        int productTypeId = Integer.parseInt(values.get("productTypeId").toString());
+        String picName = values.get("uploadPic").toString();
 //    通过typeId获得Type对象
         ProductType productType = productTypeService.queryTypeByTypeId(productTypeId);
 //    获取当前时间
