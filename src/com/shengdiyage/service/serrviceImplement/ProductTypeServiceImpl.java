@@ -37,8 +37,11 @@ public class ProductTypeServiceImpl implements ProductTypeService {
     @Override
     public int deleteProductTypeByTypeId(int typeId) {
         int result = 0;
-        productTypeDao.queryProductByTypeId(typeId);
-        return productTypeDao.deleteProductTypeByTypeId(typeId);
+//        如果该类别下没有产品
+        if(productTypeDao.queryProductsByTypeId(typeId) == null) {
+            result = productTypeDao.deleteProductTypeByTypeId(typeId);
+        }
+        return result;
     }
 
     @Override
@@ -64,13 +67,23 @@ public class ProductTypeServiceImpl implements ProductTypeService {
     }
 
     @Override
-    public List<Product> queryProductByTypeId(int typeId) {
-        return productTypeDao.queryProductByTypeId(typeId);
+    public List<Product> queryProductsByTypeId(int typeId) {
+        return productTypeDao.queryProductsByTypeId(typeId);
     }
 
     @Override
     public List<ProductType> queryAllProductType() {
         return productTypeDao.queryAllProductType();
+    }
+
+    @Override
+    public boolean queryTypeByTypeName(String typeName) {
+        boolean result = false;
+        ProductType productType = productTypeDao.queryProductTypeByTypeName(typeName);
+        if (productType == null) {
+            result = true;
+        }
+        return result;
     }
 
 //    @Override

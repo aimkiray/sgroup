@@ -33,7 +33,7 @@ public class AuthFilter implements Filter{
             return;
         } else {
             // 未登录
-            response.sendRedirect("/login.jsp");
+            response.sendRedirect("/admin/login.jsp");
         }
     }
 

@@ -20,6 +20,24 @@
 <a class="product-navigate" href="/admin/right.jsp">首页</a><span class="product-navigate"> > 产品中心</span>
 <table class="all-product-list" id="all-product-list">
 
+    <%--精确搜素--%>
+    <form action="/productservlet.do?operate=product" method="post">
+    <tr>
+        <td class="accurate-search" colspan="8">
+            <select id="type-id" name="typeId" onchange="accurateSearch()">
+                <option value="0">请选择类别</option>
+                <c:forEach items="${requestScope.producttypes}" var="productTypes">
+                    <option value="${productTypes.typeId}" <c:if test="${productTypes.typeId == requestScope.product.productType.typeId}">selected</c:if>>${productTypes.typeName}</option>
+                </c:forEach>
+            </select>
+            <select name="productId" id="show-product-list">
+                <option value="0">请选择产品</option>
+            </select>
+            <input type="submit" value="精确搜索">
+        </td>
+    </tr>
+    </form>
+
     <%--产品搜索功能--%>
     <form action="/productservlet.do?operate=product" method="post">
         <tr class="product-table-bottom">
@@ -31,7 +49,7 @@
                     </c:forEach>
                 </select>
                 <input name="productName" type="text" value="${requestScope.product.productName}" onclick="return this.value = ''">
-                <input type="submit" value="搜索">
+                <input type="submit" value="模糊搜索">
             </td>
         </tr>
     </form>
@@ -50,94 +68,76 @@
         <td>操作</td>
     </tr>
     <form id="products" name="products" action="" method="post" enctype="">
-    <%--<%--%>
-        <%--List<Product> products = (List<Product>) request.getAttribute("products");--%>
-        <%--List<ProductType> productTypes = (List<ProductType>) request.getAttribute("producttypes");--%>
-        <%--for (int i = 0; i < products.size(); i++) {--%>
-            <%--// 用于在列表中显示的时间--%>
-            <%--String dateStr = DateTools.getStrByDate(products.get(i).getProductTime(), "yyyy-MM-dd");--%>
-            <%--// 产品修改输入框默认显示的时间--%>
-            <%--String dateStrAll = DateTools.getStrByDate(products.get(i).getProductTime(), "yyyy-MM-dd HH-mm-ss");--%>
-    <%--%>--%>
+        <%--循环生成产品列表--%>
         <c:forEach items="${requestScope.products}" var="product" varStatus="productst">
-
-    <%--循环生成产品列表--%>
-    <tr class="table-body" id="table-body${productst.count}">
-        <td>
-            <input type="checkbox" name="check_product" value="${product.productId}" onclick="checkOne()">
-        </td>
-        <td>
-            <fmt:formatDate value="${product.productTime}" pattern="yyyy-MM-dd" />
-            <%--<%=dateStr %>--%>
-        </td>
-        <td>
-            ${product.productName}
-            <%--<%=products.get(i).getProductName() %>--%>
-        </td>
-        <td>
-            ${product.productPrice}
-            <%--<%=products.get(i).getProductPrice() %>--%>
-        </td>
-        <td>
-            ${product.number}
-            <%--<%=products.get(i).getNumber() %>--%>
-        </td>
-        <td>
-            ${product.productType.typeName}
-            <%--<%=products.get(i).getProductType().getTypeName() %>--%>
-        </td>
-        <td>
-            <img class="product-picture" src="${pageContext.request.contextPath}/uploads/${product.fileName}" alt="暂无图片">
-        </td>
-        <td class="bottom-buttons">
-            <a href="###" onclick="updateProduct(${productst.count})">修改</a>
-            &nbsp;&nbsp;
-            <a href="/productservlet.do?operate=delproduct&productId=${product.productId}" onclick="return confirm('确认删除？')">删除</a>
-        </td>
-    </tr>
+            <tr class="table-body" id="table-body${productst.count}">
+                <td>
+                    <input type="checkbox" name="check_product" value="${product.productId}" onclick="checkOne()">
+                </td>
+                <td>
+                    <fmt:formatDate value="${product.productTime}" pattern="yyyy-MM-dd" />
+                </td>
+                <td>
+                    ${product.productName}
+                </td>
+                <td>
+                    ${product.productPrice}
+                </td>
+                <td>
+                    ${product.number}
+                </td>
+                <td>
+                    ${product.productType.typeName}
+                </td>
+                <td>
+                    <img class="product-picture" src="${pageContext.request.contextPath}/uploads/${product.fileName}" alt="暂无图片">
+                </td>
+                <td class="bottom-buttons">
+                    <a href="###" onclick="updateProduct(${productst.count})">修改</a>
+                    &nbsp;&nbsp;
+                    <a href="/productservlet.do?operate=delproduct&productId=${product.productId}" onclick="return confirm('确认删除？')">删除</a>
+                </td>
+            </tr>
 
     <%--修改产品的列表（默认隐藏）--%>
     <tr class="hide-update-table" id="update-product-table${productst.count}">
-        <%--<form action="/productservlet.do?operate=updateproduct" method="post">--%>
             <td>
                 <%--隐藏域保存productId，一起提交--%>
                 <input type="hidden" name="productId${productst.count}" value="${product.productId}">
                 <input type="checkbox" name="check_product${productst.count}" value="${product.productId}" onclick="checkOne()">
             </td>
-            <td><input class="add-product" type="text" name="productTime${productst.count}" value="<fmt:formatDate value="${product.productTime}" pattern="yyyy-MM-dd HH-mm-ss" />"></td>
-            <td><input class="add-product" type="text" name="productName${productst.count}"
-                       value="${product.productName}"></td>
-            <td><input class="add-product" type="text" name="productPrice${productst.count}"
-                       value="${product.productPrice}"></td>
-            <td><input class="add-product" type="text" name="number${productst.count}" value="${product.number}"></td>
-            <td><select class="add-product" name="productTypeId${productst.count}">
-                <option value="">请选择类别</option>
-                <%--<%--%>
-                    <%--for (int j = 0; j < productTypes.size(); j++) {--%>
-                        <%--// 默认选中该类别--%>
-                        <%--if (products.get(i).getProductType().getTypeId() == productTypes.get(j).getTypeId()) {--%>
-                <%--%>--%>
-                <c:forEach items="${requestScope.producttypes}" var="productType" varStatus="typest" >
-                    <%--<c:if test="${products.productType.typeId == productTypes.typeId}">--%>
-                    <%--<option selected="selected" value="${productTypes.typeId}">${productTypes.typeName}</option>--%>
-                    <%--</c:if>--%>
-                    <%--<c:if test="${products.productType.typeId != productTypes.typeId}">--%>
-                    <%--<option value="${productTypes.typeId}">${productTypes.typeName}</option>--%>
-                    <%--</c:if>--%>
-                    <option <c:if test="${product.productType.typeId == productType.typeId}">selected="selected"</c:if> value="${productType.typeId}">${productType.typeName}</option>
-                </c:forEach>
-            </select></td>
+            <td>
+                <input class="add-product" type="text" name="productTime${productst.count}" value="<fmt:formatDate value="${product.productTime}" pattern="yyyy-MM-dd HH-mm-ss" />">
+            </td>
+            <td>
+                <input class="add-product" type="text" name="productName${productst.count}"
+                       value="${product.productName}">
+            </td>
+            <td>
+                <input class="add-product" type="text" name="productPrice${productst.count}"
+                       value="${product.productPrice}">
+            </td>
+            <td>
+                <input class="add-product" type="text" name="number${productst.count}" value="${product.number}">
+            </td>
+            <td>
+                    <select class="add-product" name="productTypeId${productst.count}">
+                    <option value="">请选择类别</option>
+                    <c:forEach items="${requestScope.producttypes}" var="productType" varStatus="typest" >
+                        <%--默认选中该类别--%>
+                        <option <c:if test="${product.productType.typeId == productType.typeId}">selected="selected"</c:if> value="${productType.typeId}">${productType.typeName}</option>
+                    </c:forEach>
+                    </select>
+            </td>
             <%--图片上传--%>
             <td>
                 <input name="uploadPic${productst.count}" type="file">
             </td>
-            <td><input type="submit" value="确认修改" onclick="updateProductAction(${productst.count})"></td>
-        <%--</form>--%>
+            <td>
+                <input type="submit" value="确认修改" onclick="updateProductAction(${productst.count})">
+            </td>
     </tr>
     </c:forEach>
-    <%--<%--%>
-        <%--}--%>
-    <%--%>--%>
     </form>
 
     <%--添加产品的列表（默认隐藏）--%>
@@ -203,7 +203,6 @@
                 <span>每页显示条目：</span>
                 <input name="pageSize" type="text" value="${requestScope.pageSize}">
                 <input type="submit" value="确认">
-                <%--<span>当前是第 ${requestScope.curPage} 页</span>--%>
             </td>
         </tr>
     </form>
@@ -248,7 +247,11 @@
     <%--添加产品类别（默认隐藏）--%>
     <form action="/productservlet.do?operate=addtype" method="post">
         <tr class="hide-update-table" id="add-type-table">
-            <td><input type="text" name="productTypeName"><input type="submit" value="确认"></td>
+            <td>
+                <input type="text" id="add-type" name="typeName" onblur="addTypeNotice()">
+                <span class="add-type-notice" id="add-type-notice"></span>
+                <input type="submit" value="确认">
+            </td>
         </tr>
         <tr class="type-list-body">
             <td><input type="button" value="添加" onclick="addProductType()"></td>

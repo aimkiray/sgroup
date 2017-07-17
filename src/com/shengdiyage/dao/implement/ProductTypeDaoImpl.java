@@ -44,7 +44,7 @@ public class ProductTypeDaoImpl extends BaseDao implements ProductTypeDao {
     }
 
     @Override
-    public List<Product> queryProductByTypeId(int typeId) {
+    public List<Product> queryProductsByTypeId(int typeId) {
         List<Product> products = new ArrayList<Product>();
         String sql = "SELECT * FROM producttype INNER JOIN product ON producttype.typeid = product.ptype WHERE ptype = ?";
         Object[] objects = {typeId};

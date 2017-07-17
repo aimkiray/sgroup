@@ -87,3 +87,13 @@ a:active {text-decoration:none ; color: deeppink;}
     width: 80px;
     height: 80px;
 }
+
+/*产品类别提醒*/
+.add-type-notice {
+    width: 100px;
+}
+
+/*按类别查找产品*/
+/*.accurate-search select {*/
+    /*display: inline-block;*/
+/*}*/

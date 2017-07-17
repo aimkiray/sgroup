@@ -49,13 +49,20 @@ public interface ProductTypeService {
      * @param typeId
      * @return
      */
-    List<Product> queryProductByTypeId(int typeId);
+    List<Product> queryProductsByTypeId(int typeId);
 
     /**
      * 显示所有类别
      * @return
      */
     List<ProductType> queryAllProductType();
+
+    /**
+     * 查询该类别名是否存在
+     * @param typeName 要查询的产品名
+     * @return 未存在返回true，已存在返回false
+     */
+    boolean queryTypeByTypeName(String typeName);
 
 //    /**
 //     * 通过名字查询类别

@@ -23,7 +23,7 @@
             <td><a href="/productservlet.do?operate=product" target="right">产品中心</a></td>
         </tr>
         <tr>
-            <td><a href="/productservlet.do?operate=fileManage" target="right">py交易</a></td>
+            <td><a href="/filemanageservlet.do?operate=fileList" target="right">py交易</a></td>
         </tr>
         <tr>
             <td><a href="###">集中销毁</a></td>

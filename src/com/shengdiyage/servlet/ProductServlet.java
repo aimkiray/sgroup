@@ -1,5 +1,6 @@
 package com.shengdiyage.servlet;
 
+import com.alibaba.fastjson.JSON;
 import com.shengdiyage.entity.Product;
 import com.shengdiyage.entity.ProductType;
 import com.shengdiyage.service.ProductService;
@@ -19,13 +20,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
- * Created by Akari on 2017/7/10.
+ * Created by nekuata on 2017/7/10.
  */
 public class ProductServlet extends HttpServlet {
     // 当前类的版本，修改此类的同时也要修改版本号。
@@ -110,9 +108,12 @@ public class ProductServlet extends HttpServlet {
             case "muldel":
                 mulDel(req, resp);
                 break;
-//            case "search":
-//                searchProduct(req, resp);
-//                break;
+            case "checkTypeName":
+                checkTypeName(req, resp);
+                break;
+            case "productsByType":
+                getProductsByType(req, resp);
+                break;
             default:
 //                安心吧，一般不会触发的（学下过滤器先）。
                 break;
@@ -132,6 +133,34 @@ public class ProductServlet extends HttpServlet {
     }
 
     /**
+     * Ajax异步验证产品名是否存在
+     * @param req
+     * @param resp
+     */
+    protected void checkTypeName(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String typeName = req.getParameter("typeName");
+        if (productTypeService.queryTypeByTypeName(typeName)) {
+            resp.getWriter().print(true);
+        } else {
+            resp.getWriter().print(false);
+        }
+    }
+
+    /**
+     * Ajax根据类别Id查找产品
+     * @param req
+     * @param resp
+     * @throws IOException
+     */
+    protected void getProductsByType(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        int typeId = Integer.parseInt(req.getParameter("typeId"));
+        ProductTypeService productTypeService = new ProductTypeServiceImpl();
+        List<Product> products = productTypeService.queryProductsByTypeId(typeId);
+        String strProducts = JSON.toJSONString(products);
+        resp.getWriter().print(strProducts);
+    }
+
+    /**
      * 分页查询产品&查询所有产品类别&产品模糊搜素
      * @param req 客户端发送的数据封装类
      * @param resp 服务器发送的数据封装类（大概）
@@ -146,6 +175,9 @@ public class ProductServlet extends HttpServlet {
 //        当前页
         String pageIndex = req.getParameter("curPage");
         int curPage = pageIndex == null ? 1 : Integer.parseInt(pageIndex);
+//        产品Id，默认为0
+        String realProductId = req.getParameter("productId");
+        int productId = realProductId == null ? 0 : Integer.parseInt(realProductId);
 //        产品名称，默认为"请输入产品名称"
         String realProductName = req.getParameter("productName");
         String productName = realProductName == null ? "请输入产品名称" : realProductName;
@@ -154,6 +186,7 @@ public class ProductServlet extends HttpServlet {
         int typeId = realTypeId == null ? 0 : Integer.parseInt(realTypeId);
 
         Product product = new Product();
+        product.setProductId(productId);
         product.setProductName(productName);
         ProductType productType = new ProductType();
         productType.setTypeId(typeId);
@@ -290,9 +323,9 @@ public class ProductServlet extends HttpServlet {
         diskFileItemFactory.setSizeThreshold(MEMORY_THRESHOLD);
 //        处理form中多文件上传的类，继承自FileUpload
         ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
-//        设置文件上传的最大值，用异常提醒（待填坑）
+//        设置文件上传的最大值，异常提醒（待填坑）
         servletFileUpload.setFileSizeMax(MAX_FILE_SIZE);
-//        设置文件请求的最大值，用异常提醒（待填坑）
+//        设置文件请求的最大值，异常提醒（待填坑）
         servletFileUpload.setSizeMax(MAX_REQUEST_SIZE);
 //        设置编码
         servletFileUpload.setHeaderEncoding("utf-8");
@@ -372,12 +405,11 @@ public class ProductServlet extends HttpServlet {
         }
 
 //    获取用户输入
-        String what = req.getParameter("what");
-        String productName = values.get("productName"+what).toString();
-        int productPrice = Integer.parseInt(values.get("productPrice"+what).toString());
-        int number = Integer.parseInt(values.get("number"+what).toString());
-        int productTypeId = Integer.parseInt(values.get("productTypeId"+what).toString());
-        String picName = values.get("uploadPic"+what).toString();
+        String productName = values.get("productName").toString();
+        int productPrice = Integer.parseInt(values.get("productPrice").toString());
+        int number = Integer.parseInt(values.get("number").toString());
+        int productTypeId = Integer.parseInt(values.get("productTypeId").toString());
+        String picName = values.get("uploadPic").toString();
 //    通过typeId获得Type对象
         ProductType productType = productTypeService.queryTypeByTypeId(productTypeId);
 //    获取当前时间
