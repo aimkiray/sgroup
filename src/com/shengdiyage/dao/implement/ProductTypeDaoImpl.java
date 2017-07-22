@@ -19,7 +19,7 @@ public class ProductTypeDaoImpl extends BaseDao implements ProductTypeDao {
     @Override
     public int addProductTypeByType(ProductType productType) {
         int result = 0;
-        String sql = "INSERT INTO producttype(typename) VALUES (?)";
+        String sql = "INSERT INTO product_type(typename) VALUES (?)";
         Object[] objects = {productType.getTypeName()};
         result = super.executeUpdate(sql, objects);
         return result;
@@ -28,7 +28,7 @@ public class ProductTypeDaoImpl extends BaseDao implements ProductTypeDao {
     @Override
     public int deleteProductTypeByTypeId(int typeId) {
         int result = 0;
-        String sql = "DELETE FROM producttype WHERE typeid = ?";
+        String sql = "DELETE FROM product_type WHERE typeid = ?";
         Object[] objects = {typeId};
         result = super.executeUpdate(sql, objects);
         return result;
@@ -37,7 +37,7 @@ public class ProductTypeDaoImpl extends BaseDao implements ProductTypeDao {
     @Override
     public int updateProductTypeByTypeId(ProductType productType) {
         int result = 0;
-        String sql = "UPDATE producttype set typename = ? WHERE typeid = ?";
+        String sql = "UPDATE product_type set typename = ? WHERE typeid = ?";
         Object[] objects = {productType.getTypeName(), productType.getTypeId()};
         result = super.executeUpdate(sql, objects);
         return result;
@@ -46,7 +46,7 @@ public class ProductTypeDaoImpl extends BaseDao implements ProductTypeDao {
     @Override
     public List<Product> queryProductsByTypeId(int typeId) {
         List<Product> products = new ArrayList<Product>();
-        String sql = "SELECT * FROM producttype INNER JOIN product ON producttype.typeid = product.ptype WHERE ptype = ?";
+        String sql = "SELECT * FROM product_type INNER JOIN product ON product_type.typeid = product.ptype WHERE ptype = ?";
         Object[] objects = {typeId};
         ResultSet rs = super.executeQuery(sql, objects);
         try {
@@ -73,7 +73,7 @@ public class ProductTypeDaoImpl extends BaseDao implements ProductTypeDao {
     @Override
     public ProductType queryProductTypeByTypeId(int typeId) {
         ProductType productType = new ProductType();
-        String sql = "SELECT * FROM producttype WHERE typeid = ?";
+        String sql = "SELECT * FROM product_type WHERE typeid = ?";
         Object[] objects = {typeId};
         ResultSet rs = super.executeQuery(sql, objects);
         try {
@@ -94,7 +94,7 @@ public class ProductTypeDaoImpl extends BaseDao implements ProductTypeDao {
     @Override
     public List<ProductType> queryAllProductType() {
         List<ProductType> productTypes = new ArrayList<>();
-        String sql = "SELECT * FROM producttype";
+        String sql = "SELECT * FROM product_type";
         Object[] objects = {};
         ResultSet rs = super.executeQuery(sql, objects);
         try {
@@ -112,7 +112,7 @@ public class ProductTypeDaoImpl extends BaseDao implements ProductTypeDao {
 
 //    @Override
 //    public boolean queryProductTypeByTypeName(String typename) {
-//        String sql = "SELECT typename FROM producttype WHERE typename = ?";
+//        String sql = "SELECT typename FROM product_type WHERE typename = ?";
 //        Object[] objects = {typename};
 //        try {
 //            if("".equals(super.executeQuery(sql,objects).getString("typename"))) {
@@ -127,7 +127,7 @@ public class ProductTypeDaoImpl extends BaseDao implements ProductTypeDao {
     @Override
     public ProductType queryProductTypeByTypeName(String typeName) {
         ProductType productType = null;
-        String sql = "SELECT * FROM producttype WHERE typename = ?";
+        String sql = "SELECT * FROM product_type WHERE typename = ?";
         Object[] objects = {typeName};
         ResultSet rs = super.executeQuery(sql, objects);
         try {

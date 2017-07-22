@@ -7,6 +7,8 @@ import com.shengdiyage.service.ProductService;
 import com.shengdiyage.service.ProductTypeService;
 import com.shengdiyage.service.serrviceImplement.ProductServiceImpl;
 import com.shengdiyage.service.serrviceImplement.ProductTypeServiceImpl;
+import com.shengdiyage.utils.BootstrapTable;
+import com.shengdiyage.utils.DataTables;
 import com.shengdiyage.utils.DateTools;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
@@ -111,8 +113,26 @@ public class ProductServlet extends HttpServlet {
             case "checkTypeName":
                 checkTypeName(req, resp);
                 break;
+            case "checkProductName":
+                checkProductName(req, resp);
+                break;
             case "productsByType":
                 getProductsByType(req, resp);
+                break;
+            case "queryProductToDataTables":
+                queryProductToDataTables(req, resp);
+                break;
+            case "queryProductToBootstrap":
+                queryProductToBootstrap(req, resp);
+                break;
+            case "queryProductType":
+                queryProductType(req, resp);
+                break;
+            case "getaddproductjsp":
+                getAddProductJsp(req, resp);
+                break;
+            case "getUpdateProductJsp":
+                getUpdateProductJsp(req, resp);
                 break;
             default:
 //                安心吧，一般不会触发的（学下过滤器先）。
@@ -132,8 +152,45 @@ public class ProductServlet extends HttpServlet {
         doGet(req, resp);
     }
 
+    protected void queryProductType(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        List<ProductType> productTypes = productTypeService.queryAllProductType();
+        String strTypes = JSON.toJSONString(productTypes);
+        resp.getWriter().print(strTypes);
+    }
+
+    protected void getAddProductJsp(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List<ProductType> productTypes = productTypeService.queryAllProductType();
+//        String strTypes = JSON.toJSONString(productTypes);
+        req.setAttribute("productTypes",productTypes);
+        req.getRequestDispatcher("/bootstrap/addproduct.jsp").forward(req, resp);
+    }
+
+    protected void getUpdateProductJsp(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        int productId = Integer.parseInt(req.getParameter("productId"));
+        Product product = productService.queryProduct(productId);
+        List<ProductType> productTypes = productTypeService.queryAllProductType();
+//        String strTypes = JSON.toJSONString(productTypes);
+        req.setAttribute("productTypes",productTypes);
+        req.setAttribute("product",product);
+        req.getRequestDispatcher("/bootstrap/updateproduct.jsp").forward(req, resp);
+    }
+
     /**
-     * Ajax异步验证产品名是否存在
+     * (Ajax)异步验证产品名是否存在
+     * @param req
+     * @param resp
+     */
+    protected void checkProductName(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String productName = req.getParameter("productName");
+        if (productService.queryProductByName(productName)) {
+            resp.getWriter().print(true);
+        } else {
+            resp.getWriter().print(false);
+        }
+    }
+
+    /**
+     * (Ajax)异步验证类别名是否存在
      * @param req
      * @param resp
      */
@@ -147,7 +204,7 @@ public class ProductServlet extends HttpServlet {
     }
 
     /**
-     * Ajax根据类别Id查找产品
+     * (Ajax)根据类别Id查找产品
      * @param req
      * @param resp
      * @throws IOException
@@ -178,9 +235,9 @@ public class ProductServlet extends HttpServlet {
 //        产品Id，默认为0
         String realProductId = req.getParameter("productId");
         int productId = realProductId == null ? 0 : Integer.parseInt(realProductId);
-//        产品名称，默认为"请输入产品名称"
+//        产品名称，默认为""
         String realProductName = req.getParameter("productName");
-        String productName = realProductName == null ? "请输入产品名称" : realProductName;
+        String productName = realProductName == null ? "" : realProductName;
 //        产品类别Id，默认为"0"
         String realTypeId = req.getParameter("typeId");
         int typeId = realTypeId == null ? 0 : Integer.parseInt(realTypeId);
@@ -218,6 +275,96 @@ public class ProductServlet extends HttpServlet {
         req.setAttribute("pages",pages);
         req.setAttribute("product",product);
         req.getRequestDispatcher("/product/product.jsp").forward(req, resp);
+    }
+
+    /**
+     * (bootstrap-table)分页查询产品&查询所有产品类别&产品模糊搜素
+     * @param req 客户端发送的数据封装类
+     * @param resp 服务器发送的数据封装类（大概）
+     * @throws ServletException
+     * @throws IOException
+     */
+    protected void queryProductToBootstrap(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+
+//        每页默认显示5条数据
+        String size = req.getParameter("pageSize");
+        int pageSize = size == null ? 10 : Integer.parseInt(size);
+//        当前页
+        String pageIndex = req.getParameter("pageNumber");
+        int pageNumber = pageIndex == null ? 1 : Integer.parseInt(pageIndex);
+//        产品Id，默认为0
+        String realProductId = req.getParameter("productId");
+        int productId = realProductId == null ? 0 : Integer.parseInt(realProductId);
+//        产品名称，默认为""
+        String realProductName = req.getParameter("productName");
+        String productName = realProductName == null ? "" : realProductName;
+//        产品类别Id，默认为"0"
+        String realTypeId = req.getParameter("typeId");
+        int typeId = realTypeId == null ? 0 : Integer.parseInt(realTypeId);
+
+        Product product = new Product();
+        product.setProductId(productId);
+        product.setProductName(productName);
+        ProductType productType = new ProductType();
+        productType.setTypeId(typeId);
+        product.setProductType(productType);
+//
+////        查询产品总数
+        int productNum = productService.queryProductNum(product);
+//        计算总页数
+        int pages;
+        if (productNum%pageSize != 0) {
+            pages = (productNum/pageSize) + 1;
+        } else {
+            pages = (productNum/pageSize);
+        }
+//        避免超出数据范围
+        if (pageNumber > pages) {
+            pageNumber = pages;
+        }
+        if (pageNumber < 1) {
+            pageNumber = 1;
+        }
+//        查询符合条件的产品和产品类别
+//        List<ProductType> productTypes = productTypeService.queryAllProductType();
+        List<Product> products = productService.queryProduct(product, pageNumber, pageSize);
+
+        BootstrapTable bootstrapTable = new BootstrapTable();
+        bootstrapTable.setTotal(productNum);
+        bootstrapTable.setRows(products);
+        String jsonProducts = JSON.toJSONString(bootstrapTable);
+        resp.getWriter().print(jsonProducts);
+    }
+
+    /**
+     * (dataTables)分页查询产品&查询所有产品类别&产品模糊搜素
+     * @param req 客户端发送的数据封装类
+     * @param resp 服务器发送的数据封装类（大概）
+     * @throws ServletException
+     * @throws IOException
+     */
+    protected void queryProductToDataTables(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+//        每页默认显示5条数据
+        String length = req.getParameter("length");
+        int curLength = length == null ? 10 : Integer.parseInt(length);
+//        当前页
+        String start = req.getParameter("start");
+        int curStart = start == null ? 0 : Integer.parseInt(start);
+
+        DataTables dataTables = new DataTables();
+
+//        查询全部的产品数
+        int productNum = productService.queryProductNum();
+        dataTables.setRecordsFiltered(productNum);
+        dataTables.setRecordsTotal(productNum);
+
+        List<Product> products = productService.queryProductToTable(null, curStart, curLength);
+        dataTables.setData(products);
+
+        String jsonProducts = JSON.toJSONString(dataTables);
+        resp.getWriter().print(jsonProducts);
     }
 
 //    protected void searchProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -367,7 +514,7 @@ public class ProductServlet extends HttpServlet {
                         values.put(fieldName,itemValue);
                     } else {
                         inputStream = fileItem.getInputStream();
-//                          判断有没有传文件
+//                          判断是否传文件
                         if (inputStream != null && inputStream.available() > 0) {
 //                            获取上传的文件名称（new File用于去除可能存在的路径）
                             realFileName = new File(fileItem.getName()).getName();
@@ -412,17 +559,31 @@ public class ProductServlet extends HttpServlet {
         String picName = values.get("uploadPic").toString();
 //    通过typeId获得Type对象
         ProductType productType = productTypeService.queryTypeByTypeId(productTypeId);
+        String inputDate = values.get("productTime").toString();
 //    获取当前时间
-        Date date = new Date();
+        Date date = inputDate == null ? new Date() : DateTools.getDateByStr(inputDate,"yyyy-MM-dd HH:mm:ss");
         Product product = new Product(productName,productPrice,number,productType,date,picName);
         int result = productService.addProduct(product);
         PrintWriter out = resp.getWriter();
+        String flag = req.getParameter("flag");
         if (result > 0) {
-            resp.sendRedirect("/productservlet.do?operate=product");
+            if (flag != null && "ajax".equals(flag)) {
+                out.print("true");
+            } else {
+                resp.sendRedirect("/productservlet.do?operate=product");
+            }
         } else if (result == 0) {
-            out.print("<script>alert('添加失败！请检查是否重名。');history.back();</script>");
+            if (flag != null && "ajax".equals(flag)) {
+                out.print("false");
+            } else {
+                out.print("<script>alert('添加失败！请检查是否重名。');history.back();</script>");
+            }
         } else {
-            out.print("<script>alert('添加失败！');history.back();</script>");
+            if (flag != null && "ajax".equals(flag)) {
+                out.print("false");
+            } else {
+                out.print("<script>alert('添加失败！');history.back();</script>");
+            }
         }
     }
 
@@ -561,8 +722,10 @@ public class ProductServlet extends HttpServlet {
             }
         }
 
-//        由于提交了全部表单，需要判断修改哪个
-        String what = req.getParameter("what");
+//        由于提交了全部产品表单，需要判断修改哪个产品（需要学下jQuery，动态生成form）
+        String toWhat = req.getParameter("what");
+        String what = toWhat == null ? "" : toWhat;
+
         int productId = Integer.parseInt(values.get("productId"+what).toString());
         String productName = values.get("productName"+what).toString();
         int productPrice = Integer.parseInt(values.get("productPrice"+what).toString());
@@ -577,11 +740,20 @@ public class ProductServlet extends HttpServlet {
 //    用更新后的信息创建一个产品类
         Product product = new Product(productId,productName,productPrice,number,productType,date,picName);
         int result = productService.updateProduct(product);
+        PrintWriter out = resp.getWriter();
+        String flag = req.getParameter("flag");
         if (result > 0) {
-            resp.sendRedirect("/productservlet.do?operate=product");
+            if (flag != null && "ajax".equals(flag)) {
+                out.print("true");
+            } else {
+                resp.sendRedirect("/productservlet.do?operate=product");
+            }
         } else {
-            PrintWriter out = resp.getWriter();
-            out.print("<script>alert('修改失败！');history.back();</script>");
+            if (flag != null && "ajax".equals(flag)) {
+                out.print("false");
+            } else {
+                out.print("<script>alert('修改失败！');history.back();</script>");
+            }
         }
     }
 

@@ -44,29 +44,10 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
 
     @Override
     public Product queryProduct(int pid) {
-        Product product = null;
         String sql = "SELECT * FROM product WHERE pid = ?";
         Object[] objects = {pid};
         ResultSet rs = super.executeQuery(sql,objects);
-        try {
-            if(rs.next()) {
-                product = new Product();
-                product.setProductId(rs.getInt("pid"));
-                product.setProductName(rs.getString("pname"));
-                product.setProductPrice(rs.getInt("pprice"));
-                product.setNumber(rs.getInt("pnumber"));
-                product.setProductTime(rs.getTime("producttime"));
-                product.setId(rs.getInt("id"));
-                ProductTypeService productTypeService = new ProductTypeServiceImpl();
-                ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
-                product.setProductType(productType);
-                product.setFileName(rs.getString("filename"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        super.closeAll();
-        return product;
+        return super.getOneProduct(rs);
     }
 
     /**
@@ -131,7 +112,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
                 sql += "AND ptype = ? ";
                 values.add(product.getProductType().getTypeId());
             }
-            if (product.getProductName() != null && !"请输入产品名称".equals(product.getProductName())) {
+            if (product.getProductName() != null && !"".equals(product.getProductName())) {
                 sql += "AND pname like ? ";
                 values.add("%"+product.getProductName()+"%");
             }
@@ -148,65 +129,18 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
     }
 
     public List<Product> queryProduct() {
-        List<Product> products = new ArrayList<Product>();
 //        以id增序查询全部产品
         String sql = "SELECT * FROM product ORDER BY pid ASC";
         Object[] objects = {};
         ResultSet rs = super.executeQuery(sql, objects);
-        try {
-            while (rs.next()) {
-                Product product = new Product();
-                product.setProductId(rs.getInt("pid"));
-                product.setProductName(rs.getString("pname"));
-                product.setProductPrice(rs.getInt("pprice"));
-                product.setNumber(rs.getInt("pnumber"));
-                product.setProductTime(rs.getTime("producttime"));
-                product.setId(rs.getInt("id"));
-                ProductTypeService productTypeService = new ProductTypeServiceImpl();
-                ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
-                product.setProductType(productType);
-                product.setFileName(rs.getString("filename"));
-//                循环添加产品到List
-                products.add(product);
-            }
-//            关闭所有数据库连接
-            super.closeAll();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return products;
+        return super.getProducts(rs);
     }
 
     public List<Product> queryProduct(int start, int conut) {
-        List<Product> products = new ArrayList<Product>();
         String sql = "SELECT * FROM product ORDER BY pid ASC LIMIT ?,?";
         Object[] objects = {start,conut};
         ResultSet rs = super.executeQuery(sql, objects);
-        try {
-            while (rs.next()) {
-                Product product = new Product();
-                product.setProductId(rs.getInt("pid"));
-                product.setProductName(rs.getString("pname"));
-                product.setProductPrice(rs.getInt("pprice"));
-                product.setNumber(rs.getInt("pnumber"));
-                product.setProductTime(rs.getTime("producttime"));
-                product.setId(rs.getInt("id"));
-                ProductTypeService productTypeService = new ProductTypeServiceImpl();
-                ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
-                product.setProductType(productType);
-                product.setFileName(rs.getString("filename"));
-                products.add(product);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            super.closeAll();
-        }
-    return products;
+        return super.getProducts(rs);
     }
 
     /**
@@ -214,11 +148,10 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
      * @param product 要查询的产品
      * @param start 从第几条开始查询
      * @param conut 每次查询的数量
-     * @return
+     * @return 查询到的产品集合
      */
     @Override
     public List<Product> queryProduct(Product product, int start, int conut) {
-        List<Product> products = new ArrayList<Product>();
         List values = new ArrayList();
         String sql = "SELECT * FROM product WHERE 1=1 ";
         if (product != null) {
@@ -230,7 +163,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
                 sql += "AND ptype = ? ";
                 values.add(product.getProductType().getTypeId());
             }
-            if (product.getProductName() != null && !"请输入产品名称".equals(product.getProductName())) {
+            if (product.getProductName() != null && !"".equals(product.getProductName())) {
                 sql += "AND pname like ? ";
 //                模糊搜索
                 values.add("%"+product.getProductName()+"%");
@@ -240,58 +173,19 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         values.add(start);
         values.add(conut);
         ResultSet rs = super.executeQuery(sql, values.toArray());
-        try {
-            while (rs.next()) {
-                Product realproduct = new Product();
-                realproduct.setProductId(rs.getInt("pid"));
-                realproduct.setProductName(rs.getString("pname"));
-                realproduct.setProductPrice(rs.getInt("pprice"));
-                realproduct.setNumber(rs.getInt("pnumber"));
-                realproduct.setProductTime(rs.getTime("producttime"));
-                realproduct.setId(rs.getInt("id"));
-                ProductTypeService productTypeService = new ProductTypeServiceImpl();
-                ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
-                realproduct.setProductType(productType);
-                realproduct.setFileName(rs.getString("filename"));
-                products.add(realproduct);
-            }
-            super.closeAll();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return products;
+        return super.getProducts(rs);
     }
 
-
+    /**
+     * 通过产品名称查找产品
+     * @param productName 产品名称
+     * @return 找到的产品，没找到返回null
+     */
     @Override
-    public Product queryProductByName(String pname) {
-        Product product = null;
+    public Product queryProductByName(String productName) {
         String sql = "SELECT * FROM product WHERE pname = ?";
-        Object[] objects = {pname};
+        Object[] objects = {productName};
         ResultSet rs = super.executeQuery(sql, objects);
-        try {
-            if(rs.next()) {
-                product = new Product();
-                product.setProductId(rs.getInt("pid"));
-                product.setProductName(rs.getString("pname"));
-                product.setProductPrice(rs.getInt("pprice"));
-                product.setNumber(rs.getInt("pnumber"));
-                product.setProductTime(rs.getTime("producttime"));
-                product.setId(rs.getInt("id"));
-                ProductTypeService productTypeService = new ProductTypeServiceImpl();
-                ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
-                product.setProductType(productType);
-                product.setFileName(rs.getString("filename"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            super.closeAll();
-        }
-        return product;
+        return super.getOneProduct(rs);
     }
 }

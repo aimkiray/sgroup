@@ -97,7 +97,22 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public List<Product> queryProductToTable(Product product, int start, int length) {
+        return productDao.queryProduct(product, start, length);
+    }
+
+    @Override
     public int queryProductNum() {
         return productDao.queryProductNum();
+    }
+
+    /**
+     * 通过产品名称查找产品
+     * @param productName 产品名称
+     * @return 找到的产品，没找到返回null
+     */
+    @Override
+    public boolean queryProductByName(String productName) {
+        return productDao.queryProductByName(productName) == null;
     }
 }

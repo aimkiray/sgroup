@@ -80,9 +80,9 @@ public interface ProductDao {
 
     /**
      * 根据名字查询产品
-     * @param pname
-     * @return
+     * @param productName 产品名称
+     * @return 查询到的产品，没有则返回null
      */
-    Product queryProductByName(String pname);
+    Product queryProductByName(String productName);
 
 }

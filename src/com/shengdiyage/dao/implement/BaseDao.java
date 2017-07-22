@@ -1,6 +1,14 @@
 package com.shengdiyage.dao.implement;
 
+import com.shengdiyage.entity.Product;
+import com.shengdiyage.entity.ProductType;
+import com.shengdiyage.service.ProductTypeService;
+import com.shengdiyage.service.serrviceImplement.ProductTypeServiceImpl;
+import org.mariadb.jdbc.internal.com.read.dao.Results;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Akari on 2017/6/26.
@@ -26,7 +34,7 @@ public class BaseDao {
 
     /**
      * 使用DriverManager获得数据库连接
-     * @return
+     * @return 数据库连接
      * @throws SQLException
      */
     public Connection getConnection() throws SQLException {
@@ -37,9 +45,9 @@ public class BaseDao {
      * 通用的增删改功能
      * String sql填入要执行的sql语句，Object[] values按sql语句中的？位置依次输入
      * 返回-1表示失败
-     * @param sql
-     * @param values
-     * @return
+     * @param sql 要执行的sql语句
+     * @param values 语句中问号对应值的数组
+     * @return 受影响的条目数
      */
     public int executeUpdate(String sql,Object[] values) {
         int result = 0;
@@ -66,8 +74,8 @@ public class BaseDao {
      * 查询功能
      * String sql填入要执行的sql语句，Object[] values按sql语句中的？位置依次输入
      * 返回-1表示失败
-     * @param sql
-     * @return
+     * @param sql 要执行的sql语句
+     * @return 查询结果集
      */
     public ResultSet executeQuery(String sql,Object[] values) {
         try {
@@ -110,5 +118,64 @@ public class BaseDao {
                 e.printStackTrace();
             }
         }
+    }
+
+    /**
+     * 从数据库查询结果集中获取一个product
+     * @param rs 查询结果集
+     * @return 返回查询到的产品，否则返回null
+     */
+    public Product getOneProduct(ResultSet rs) {
+        Product product = null;
+        try {
+            if(rs.next()) {
+                product = new Product();
+                product.setProductId(rs.getInt("pid"));
+                product.setProductName(rs.getString("pname"));
+                product.setProductPrice(rs.getInt("pprice"));
+                product.setNumber(rs.getInt("pnumber"));
+                product.setProductTime(rs.getTime("producttime"));
+                product.setId(rs.getInt("id"));
+                ProductTypeService productTypeService = new ProductTypeServiceImpl();
+                ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
+                product.setProductType(productType);
+                product.setFileName(rs.getString("filename"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeAll();
+        }
+        return product;
+    }
+
+    /**
+     * 从数据库查询结果集中获取产品集合
+     * @param rs 查询结果集
+     * @return 返回查询到的产品集合
+     */
+    public List<Product> getProducts(ResultSet rs) {
+        List<Product> products = new ArrayList<Product>();
+        try {
+            while (rs.next()) {
+                Product realproduct = new Product();
+                realproduct.setProductId(rs.getInt("pid"));
+                realproduct.setProductName(rs.getString("pname"));
+                realproduct.setProductPrice(rs.getInt("pprice"));
+                realproduct.setNumber(rs.getInt("pnumber"));
+                realproduct.setProductTime(rs.getTime("producttime"));
+                realproduct.setId(rs.getInt("id"));
+                ProductTypeService productTypeService = new ProductTypeServiceImpl();
+                ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
+                realproduct.setProductType(productType);
+                realproduct.setFileName(rs.getString("filename"));
+                products.add(realproduct);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeAll();
+        }
+        return products;
     }
 }

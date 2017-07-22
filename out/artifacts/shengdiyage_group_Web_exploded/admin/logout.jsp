@@ -8,5 +8,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     session.removeAttribute("admin");
-    response.sendRedirect("/login.jsp");
+    response.sendRedirect("/admin/login.jsp");
 %>

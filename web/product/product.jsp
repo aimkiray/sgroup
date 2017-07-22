@@ -15,6 +15,7 @@
     <c:set var="root" value="${pageContext.request.contextPath}" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="/product/css/product.css">
+    <script type="text/javascript" src="${root}/js/jquery-3.2.1.min.js"></script>
 </head>
 <body class="product-body">
 <a class="product-navigate" href="/admin/right.jsp">首页</a><span class="product-navigate"> > 产品中心</span>
@@ -22,7 +23,7 @@
 
     <%--精确搜素--%>
     <form action="/productservlet.do?operate=product" method="post">
-    <tr>
+    <tr class="product-table-bottom">
         <td class="accurate-search" colspan="8">
             <select id="type-id" name="typeId" onchange="accurateSearch()">
                 <option value="0">请选择类别</option>
@@ -42,13 +43,13 @@
     <form action="/productservlet.do?operate=product" method="post">
         <tr class="product-table-bottom">
             <td colspan="8">
-                <select name="typeId">
+                <select name="typeId" id="productType">
                     <option value="0">请选择类别</option>
                     <c:forEach items="${requestScope.producttypes}" var="productTypes">
                     <option value="${productTypes.typeId}" <c:if test="${productTypes.typeId == requestScope.product.productType.typeId}">selected</c:if>>${productTypes.typeName}</option>
                     </c:forEach>
                 </select>
-                <input name="productName" type="text" value="${requestScope.product.productName}" onclick="return this.value = ''">
+                <input name="productName" type="text" placeholder="请输入产品名称">
                 <input type="submit" value="模糊搜索">
             </td>
         </tr>
@@ -57,7 +58,7 @@
     <%--当前列内容的名称--%>
     <tr class="table-head">
         <td>
-            <input id="select-all-product" name="check_product" type="checkbox" onclick="checkAll()">
+            <input id="select-all-product" name="check_product" type="checkbox" onclick="checkAll(this)">
         </td>
         <td>时间</td>
         <td>名称</td>
@@ -94,7 +95,7 @@
                 </td>
                 <td class="bottom-buttons">
                     <a href="###" onclick="updateProduct(${productst.count})">修改</a>
-                    &nbsp;&nbsp;
+                    <span>/</span>
                     <a href="/productservlet.do?operate=delproduct&productId=${product.productId}" onclick="return confirm('确认删除？')">删除</a>
                 </td>
             </tr>
@@ -125,7 +126,7 @@
                     <option value="">请选择类别</option>
                     <c:forEach items="${requestScope.producttypes}" var="productType" varStatus="typest" >
                         <%--默认选中该类别--%>
-                        <option <c:if test="${product.productType.typeId == productType.typeId}">selected="selected"</c:if> value="${productType.typeId}">${productType.typeName}</option>
+                        <option <c:if test="${product.productType.typeId == productType.typeId}">selected</c:if> value="${productType.typeId}">${productType.typeName}</option>
                     </c:forEach>
                     </select>
             </td>
@@ -143,8 +144,8 @@
     <%--添加产品的列表（默认隐藏）--%>
     <form action="/productservlet.do?operate=addproduct" method="post" enctype="multipart/form-data">
     <tr class="hide-update-table" id="add-product-table">
-        <td colspan="2"><span class="add-product-text">请按类别输入：</span></td>
-        <td><input class="add-product" type="text" name="productName"></td>
+        <td colspan="2"><span class="add-product-text">按类别输入：</span></td>
+        <td><input class="add-product" type="text" name="productName" onblur="authProductName(this)"></td>
         <td><input class="add-product" type="text" name="productPrice"></td>
         <td><input class="add-product" type="text" name="number"></td>
         <td>
@@ -159,7 +160,20 @@
         <td>
             <input name="uploadPic" type="file">
         </td>
-        <td><input type="submit" value="确认"></td>
+        <td>
+            <input type="submit" value="确认">
+        </td>
+    </tr>
+    <%--添加产品的提示--%>
+    <tr id="add-product-notice">
+        <td colspan="2"></td>
+        <td id="add-product-name"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     </form>
 
@@ -235,7 +249,8 @@
             </span>
             <%--默认隐藏的类别修改输入框--%>
             <span class="hide-update-table" id="update-type-input${typest.count}">
-                <input type="text" name="productTypeName" value="${productTypes.typeName}"><%--隐藏域保存类别Id--%>
+                <input type="text" name="productTypeName" value="${productTypes.typeName}">
+                <%--隐藏域保存类别Id--%>
                 <input type="hidden" name="productTypeId" value="${productTypes.typeId}">
                 <input type="submit" value="确定">
             </span>
@@ -246,10 +261,15 @@
 
     <%--添加产品类别（默认隐藏）--%>
     <form action="/productservlet.do?operate=addtype" method="post">
-        <tr class="hide-update-table" id="add-type-table">
+        <tr class="hide-update-table" id="add-type-title">
             <td>
-                <input type="text" id="add-type" name="typeName" onblur="addTypeNotice()">
+                <span>添加类别：</span>
                 <span class="add-type-notice" id="add-type-notice"></span>
+            </td>
+        </tr>
+        <tr class="hide-update-table" id="add-type-body">
+            <td>
+                <input type="text" id="add-type" name="typeName" onblur="authTypeName()">
                 <input type="submit" value="确认">
             </td>
         </tr>

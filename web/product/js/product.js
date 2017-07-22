@@ -35,8 +35,12 @@ function updateProduct() {
 }
 // 显示添加产品的单元格
 function addProductType() {
-    var addTypeTable = document.getElementById("add-type-table");
-    addTypeTable.setAttribute("class", "type-list-body");
+    // var addTypeBody = document.getElementById("add-type-body");
+    // var addTypeTitle = document.getElementById("add-type-title");
+    // addTypeBody.setAttribute("class", "type-list-body");
+    // addTypeTitle.setAttribute("class", "type-list-body");
+    $("#add-type-title")[0].setAttribute("class", "type-list-body");
+    $("#add-type-body")[0].setAttribute("class", "type-list-body");
 }
 // 显示修改产品类别的输入框
 function updateType() {
@@ -52,38 +56,42 @@ function updateType() {
 
 // 产品全选框
 function checkAll() {
-    addFormToMulDel();
+    // 切换到批量删除模式(暂弃坑)
+    // addFormToMulDel();
     // 获得所有checkbox
-    var check = document.getElementsByName("check_product");
-    // 如果全选框被选中
-    if (check[0].checked) {
-        // 选中所有checkbox
-        for (var i = 1; i < check.length; i++) {
-            check[i].checked = true;
-        }
-    }
-    // 如果除全选框外的checkbox全部选中
-    var temp = true;
-    for (i = 1; i < check.length; i++) {
-        temp = (temp && check[i].checked)
-    }
-    // 选中全选框
-    if (temp) {
-        check[0].checked = true;
-    }
+    // var check = document.getElementsByName("check_product");
+    // // 如果全部checkbox都被选中
+    // var auth = true;
+    // for (i = 0; i < check.length; i++) {
+    //     auth = (check[i].checked && auth);
+    // }
+    // // 取消所有选中
+    // if (auth) {
+    //     for (i = 0; i < check.length; i++) {
+    //         check[i].checked = false;
+    //     }
+    // }
+    // // 如果全选框被选中
+    // if (check[0].checked) {
+    //     // 选中所有checkbox
+    //     for (var i = 1; i < check.length; i++) {
+    //         check[i].checked = true;
+    //     }
+    // }
+    $("input[name='check_product']").prop("checked", $(this).prop("checked"));
 }
 
 // 产品单选框
 function checkOne() {
     // 切换到批量删除模式
-    addFormToMulDel();
+    // addFormToMulDel();
     var check = document.getElementsByName("check_product");
     if (check[0].checked) {
         check[0].checked = false;
     }
     var temp = true;
     for (var i = 1; i < check.length; i++) {
-        temp = (temp && check[i].checked)
+        temp = (temp & check[i].checked)
     }
     if (temp) {
         check[0].checked = true;
@@ -91,9 +99,9 @@ function checkOne() {
 }
 
 // 添加用于批量删除的form表单
-function addFormToMulDel() {
-    var mainTable = document.getElementById("");
-}
+// function addFormToMulDel() {
+//     var mainTable = document.getElementById("");
+// }
 
 // 切换form表单的提交动作
 // 修改产品
@@ -134,8 +142,8 @@ function createXMLHttpRequest() {
     return null;
 }
 
-// 产品类别添加验证(ajax)
-function addTypeNotice() {
+// 产品类别添加验证(原生ajax)
+function authTypeName() {
 
     var typeName = document.getElementById("add-type").value;
     if (typeName != "") {
@@ -143,9 +151,9 @@ function addTypeNotice() {
         xmlHttp.onreadystatechange = function () {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                 if (xmlHttp.responseText == "true") {
-                    document.getElementById("add-type-notice").innerHTML = "<span style='color: green'>可以添加</span>";
+                    $("#add-type-notice").html("<span style='color: green'>可以添加</span>");
                 } else {
-                    document.getElementById("add-type-notice").innerHTML = "<span style='color: red'>该类别已存在</span>";
+                    $("#add-type-notice").html("<span style='color: red'>该类别已存在</span>");
                 }
             }
         }
@@ -155,7 +163,7 @@ function addTypeNotice() {
     }
 }
 
-// 产品类别下的所有产品(ajax)
+// 产品类别下的所有产品动态生成(原生ajax)
 function accurateSearch() {
     // 初始化产品列表
     document.getElementById("show-product-list").length = 1;
@@ -176,4 +184,25 @@ function accurateSearch() {
         xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xmlHttp.send("operate=productsByType&typeId=" + typeId);
     }
+}
+
+// 添加产品时检查名称是否已存在
+function authProductName() {
+    $.ajax({
+        type: "post",
+        url: "/productservlet.do",
+        data: "operate=checkProductName&productName="+arguments[0].value,
+        dataType: "html",
+        success: function (data) {
+            if (data == "true") {
+                $("#add-product-name").html("<span style='color: green'>可以添加</span>");
+            } else {
+                $("#add-product-name").html("<span style='color: red'>该产品已存在</span>");
+            }
+        },
+        error: function () {
+            alert("通信失败");
+        }
+
+    })
 }

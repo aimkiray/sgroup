@@ -50,15 +50,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/junit-4.12.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$MODULE_DIR$/../drives/commons-io-2.5.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -77,7 +68,16 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/fastjson-1.2.35.jar!/" />
+          <root url="jar://$MODULE_DIR$/../drives/fastjson-1.2.35.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../drives/junit-4.12.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

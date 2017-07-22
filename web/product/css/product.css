@@ -1,3 +1,9 @@
+/*产品表格样式*/
+.all-product-list {
+    table-layout: fixed;
+    word-wrap: break-word;
+    word-break: break-all;
+}
 /*页面边距*/
 .product-body {
     margin: 20px;
@@ -84,7 +90,7 @@ a:active {text-decoration:none ; color: deeppink;}
 
 /*产品图片样式*/
 .product-picture {
-    width: 80px;
+    /*width: 80px;*/
     height: 80px;
 }
 
@@ -93,7 +99,7 @@ a:active {text-decoration:none ; color: deeppink;}
     width: 100px;
 }
 
-/*按类别查找产品*/
+/*按类别精确查找产品*/
 /*.accurate-search select {*/
     /*display: inline-block;*/
 /*}*/

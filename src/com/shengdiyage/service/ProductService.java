@@ -58,6 +58,14 @@ public interface ProductService {
     List<Product> queryProduct(Product product, int curPage, int conut);
 
     /**
+     * (dataTables)分页查询
+     * @param start
+     * @param length
+     * @return
+     */
+    List<Product> queryProductToTable(Product product, int start, int length);
+
+    /**
      * 查询产品总数
      * @return 产品总数
      */
@@ -69,4 +77,11 @@ public interface ProductService {
      * @return 产品总数
      */
     int queryProductNum(Product product);
+
+    /**
+     * 通过产品名称查找产品
+     * @param productName 产品名称
+     * @return 找到的产品，没找到返回null
+     */
+    boolean queryProductByName(String productName);
 }

@@ -35,7 +35,7 @@
     <tr>
         <td colspan="4">
             <input type="file" name="name">
-            <input type="submit" value="确认">
+            <input type="submit" value="上传">
         </td>
     </tr>
     </form>
@@ -78,7 +78,6 @@
             <span>每页显示条目：</span>
             <input name="pageSize" type="text" value="${requestScope.pageSize}">
             <input type="submit" value="确认">
-            <%--<span>当前是第 ${requestScope.curPage} 页</span>--%>
         </td>
     </tr>
 </table>
