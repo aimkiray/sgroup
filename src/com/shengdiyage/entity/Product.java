@@ -22,6 +22,7 @@ public class Product implements Serializable {
     private Date productTime;
     private String fileName;
     private int id = 0;
+    private int quantity;
 
     public Product(int productId, String productName, int productPrice, int number, ProductType productType, Date productTime) {
         this.productId = productId;
@@ -149,6 +150,14 @@ public class Product implements Serializable {
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @Override

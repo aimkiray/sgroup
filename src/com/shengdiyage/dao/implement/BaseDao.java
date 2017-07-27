@@ -1,14 +1,6 @@
 package com.shengdiyage.dao.implement;
 
-import com.shengdiyage.entity.Product;
-import com.shengdiyage.entity.ProductType;
-import com.shengdiyage.service.ProductTypeService;
-import com.shengdiyage.service.serrviceImplement.ProductTypeServiceImpl;
-import org.mariadb.jdbc.internal.com.read.dao.Results;
-
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Akari on 2017/6/26.
@@ -118,64 +110,5 @@ public class BaseDao {
                 e.printStackTrace();
             }
         }
-    }
-
-    /**
-     * 从数据库查询结果集中获取一个product
-     * @param rs 查询结果集
-     * @return 返回查询到的产品，否则返回null
-     */
-    public Product getOneProduct(ResultSet rs) {
-        Product product = null;
-        try {
-            if(rs.next()) {
-                product = new Product();
-                product.setProductId(rs.getInt("pid"));
-                product.setProductName(rs.getString("pname"));
-                product.setProductPrice(rs.getInt("pprice"));
-                product.setNumber(rs.getInt("pnumber"));
-                product.setProductTime(rs.getTime("producttime"));
-                product.setId(rs.getInt("id"));
-                ProductTypeService productTypeService = new ProductTypeServiceImpl();
-                ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
-                product.setProductType(productType);
-                product.setFileName(rs.getString("filename"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            closeAll();
-        }
-        return product;
-    }
-
-    /**
-     * 从数据库查询结果集中获取产品集合
-     * @param rs 查询结果集
-     * @return 返回查询到的产品集合
-     */
-    public List<Product> getProducts(ResultSet rs) {
-        List<Product> products = new ArrayList<Product>();
-        try {
-            while (rs.next()) {
-                Product realproduct = new Product();
-                realproduct.setProductId(rs.getInt("pid"));
-                realproduct.setProductName(rs.getString("pname"));
-                realproduct.setProductPrice(rs.getInt("pprice"));
-                realproduct.setNumber(rs.getInt("pnumber"));
-                realproduct.setProductTime(rs.getTime("producttime"));
-                realproduct.setId(rs.getInt("id"));
-                ProductTypeService productTypeService = new ProductTypeServiceImpl();
-                ProductType productType = productTypeService.queryTypeByTypeId(rs.getInt("ptype"));
-                realproduct.setProductType(productType);
-                realproduct.setFileName(rs.getString("filename"));
-                products.add(realproduct);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            closeAll();
-        }
-        return products;
     }
 }

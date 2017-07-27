@@ -2,7 +2,7 @@ package com.shengdiyage.servlet;
 
 import com.shengdiyage.entity.Admin;
 import com.shengdiyage.service.AdminService;
-import com.shengdiyage.service.serrviceImplement.AdminServiceImpl;
+import com.shengdiyage.service.serviceImplement.AdminServiceImpl;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;

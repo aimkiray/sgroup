@@ -2,7 +2,7 @@ package com.shengdiyage.servlet;
 
 import com.shengdiyage.entity.FileDemo;
 import com.shengdiyage.service.FileService;
-import com.shengdiyage.service.serrviceImplement.FileServiceImpl;
+import com.shengdiyage.service.serviceImplement.FileServiceImpl;
 import com.shengdiyage.utils.DateTools;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;

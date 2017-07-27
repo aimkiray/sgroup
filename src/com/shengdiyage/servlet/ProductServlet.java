@@ -5,8 +5,8 @@ import com.shengdiyage.entity.Product;
 import com.shengdiyage.entity.ProductType;
 import com.shengdiyage.service.ProductService;
 import com.shengdiyage.service.ProductTypeService;
-import com.shengdiyage.service.serrviceImplement.ProductServiceImpl;
-import com.shengdiyage.service.serrviceImplement.ProductTypeServiceImpl;
+import com.shengdiyage.service.serviceImplement.ProductServiceImpl;
+import com.shengdiyage.service.serviceImplement.ProductTypeServiceImpl;
 import com.shengdiyage.utils.BootstrapTable;
 import com.shengdiyage.utils.DataTables;
 import com.shengdiyage.utils.DateTools;
@@ -736,7 +736,7 @@ public class ProductServlet extends HttpServlet {
 //    通过typeId获得Type对象
         ProductType productType = productTypeService.queryTypeByTypeId(productTypeId);
 //    获取当前时间
-        Date date = DateTools.getDateByStr(productTime,"yyyy-MM-dd HH-mm-ss");
+        Date date = DateTools.getDateByStr(productTime,"yyyy-MM-dd HH:mm:ss");
 //    用更新后的信息创建一个产品类
         Product product = new Product(productId,productName,productPrice,number,productType,date,picName);
         int result = productService.updateProduct(product);

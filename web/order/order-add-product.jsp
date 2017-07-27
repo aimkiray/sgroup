@@ -11,48 +11,41 @@
 <head>
     <title>选择商品</title>
     <c:set var="root" value="${pageContext.request.contextPath}"/>
+    <script src="${root}/order/js/order-add-product.js"></script>
 </head>
 <body>
 <div class="panel-body">
-    <div class="panel panel-default">
-        <div class="panel-heading">查询条件</div>
-        <div class="panel-body">
 
-            <form class="form-inline" id="formSearch">
+    <%--<form action="" >--%>
+    <%--<div id="toolbar" class="btn-group">
+        <form class="form-inline" id="formSearch">
 
-                <%--产品类别选择框--%>
-                <div class="form-group" style="margin-top: 5px">
-                    <label for="typeIdSearch">类别：</label>
-                    <select class="form-control" id="typeIdSearch">
-                        <option value="0">请选择类别</option>
-                    </select>
+            &lt;%&ndash;客户选择&ndash;%&gt;
+            <div class="form-group">
+                <label for="customName">客户：</label>
+                <select class="form-control" id="customName">
+                    <option value="0">请选择客户</option>
+                </select>
+            </div>
+
+            &lt;%&ndash;店员选择&ndash;%&gt;
+            <div class="form-group">
+                <label for="empName">店员：</label>
+                <select class="form-control" id="empName">
+                    <option value="0">请选择店员</option>
+                </select>
+            </div>
+            &lt;%&ndash;日期选择&ndash;%&gt;
+                <div class="form-group">
+                    <label for="empName">日期：</label>
+                    <input id="orderDate" name="orderDate" type="text" value="" placeholder="日期" readonly class="order_datetime form-control">
                 </div>
-
-                <%--产品名称模糊搜索--%>
-                <div class="form-group" style="margin-top: 5px;margin-left: 10px">
-                    <label for="productNameSearch">名称：</label>
-                    <input type="text" class="form-control" id="productNameSearch" placeholder="产品名称">
-                </div>
-
-                <%--确认按钮--%>
-                <button type="button" id="btn_query" class="btn btn-primary" style="margin-top: 5px;margin-left: 10px" >查询</button>
-            </form>
-
-        </div>
-    </div>
-
-    <div id="toolbar" class="btn-group">
-        <button id="btn_add" type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
-        </button>
-        <button id="btn_edit" type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
-        </button>
-        <button id="btn_delete" type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
-        </button>
-    </div>
+        </form>
+    </div>--%>
     <table id="tb_product"></table>
+    <%--</form>--%>
+    <%--生成订单按钮--%>
+    <input id="btn_generate_order" class="btn btn-primary" value="生成订单">
 </div>
 </body>
 </html>

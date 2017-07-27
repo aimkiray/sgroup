@@ -14,7 +14,7 @@
 </head>
 <script>
     $(document).ready(function () {
-        $("#btn_add_product").click(function () {
+        /*$("#btn_add_product").click(function () {
             $.ajax({
                 url: "/productservlet.do?operate=addproduct&flag=ajax",
                 cache: false, //禁用缓存
@@ -36,8 +36,8 @@
                     $(".bootbox-close-button").click();
                 }
             });
-        });
-        $("#btn_add_product").click(function () {
+        });*/
+        $("#btn_update_product").click(function () {
             $.ajax({
                 url: "/productservlet.do?operate=updateproduct&flag=ajax",
                 cache: false, //禁用缓存
@@ -66,12 +66,20 @@
             autoclose: true,
             todayBtn: true
         });
+
+        $(document).click(function(e){
+            var _con = $(".modal-content");   // 设置目标区域
+            if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+                $(".bootbox-close-button").click();
+            }
+        });
     });
 </script>
 <body>
 <c:set var="product" value="${requestScope.product}" />
 <fmt:formatDate value="${product.productTime}" pattern="yyyy-MM-dd HH:mm:ss" var="productTime"/>
 <form id="uploadForm" enctype="multipart/form-data">
+    <input type="hidden" name="productId" value="${product.productId}">
     <div class="form-group">
         <label for="productName">名称</label>
         <input type="text" class="form-control" id="productName" name="productName" value="${product.productName}" placeholder="君の名は。">
@@ -103,7 +111,7 @@
         <p class="help-block">产品图片上传</p>
     </div>
 
-    <button type="button" id="btn_add_product" class="btn btn-default">提交</button>
+    <button type="button" id="btn_update_product" class="btn btn-default">提交</button>
 </form>
 </body>
 </html>

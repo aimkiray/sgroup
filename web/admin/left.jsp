@@ -32,13 +32,16 @@
             <td><a href="${root}/bootstrap/bootstrap-product.jsp" target="right">零售&批发</a></td>
         </tr>
         <tr>
-            <td><a href="${root}/bootstrap/product-center.jsp" target="right">使用方法</a></td>
+            <td><a href="${root}/orderservlet.do?operate=OrderList" target="right">使用方法</a></td>
         </tr>
         <tr>
             <td><a href="${root}/jsgrip/product-table.jsp" target="right">食用方法?</a></td>
         </tr>
         <tr>
             <td><a href="${root}/order/order.jsp" target="right">禁止事项</a></td>
+        </tr>
+        <tr>
+            <td><a href="${root}/order/order.jsp" target="right">猜猜我是谁~</a></td>
         </tr>
     </table>
 </div>

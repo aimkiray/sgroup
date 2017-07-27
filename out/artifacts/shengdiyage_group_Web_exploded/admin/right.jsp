@@ -11,7 +11,7 @@
     <link href="/admin/css/frame.css" rel="stylesheet" type="text/css">
     <title>Akari</title>
 </head>
-<body style="margin: 20px">
+<body style="margin: 20px;background-color: #F2ECE5">
 <span style="color: blue;display: inline-block">首页</span>
 <p style="text-align: center; font-size: 20px; font-weight: bold">
     <span style="color: red">你还在为庄稼收成不好而担忧吗？</span>

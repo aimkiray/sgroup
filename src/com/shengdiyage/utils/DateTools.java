@@ -49,4 +49,12 @@ public class DateTools {
         fileName += "." + ext;
         return fileName;
     }
+
+    public static String getOrderId () {
+        String orderId = getStrByDate(new Date(),"yyyyMMddHHmmss");
+        for (int i = 0; i< 4; i++) {
+            orderId += (int)(Math.random()*10);
+        }
+        return orderId;
+    }
 }

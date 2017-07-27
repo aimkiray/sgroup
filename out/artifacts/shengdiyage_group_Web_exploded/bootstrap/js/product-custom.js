@@ -94,6 +94,7 @@
         });
 })*/
 $(document).ready(function () {
+    // alert(0);
     // 初始化产品类别列表
     LoadType();
     // alert($("#typeId").val());
@@ -107,7 +108,7 @@ $(document).ready(function () {
 
 });
 
-// 用于保存产品数组
+// 用于生成产品数组
 
 function LoadType() {
     $.ajax({
@@ -115,12 +116,14 @@ function LoadType() {
         type: "post",
         dataType: "json",
         success: function (arrayType) {
+            // alert(1);
             var optionStr = "<option value='0'>请选择类别</option>";
             for (var i = 0; i < arrayType.length; i++) {
                 var jsonData = arrayType[i];
                 optionStr += "<option value='" + jsonData.typeId + "'>" + jsonData.typeName + "</option>"
             }
-            $("#typeId").html(optionStr);
+            // alert(optionStr);
+            $("#typeIdSearch").html(optionStr);
         },
         error: function () {
             alert("通信失败");
@@ -149,7 +152,7 @@ var TableInit = function () {
             sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
             pageNumber:1,                       //初始化加载第一页，默认第一页
             pageSize: 10,                       //每页的记录行数（*）
-            pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+            pageList: [10, 25, 50, 100],      //可供选择的每页的行数（*）
             // search: true,                       //是否显示表格搜索，此搜索是客户端搜索，不会进服务端，所以，个人感觉意义不大
             // strictSearch: true,
             showColumns: true,                  //是否显示所有的列
@@ -262,7 +265,7 @@ function updateProduct(value) {
     });
 }
 
-function delProduct() {
+function delProduct(productId) {
     bootbox.confirm({
         message: "确认删除？",
         buttons: {
@@ -278,14 +281,14 @@ function delProduct() {
         callback: function (result) {
             if (result) {
                 $.ajax({
-                    url: "/productservlet.do?operate=delproduct&productId="+arguments[0],
+                    url: "/productservlet.do?operate=delproduct&productId="+productId,
                     type: "post",
                     dataType: "text",
                     success: function () {
                         $(".bootbox-close-button").click();
                     },
                     error: function () {
-                        alert("通信失败");
+                        alert("删除失败");
                         // $(".bootbox-close-button").click();
                     }
                 });
@@ -299,10 +302,16 @@ function delProduct() {
 
 var ButtonInit = function () {
     var productInit = {};
-    var postdata = {};
 
     productInit.Init = function () {
         // 初始化页面上面的按钮事件
+
+        $(document).click(function(e){
+            var _con = $(".modal-content");   // 设置目标区域
+            if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+                $(".bootbox-close-button").click();
+            }
+        });
 
         $("#btn_add").click(function () {
             $.ajax({
@@ -321,7 +330,30 @@ var ButtonInit = function () {
             });
         });
 
-        $("#btn_edit").click(function () {
+        $("#btn_query").click(function () {
+            $("#tb_product").bootstrapTable('refresh');
+        });
+
+        /*弹出修改产品栏
+        $("#btn_update_product").click(function () {
+            alert(1);
+            $.ajax({
+                url: "/productservlet.do?operate=getupdateproductjsp",
+                type: "post",
+                dataType: "text",
+                success: function (data) {
+                    bootbox.dialog({
+                        message: data,
+                        title: "修改产品"
+                    })
+                },
+                error: function () {
+                    alert("通信失败");
+                }
+            });
+        });*/
+
+        /*$("#btn_edit").click(function () {
            var arrselections = $("#tb_product").bootstrapTable('getSelections');
            if (arrselections.length > 1) {
                toastr.warning('只能选择一行进行编辑');
@@ -341,28 +373,9 @@ var ButtonInit = function () {
 
            postdata.DEPARTMENT_ID = arrselections[0].DEPARTMENT_ID;
            $('#myModal').modal();
-        });
+        });*/
 
-        // 弹出修改产品栏
-        // $("#btn_update_product").click(function () {
-        //     alert(1);
-        //     $.ajax({
-        //         url: "/productservlet.do?operate=getupdateproductjsp",
-        //         type: "post",
-        //         dataType: "text",
-        //         success: function (data) {
-        //             bootbox.dialog({
-        //                 message: data,
-        //                 title: "修改产品"
-        //             })
-        //         },
-        //         error: function () {
-        //             alert("通信失败");
-        //         }
-        //     });
-        // });
-
-        $("#btn_delete").click(function () {
+        /*$("#btn_delete").click(function () {
            var arrselections = $("#tb_product").bootstrapTable('getSelections');
            if (arrselections.length <= 0) {
                toastr.warning('请选择有效数据');
@@ -392,9 +405,9 @@ var ButtonInit = function () {
 
                });
            });
-        });
+        });*/
 
-        $("#btn_submit").click(function () {
+        /*$("#btn_submit").click(function () {
            postdata.DEPARTMENT_NAME = $("#txt_departmentname").val();
            postdata.PARENT_ID = $("#txt_parentdepartment").val();
            postdata.DEPARTMENT_LEVEL = $("#txt_departmentlevel").val();
@@ -417,12 +430,7 @@ var ButtonInit = function () {
                }
 
            });
-        });
-
-        $("#btn_query").click(function () {
-            // alert($("#typeId").val())
-           $("#tb_product").bootstrapTable('refresh');
-        });
+        });*/
     };
 
     return productInit;

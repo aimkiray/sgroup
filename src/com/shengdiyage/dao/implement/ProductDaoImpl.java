@@ -1,10 +1,11 @@
 package com.shengdiyage.dao.implement;
 
 import com.shengdiyage.dao.ProductDao;
+import com.shengdiyage.dao.ProductTypeDao;
 import com.shengdiyage.entity.Product;
 import com.shengdiyage.entity.ProductType;
 import com.shengdiyage.service.ProductTypeService;
-import com.shengdiyage.service.serrviceImplement.ProductTypeServiceImpl;
+import com.shengdiyage.service.serviceImplement.ProductTypeServiceImpl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,6 +16,8 @@ import java.util.List;
  * Created by Akari on 2017/6/27.
  */
 public class ProductDaoImpl extends BaseDao implements ProductDao {
+
+    private ProductTypeDao productTypeDao = new ProductTypeDaoImpl();
     @Override
     public int addProduct(Product product) {
         int result = 0;
@@ -47,7 +50,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         String sql = "SELECT * FROM product WHERE pid = ?";
         Object[] objects = {pid};
         ResultSet rs = super.executeQuery(sql,objects);
-        return super.getOneProduct(rs);
+        return getOneProduct(rs);
     }
 
     /**
@@ -81,7 +84,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
     @Override
     public int queryProductNum() {
         int result = 0;
-        String sql = "SELECT COUNT(*) FROM product";
+        String sql = "SELECT COUNT(pid) FROM product";
         Object[] objects = {};
         ResultSet rs = super.executeQuery(sql, objects);
         try {
@@ -90,6 +93,8 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            super.closeAll();
         }
         return result;
     }
@@ -124,6 +129,8 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            super.closeAll();
         }
         return result;
     }
@@ -133,14 +140,14 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         String sql = "SELECT * FROM product ORDER BY pid ASC";
         Object[] objects = {};
         ResultSet rs = super.executeQuery(sql, objects);
-        return super.getProducts(rs);
+        return getProducts(rs);
     }
 
     public List<Product> queryProduct(int start, int conut) {
         String sql = "SELECT * FROM product ORDER BY pid ASC LIMIT ?,?";
         Object[] objects = {start,conut};
         ResultSet rs = super.executeQuery(sql, objects);
-        return super.getProducts(rs);
+        return getProducts(rs);
     }
 
     /**
@@ -173,7 +180,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         values.add(start);
         values.add(conut);
         ResultSet rs = super.executeQuery(sql, values.toArray());
-        return super.getProducts(rs);
+        return getProducts(rs);
     }
 
     /**
@@ -186,6 +193,63 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         String sql = "SELECT * FROM product WHERE pname = ?";
         Object[] objects = {productName};
         ResultSet rs = super.executeQuery(sql, objects);
-        return super.getOneProduct(rs);
+        return getOneProduct(rs);
+    }
+
+    /**
+     * 从数据库查询结果中获取product
+     * @param rs 查询结果集
+     * @return 返回查询到的产品，否则返回null
+     */
+    private Product getOneProduct(ResultSet rs) {
+        Product product = null;
+        try {
+            if(rs.next()) {
+                product = new Product();
+                product.setProductId(rs.getInt("pid"));
+                product.setProductName(rs.getString("pname"));
+                product.setProductPrice(rs.getInt("pprice"));
+                product.setNumber(rs.getInt("pnumber"));
+                product.setProductTime(rs.getTime("producttime"));
+                product.setId(rs.getInt("id"));
+                ProductType productType = productTypeDao.queryProductTypeByTypeId(rs.getInt("ptype"));
+                product.setProductType(productType);
+                product.setFileName(rs.getString("filename"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            super.closeAll();
+        }
+        return product;
+    }
+
+    /**
+     * 从数据库查询结果集中获取产品集合
+     * @param rs 查询结果集
+     * @return 返回查询到的产品集合
+     */
+    private List<Product> getProducts(ResultSet rs) {
+        List<Product> products = new ArrayList<Product>();
+        try {
+            while (rs.next()) {
+                Product realproduct = new Product();
+                realproduct.setProductId(rs.getInt("pid"));
+                realproduct.setProductName(rs.getString("pname"));
+                realproduct.setProductPrice(rs.getInt("pprice"));
+                realproduct.setNumber(rs.getInt("pnumber"));
+                realproduct.setProductTime(rs.getTime("producttime"));
+                realproduct.setId(rs.getInt("id"));
+                ProductType productType = productTypeDao.queryProductTypeByTypeId(rs.getInt("ptype"));
+                realproduct.setProductType(productType);
+                realproduct.setFileName(rs.getString("filename"));
+                products.add(realproduct);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeAll();
+        }
+        return products;
     }
 }

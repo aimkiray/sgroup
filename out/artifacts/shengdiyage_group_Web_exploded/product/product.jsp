@@ -108,7 +108,7 @@
                 <input type="checkbox" name="check_product${productst.count}" value="${product.productId}" onclick="checkOne()">
             </td>
             <td>
-                <input class="add-product" type="text" name="productTime${productst.count}" value="<fmt:formatDate value="${product.productTime}" pattern="yyyy-MM-dd HH-mm-ss" />">
+                <input class="add-product" type="text" name="productTime${productst.count}" value="<fmt:formatDate value="${product.productTime}" pattern="yyyy-MM-dd HH:mm:ss" />">
             </td>
             <td>
                 <input class="add-product" type="text" name="productName${productst.count}"

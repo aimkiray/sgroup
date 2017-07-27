@@ -7,159 +7,167 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8339405-8ef6-4312-9858-8457bed7e671" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/nekuata.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/servlet/BootstrapProductServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/servlet/OrderServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/utils/BootstrapTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/utils/DataTables.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/addproduct.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/bootstrap-product.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-datetimepicker.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-editable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/product-custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/extension/editable/bootstrap-editable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/extension/editable/bootstrap-editable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/extension/editable/bootstrap-table-editable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/extension/editable/extension.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/bootbox.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/bootstrap-datetimepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/bootstrap-datetimepicker.zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/bootstrap-table-zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/bootstrap-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/product-custom-new.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/product-custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/product-center.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/updateproduct.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.az.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.bn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.ee.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.hy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.is.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.ka.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.ms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.pt-BR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.rs-latin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.rs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.sw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.ua.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-TW.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap3-editable/js/bootstrap-editable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/bootstrap3-editable/js/bootstrap-editable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap-editable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap-table.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/css/buttons.dataTables.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/css/datatables-custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/css/editor.dataTables.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/css/jquery.dataTables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/css/select.dataTables.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/js/dataTables.buttons.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/js/dataTables.editor.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/js/dataTables.select.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/js/datatables-custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/js/jquery-1.12.4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/js/jquery.dataTables.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/json/chinese.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/datatables/product-datatables.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootbox.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap-editable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap-table-editable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap-table-zh-CN.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap-table.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-3.2.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/jsgrip/css/jsgrid-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/jsgrip/css/jsgrid.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/jsgrip/js/jsgrid.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/jsgrip/js/product-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/jsgrip/product-table.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/css/order-custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/js/order-add-product.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/js/order-custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/order-add-product.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/order.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/shengdiyage_group_Web_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/shengdiyage_group_Web_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/CategoryDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/CustomerDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/EmployeeDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/OrderDetailDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/CategoryDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/CustomerDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/EmployeeDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/OrderDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/OrderDetailDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/Category.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/Customer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/Employee.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/Order.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/OrderDetail.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/Provider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/CustomerService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/EmployeeService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/OrderDetailService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/OrderService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/CustomerServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/EmployeeServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/OrderDetailServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/OrderServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/js/orderdetail-custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/js/orderedit-custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/js/orderlist-custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/neworderedit.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/orderdetail.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/orderedit.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/order/orderlist.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/build/build.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/build/build_standalone.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/less/datetimepicker.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/minify.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v2/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v2/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v2/bootstrap/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v2/bootstrap/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v2/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v2/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v2/jquery/jquery-1.8.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/bootstrap/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/sample in bootstrap v3/jquery/jquery-1.8.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/screenshot/standard_day.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/screenshot/standard_day_meridian.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/screenshot/standard_decade.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/screenshot/standard_full.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/screenshot/standard_hour.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/screenshot/standard_hour_meridian.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/screenshot/standard_month.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/screenshot/standard_year.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/_coverage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/assets/coverage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/assets/jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/assets/mock.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/assets/qunit-logging.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/assets/qunit.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/assets/qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/assets/utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/run-qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/events.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/formats.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/inline.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/keyboard_navigation/2011.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/keyboard_navigation/2012.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/keyboard_navigation/all.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/mouse_navigation/2011.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/mouse_navigation/2012.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/mouse_navigation/all.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/suites/options.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/tests.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/tests/tests.min.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap/ui-bootstrap-csp.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/bootstrap/js/product-custom-new.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/bootstrap/product-center.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/product-custom-new.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/product-center.jsp" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/OrdersDao.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/OrderDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/AdminServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/AdminServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/BossServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/BossServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/FileServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/FileServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/ProductServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductTypeServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/ProductTypeServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/web/content/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/web/content/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/web/content/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/web/content/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/web/content/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/web/content/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/web/content/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/web/content/fonts/glyphicons-halflings-regular.woff2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/48aa238b-cbc1-466a-8163-aa040f464471.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/48aa238b-cbc1-466a-8163-aa040f464471.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.pt.js" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.sk.js" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/Content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.sk.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/admin/left.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/admin/left.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/admin/logout.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/admin/logout.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/admin/right.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/admin/right.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/admin/top.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/admin/top.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/filemanage/filemanage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/filemanage/filemanage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/product/css/product.css" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/product/css/product.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/product/js/product.js" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/product/js/product.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/product/product.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/product/product.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shengdiyage-group.iml" afterPath="$PROJECT_DIR$/shengdiyage-group.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/ProductDao.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/ProductDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/bootstrap/addproduct.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/bootstrap/addproduct.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/bootstrap/bootstrap-product.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/bootstrap/bootstrap-product.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/bootstrap/js/product-custom.js" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/bootstrap/js/product-custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/bootstrap/updateproduct.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/bootstrap/updateproduct.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/order/css/order-custom.css" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/order/css/order-custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/order/js/order-add-product.js" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/order/js/order-add-product.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/order/js/order-custom.js" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/order/js/order-custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/order/order-add-product.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/order/order-add-product.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/order/order.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shengdiyage_group_Web_exploded/order/order.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/BaseDao.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/BaseDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductTypeDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductTypeDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/ProductService.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/ProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/entity/Product.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/entity/Product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/servlet/BootstrapProductServlet.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/servlet/BootstrapProductServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/servlet/FileManageServlet.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/servlet/FileManageServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/servlet/LoginServlet.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/servlet/LoginServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/servlet/OrderServlet.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/servlet/OrderServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shengdiyage/utils/DateTools.java" afterPath="$PROJECT_DIR$/src/com/shengdiyage/utils/DateTools.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/left.jsp" afterPath="$PROJECT_DIR$/web/admin/left.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/logout.jsp" afterPath="$PROJECT_DIR$/web/admin/logout.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/right.jsp" afterPath="$PROJECT_DIR$/web/admin/right.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/top.jsp" afterPath="$PROJECT_DIR$/web/admin/top.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/filemanage/filemanage.jsp" afterPath="$PROJECT_DIR$/web/filemanage/filemanage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/product/css/product.css" afterPath="$PROJECT_DIR$/web/product/css/product.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/product/js/product.js" afterPath="$PROJECT_DIR$/web/product/js/product.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/addproduct.jsp" afterPath="$PROJECT_DIR$/web/bootstrap/addproduct.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/bootstrap-product.jsp" afterPath="$PROJECT_DIR$/web/bootstrap/bootstrap-product.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/product-custom.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/product-custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/updateproduct.jsp" afterPath="$PROJECT_DIR$/web/bootstrap/updateproduct.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/order/css/order-custom.css" afterPath="$PROJECT_DIR$/web/order/css/order-custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/order/js/order-add-product.js" afterPath="$PROJECT_DIR$/web/order/js/order-add-product.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/order/js/order-custom.js" afterPath="$PROJECT_DIR$/web/order/js/order-custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/order/order-add-product.jsp" afterPath="$PROJECT_DIR$/web/order/order-add-product.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/order/order.jsp" afterPath="$PROJECT_DIR$/web/order/order.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/product/product.jsp" afterPath="$PROJECT_DIR$/web/product/product.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -192,19 +200,31 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="shengdiyage" type="e3449647:DbNodeDescriptor" />
+        <item name="customer" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="shengdiyage" type="e3449647:DbNodeDescriptor" />
+        <item name="employee" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="shengdiyage" type="e3449647:DbNodeDescriptor" />
         <item name="order_detail" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="shengdiyage" type="e3449647:DbNodeDescriptor" />
-        <item name="product" type="e3449647:DbNodeDescriptor" />
+        <item name="order_info" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="shengdiyage" type="e3449647:DbNodeDescriptor" />
-        <item name="provider" type="e3449647:DbNodeDescriptor" />
+        <item name="product" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
@@ -213,120 +233,21 @@
     <favorites_list name="shengdiyage-group" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProductServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="732" column="64" lean-forward="false" selection-start-line="732" selection-start-column="64" selection-end-line="732" selection-end-column="64" />
-              <folding>
-                <element signature="method#checkProductName#0;class#ProductServlet#0" expanded="false" />
-                <element signature="method#checkTypeName#0;class#ProductServlet#0" expanded="false" />
-                <element signature="method#getProductsByType#0;class#ProductServlet#0" expanded="false" />
-                <element signature="method#queryProduct#0;class#ProductServlet#0" expanded="false" />
-                <element signature="method#queryProductToBootstrap#0;class#ProductServlet#0" expanded="false" />
-                <element signature="method#queryProductToDataTables#0;class#ProductServlet#0" expanded="false" />
-                <element signature="e#13205#13328#0" expanded="false" />
-                <element signature="method#addType#0;class#ProductServlet#0" expanded="false" />
-                <element signature="method#delType#0;class#ProductServlet#0" expanded="false" />
-                <element signature="method#updateType#0;class#ProductServlet#0" expanded="false" />
-                <element signature="method#mulDel#0;class#ProductServlet#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order-add-product.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/order/js/order-add-product.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3116">
-              <caret line="257" column="6" lean-forward="false" selection-start-line="257" selection-start-column="6" selection-end-line="257" selection-end-column="6" />
-              <folding>
-                <element signature="e#44#2975#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order-add-product.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/order/order-add-product.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/order/order.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category" pinned="false" current-in-tab="false">
-        <entry file="das://table:/26856f02/48aa238b-cbc1-466a-8163-aa040f464471/shengdiyage.category">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="left.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/left.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="40" column="57" lean-forward="false" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order-custom.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/order/css/order-custom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addproduct.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bootstrap/addproduct.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pid</find>
-      <find>producttype.do</find>
-      <find>删除</find>
-      <find>getC</find>
-      <find>getS</find>
       <find>producttime</find>
       <find>productId</find>
       <find>requestScope.product</find>
@@ -342,7 +263,21 @@
       <find>producttype</find>
       <find>+what</find>
       <find>uploadPic</find>
+      <find>product</find>
+      <find>Detial</find>
+      <find>pagination</find>
+      <find>Id</find>
+      <find>employee_date</find>
+      <find>order</find>
+      <find>Order</find>
+      <find>订单</find>
+      <find>employeeService</find>
+      <find>toOrderList</find>
       <find>alert</find>
+      <find>btn_edit</find>
+      <find>getUpdateProductJsp</find>
+      <find>HH-mm-ss</find>
+      <find>delproduct</find>
     </findStrings>
     <replaceStrings>
       <replace>productservlet.do</replace>
@@ -350,6 +285,25 @@
       <replace>file</replace>
       <replace>tb_product</replace>
       <replace>product_type</replace>
+      <replace>order</replace>
+      <replace>orderDetial</replace>
+      <replace>Detail</replace>
+      <replace>Category</replace>
+      <replace>category</replace>
+      <replace>目录</replace>
+      <replace>Custom</replace>
+      <replace>customer</replace>
+      <replace>客户</replace>
+      <replace>员工</replace>
+      <replace>empID</replace>
+      <replace>orderDetail</replace>
+      <replace>OrderDetail</replace>
+      <replace>订单详情</replace>
+      <replace>customerDao</replace>
+      <replace>CustomerDao</replace>
+      <replace>EmployeeDao</replace>
+      <replace>employeeDao</replace>
+      <replace>HH:mm:ss</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -373,57 +327,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/notebook/upload&amp;download.md" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/ProductTypeService.java" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/ProductTypeDao.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/CategoryDao.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/OrderDetailService.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/OrderDetailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/CategoryDaoImpl.java" />
+        <option value="$PROJECT_DIR$/web/order/order-add-product.jsp" />
         <option value="$PROJECT_DIR$/src/com/shengdiyage/entity/Product.java" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductTypeServiceImpl.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/48aa238b-cbc1-466a-8163-aa040f464471/console.sql" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/servlet/FileManageServlet.java" />
-        <option value="$PROJECT_DIR$/web/product/css/product.css" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/ProductDao.java" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/BaseDao.java" />
-        <option value="$PROJECT_DIR$/web/admin/top.jsp" />
-        <option value="$PROJECT_DIR$/web/filemanage/filemanage.jsp" />
-        <option value="$PROJECT_DIR$/web/datatables.jsp" />
-        <option value="$PROJECT_DIR$/web/jsgrip/jsgrip.jsp" />
-        <option value="$PROJECT_DIR$/web/jsgrip/product-table.jsp" />
-        <option value="$PROJECT_DIR$/web/jsgrip/js/product-table.js" />
-        <option value="$PROJECT_DIR$/web/datetables/datatables.jsp" />
-        <option value="$PROJECT_DIR$/web/datetables/js/product-datatable-custom.js" />
-        <option value="$PROJECT_DIR$/web/datetables/css/product-datatable-custom.css" />
-        <option value="$PROJECT_DIR$/web/datetables/product-datatables.jsp" />
-        <option value="$PROJECT_DIR$/web/datetables/json/chinese.json" />
-        <option value="$PROJECT_DIR$/web/datetables/js/datatables-custom.js" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/ProductService.java" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/utils/DataTables.java" />
-        <option value="$PROJECT_DIR$/web/datatables/product-datatables.jsp" />
-        <option value="$PROJECT_DIR$/web/bootstrap/product-bootstrap.jsp" />
-        <option value="$PROJECT_DIR$/web/bootstrap/css/product-custom.css" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/utils/BootstrapTable.java" />
-        <option value="$PROJECT_DIR$/web/datatables/js/datatables-custom.js" />
-        <option value="$PROJECT_DIR$/web/bootstrap/js/product-custom-new.js" />
-        <option value="$PROJECT_DIR$/web/bootstrap/product-center.jsp" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/utils/DateTools.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/CustomerDao.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/EmployeeDao.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/CustomerService.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/EmployeeService.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/EmployeeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/EmployeeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/EmployeeDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/CustomerDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/entity/Order.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/entity/Customer.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/entity/Employee.java" />
         <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductTypeDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/servlet/OrderServlet.java" />
-        <option value="$PROJECT_DIR$/web/admin/logout.jsp" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/servlet/BootstrapProductServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/product/js/product.js" />
+        <option value="$PROJECT_DIR$/web/order/js/order-custom.js" />
+        <option value="$PROJECT_DIR$/web/admin/right.jsp" />
+        <option value="$PROJECT_DIR$/web/order/js/orderdetail-custom.js" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/entity/OrderDetail.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/OrderDetailDao.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/OrderDetailService.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/OrderDao.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/OrderDetailDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/OrderDetailServiceImpl.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/48aa238b-cbc1-466a-8163-aa040f464471/console.sql" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/dao/implement/OrderDaoImpl.java" />
+        <option value="$PROJECT_DIR$/web/admin/left.jsp" />
+        <option value="$PROJECT_DIR$/web/order/orderedit.jsp" />
+        <option value="$PROJECT_DIR$/web/admin/top.jsp" />
+        <option value="$PROJECT_DIR$/web/order/order.jsp" />
+        <option value="$PROJECT_DIR$/web/order/neworderedit.jsp" />
+        <option value="$PROJECT_DIR$/web/order/js/orderedit-custom.js" />
+        <option value="$PROJECT_DIR$/web/bootstrap/updateproduct.jsp" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java" />
         <option value="$PROJECT_DIR$/web/product/product.jsp" />
         <option value="$PROJECT_DIR$/web/bootstrap/js/product-custom.js" />
-        <option value="$PROJECT_DIR$/web/bootstrap/bootstrap-product.jsp" />
-        <option value="$PROJECT_DIR$/web/bootstrap/addproduct.jsp" />
-        <option value="$PROJECT_DIR$/web/bootstrap/updateproduct.jsp" />
-        <option value="$PROJECT_DIR$/web/order/css/order-custom.css" />
-        <option value="$PROJECT_DIR$/web/order/js/order-custom.js" />
-        <option value="$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java" />
+        <option value="$PROJECT_DIR$/web/order/orderdetail.jsp" />
         <option value="$PROJECT_DIR$/web/order/js/order-add-product.js" />
-        <option value="$PROJECT_DIR$/web/order/order-add-product.jsp" />
-        <option value="$PROJECT_DIR$/web/admin/left.jsp" />
-        <option value="$PROJECT_DIR$/web/order/order.jsp" />
+        <option value="$PROJECT_DIR$/web/order/js/orderlist-custom.js" />
+        <option value="$PROJECT_DIR$/web/order/orderlist.jsp" />
+        <option value="$PROJECT_DIR$/src/com/shengdiyage/servlet/OrderServlet.java" />
       </list>
     </option>
   </component>
@@ -453,11 +407,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="421" />
-    <option name="y" value="110" />
-    <option name="width" value="1320" />
-    <option name="height" value="780" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-50" />
+    <option name="y" value="383" />
+    <option name="width" value="1318" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -607,10 +561,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -632,84 +584,14 @@
             <path>
               <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
               <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="shengdiyage" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="shengdiyage" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="implement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="shengdiyage" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shengdiyage-group" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shengdiyage-group" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -720,7 +602,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="SearchEverywhereHistoryKey" value="duplica&#9;ACTION&#9;DupLocate&#10;dupli&#9;ACTION&#9;null&#10;backg&#9;ACTION&#9;Images.SetBackgroundImage&#10;backgr&#9;ACTION&#9;Images.SetBackgroundImage&#10;markdown&#9;ACTION&#9;Markdown.Toolbar.Left&#10;java comp&#9;PSI&#9;JAVA://javax.tools.JavaCompiler&#10;Str&#9;ACTION&#9;ActivateStructureToolWindow" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -730,22 +612,25 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web\bootstrap" />
-      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web\datatables\js" />
-      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\Assessment_jsp\web" />
-      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\Assessment_jsp\web\admin\css" />
-      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\Assessment_jsp\web\WEB-INF\lib" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.shengdiyage.servlet" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web\content" />
       <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web\bootstrap\css" />
       <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web\bootstrap\js" />
       <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web" />
       <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web\js" />
-      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web\css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shengdiyage.dao.implement" />
+      <recent name="com.shengdiyage.dao" />
+      <recent name="com.shengdiyage.entity" />
+      <recent name="com.shengdiyage.servlet" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web\order" />
+      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web\bootstrap" />
+      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\shengdiyage-group\web\datatables\js" />
+      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\Assessment_jsp\web" />
+      <recent name="C:\Users\Akari\Dropbox\IdeaProjects\Assessment_jsp\web\admin\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -779,6 +664,31 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="shengdiyage-group" />
       <envs />
+    </configuration>
+    <configuration name="OrderServlet.queryOrderDetail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.shengdiyage.servlet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="shengdiyage-group" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.shengdiyage.servlet" />
+      <option name="MAIN_CLASS_NAME" value="com.shengdiyage.servlet.OrderServlet" />
+      <option name="METHOD_NAME" value="queryOrderDetail" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="TestStream (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -1009,6 +919,53 @@
       <module name="" />
       <envs />
     </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <setting name="vmparams" value="" />
       <setting name="cmdLine" value="run-app" />
@@ -1233,55 +1190,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -1377,22 +1285,22 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration name="product.jsp" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/product/product.jsp" />
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 9.0.0.M22" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 8.5.16" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.product.jsp" />
-      <item index="3" class="java.lang.String" itemvalue="Application.MainUI" />
-      <item index="4" class="java.lang.String" itemvalue="Application.TestStream" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TestStream.testByteStream" />
-      <item index="6" class="java.lang.String" itemvalue="Application.TestStream (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MainUI" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TestStream" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestStream.testByteStream" />
+      <item index="5" class="java.lang.String" itemvalue="Application.TestStream (1)" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.OrderServlet.queryOrderDetail" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestStream (1)" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestStream.testByteStream" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TestStream" />
-        <item index="3" class="java.lang.String" itemvalue="Application.MainUI" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.OrderServlet.queryOrderDetail" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestStream (1)" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestStream.testByteStream" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TestStream" />
+        <item index="4" class="java.lang.String" itemvalue="Application.MainUI" />
       </list>
     </recent_temporary>
   </component>
@@ -1451,11 +1359,22 @@
       <workItem from="1500556577286" duration="728000" />
       <workItem from="1500597191845" duration="29604000" />
       <workItem from="1500683164644" duration="20510000" />
-      <workItem from="1500714914257" duration="855000" />
+      <workItem from="1500714914257" duration="14179000" />
+      <workItem from="1500772223392" duration="9061000" />
+      <workItem from="1500786921138" duration="461000" />
+      <workItem from="1500787418542" duration="122000" />
+      <workItem from="1500787609590" duration="19600000" />
+      <workItem from="1500881029415" duration="12695000" />
+      <workItem from="1500944969089" duration="37605000" />
+      <workItem from="1501028553771" duration="50367000" />
+      <workItem from="1501115286280" duration="9985000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="OrderServlet_queryOrderDetail - 2017.07.25 at 11h 17m 13s.xml">
+      <configuration name="OrderServlet.queryOrderDetail" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="TestStream_testByteStream - 2017.07.13 at 19h 34m 00s.xml">
       <configuration name="TestStream.testByteStream" configurationId="JUnit" />
     </history-entry>
@@ -1470,7 +1389,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="533893000" />
+    <option name="totallyTimeSpent" value="687113000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1482,77 +1401,76 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1320" height="784" extended-state="7" />
-    <editor active="true" />
+    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2534776" sideWeight="0.49523053" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32" sideWeight="0.5031746" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2575251" sideWeight="0.5063593" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32766616" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26923078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.49078342" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1984127" sideWeight="0.5092166" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29444444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16587302" sideWeight="0.46666667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16587302" sideWeight="0.53333336" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19920635" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1984127" sideWeight="0.5092166" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23802164" sideWeight="0.4968254" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18492064" sideWeight="0.51724136" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32766616" sideWeight="0.4936407" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2828439" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32766616" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32612056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32" sideWeight="0.5031746" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2575251" sideWeight="0.5063593" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32766616" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19285715" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19920635" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16" sideWeight="0.4968254" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32766616" sideWeight="0.4936407" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2534776" sideWeight="0.49523053" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26923078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17936508" sideWeight="0.49078342" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1984127" sideWeight="0.5092166" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32615384" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32766616" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16587302" sideWeight="0.46666667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16587302" sideWeight="0.53333336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32612056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1984127" sideWeight="0.5092166" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18492064" sideWeight="0.51724136" order="8" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1566,15 +1484,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java</url>
-          <line>554</line>
-          <properties />
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="91" />
+      <option name="time" value="121" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1583,371 +1493,166 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/entity/ProductType.java">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/CustomerDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="50" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/datatables/js/dataTables.editor.min.js">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/CustomerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="214">
+          <caret line="76" column="53" lean-forward="true" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/datatables/css/datatables-custom.css">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/EmployeeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="243">
+          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/css/product-custom.css">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/EmployeeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="62">
+          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/datatables/product-datatables.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/implement/EmployeeDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/extension/editable/README.md" />
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/extension/editable/extension.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/utils/DataTables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/filter/AuthFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/filter/EncodingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/js/bootstrap-table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="2043" column="29" lean-forward="false" selection-start-line="2043" selection-start-column="25" selection-end-line="2043" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/utils/BootstrapTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/extension/editable/bootstrap-editable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/extension/editable/bootstrap-table-editable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/datatables/js/datatables-custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/26856f02/48aa238b-cbc1-466a-8163-aa040f464471/shengdiyage.product" />
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductTypeDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+        <state relative-caret-position="14">
+          <caret line="101" column="55" lean-forward="true" selection-start-line="101" selection-start-column="55" selection-end-line="101" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/js/product-custom-new.js">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/entity/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="85" column="29" lean-forward="false" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+        <state relative-caret-position="114">
+          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/servlet/OrderServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/entity/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="114">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/right.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductTypeDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="69" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/entity/OrderDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#344#345#0" expanded="false" />
-            <element signature="e#367#368#0" expanded="false" />
-            <element signature="e#746#747#0" expanded="false" />
-            <element signature="e#777#778#0" expanded="false" />
+            <element signature="e#771#772#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#848#849#0" expanded="false" />
+            <element signature="e#886#887#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/logout.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/OrderDetailDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        <state relative-caret-position="312">
+          <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/implement/CustomerDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="98" column="33" lean-forward="true" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="559">
+          <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/26856f02/48aa238b-cbc1-466a-8163-aa040f464471/shengdiyage.order_detail">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/26856f02/48aa238b-cbc1-466a-8163-aa040f464471/shengdiyage.orders">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/product/js/product.js">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/OrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="196" column="33" lean-forward="false" selection-start-line="196" selection-start-column="33" selection-end-line="196" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../drives/mariadb-java-client-2.0.2.jar!/org/mariadb/jdbc/UrlParser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../drives/mariadb-java-client-2.0.2.jar!/org/mariadb/jdbc/Driver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/implement/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="20" column="124" lean-forward="true" selection-start-line="20" selection-start-column="124" selection-end-line="20" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/servlet/BootstrapProductServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="599" column="32" lean-forward="false" selection-start-line="599" selection-start-column="32" selection-end-line="599" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="274">
+          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/entity/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/serrviceImplement/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/product-center.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
-          <caret line="79" column="18" lean-forward="false" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+        <state relative-caret-position="285">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/26856f02/48aa238b-cbc1-466a-8163-aa040f464471/shengdiyage.product">
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/implement/OrderDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="86" column="26" lean-forward="false" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/48aa238b-cbc1-466a-8163-aa040f464471/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/entity/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/26856f02/48aa238b-cbc1-466a-8163-aa040f464471/shengdiyage.order_info">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/product/product.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="78" column="48" lean-forward="true" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/updateproduct.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="76" column="135" lean-forward="true" selection-start-line="76" selection-start-column="135" selection-end-line="76" selection-end-column="135" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/js/product-custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="105" column="29" lean-forward="false" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-          <folding>
-            <element signature="e#44#2975#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/order/js/order-custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/bootstrap-product.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="732" column="64" lean-forward="false" selection-start-line="732" selection-start-column="64" selection-end-line="732" selection-end-column="64" />
-          <folding>
-            <element signature="method#checkProductName#0;class#ProductServlet#0" expanded="false" />
-            <element signature="method#checkTypeName#0;class#ProductServlet#0" expanded="false" />
-            <element signature="method#getProductsByType#0;class#ProductServlet#0" expanded="false" />
-            <element signature="method#queryProduct#0;class#ProductServlet#0" expanded="false" />
-            <element signature="method#queryProductToBootstrap#0;class#ProductServlet#0" expanded="false" />
-            <element signature="method#queryProductToDataTables#0;class#ProductServlet#0" expanded="false" />
-            <element signature="e#13205#13328#0" expanded="false" />
-            <element signature="method#addType#0;class#ProductServlet#0" expanded="false" />
-            <element signature="method#delType#0;class#ProductServlet#0" expanded="false" />
-            <element signature="method#updateType#0;class#ProductServlet#0" expanded="false" />
-            <element signature="method#mulDel#0;class#ProductServlet#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/addproduct.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/order/css/order-custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/left.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="57" lean-forward="false" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/order/js/order-add-product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3116">
-          <caret line="257" column="6" lean-forward="false" selection-start-line="257" selection-start-column="6" selection-end-line="257" selection-end-column="6" />
-          <folding>
-            <element signature="e#44#2975#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/order/order-add-product.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/content/bootstrap/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/26856f02/48aa238b-cbc1-466a-8163-aa040f464471/shengdiyage.category">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/26856f02/48aa238b-cbc1-466a-8163-aa040f464471/shengdiyage.employees">
+    <entry file="das://table:/26856f02/48aa238b-cbc1-466a-8163-aa040f464471/shengdiyage.employee">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1961,10 +1666,251 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/26856f02/48aa238b-cbc1-466a-8163-aa040f464471/shengdiyage.order_detail">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/top.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="22" column="89" lean-forward="false" selection-start-line="22" selection-start-column="89" selection-end-line="22" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/ProductTypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/OrderDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/implement/OrderDetailDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/OrderDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="11" column="61" lean-forward="true" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/left.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order/js/orderdetail-custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order/js/order-custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="323" column="28" lean-forward="false" selection-start-line="323" selection-start-column="28" selection-end-line="323" selection-end-column="28" />
+          <folding>
+            <element signature="e#44#2975#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order/neworderedit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="99" column="46" lean-forward="true" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/product/product.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bootstrap/updateproduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1539">
+          <caret line="81" column="71" lean-forward="true" selection-start-line="81" selection-start-column="71" selection-end-line="81" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/product/js/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <marker date="1500626533198" expanded="true" signature="4518:4530" ph="..." />
+            <marker date="1500626533198" expanded="true" signature="4633:4643" ph="..." />
+            <marker date="1500626533198" expanded="true" signature="6250:6262" ph="..." />
+            <marker date="1500626533198" expanded="true" signature="6358:6368" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/service/serviceImplement/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#1475#1476#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/implement/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="58" column="19" lean-forward="true" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bootstrap/js/product-custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="286" column="42" lean-forward="true" selection-start-line="286" selection-start-column="42" selection-end-line="286" selection-end-column="42" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#44#2975#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order/js/order-add-product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="157" column="36" lean-forward="true" selection-start-line="157" selection-start-column="36" selection-end-line="157" selection-end-column="36" />
+          <folding>
+            <element signature="e#44#2975#0" expanded="false" />
+            <element signature="n#!!doc;n#addProductNum#0" expanded="false" />
+            <marker date="1501121260656" expanded="true" signature="7880:7891" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order/orderdetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order/orderedit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="81" column="36" lean-forward="true" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order/js/orderedit-custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="125" column="1" lean-forward="true" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/servlet/ProductServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7661">
+          <caret line="706" column="37" lean-forward="false" selection-start-line="706" selection-start-column="37" selection-end-line="706" selection-end-column="37" />
+          <folding>
+            <element signature="method#checkProductName#0;class#ProductServlet#0" expanded="false" />
+            <element signature="method#checkTypeName#0;class#ProductServlet#0" expanded="false" />
+            <element signature="method#getProductsByType#0;class#ProductServlet#0" expanded="false" />
+            <element signature="method#queryProductToBootstrap#0;class#ProductServlet#0" expanded="false" />
+            <element signature="method#queryProductToDataTables#0;class#ProductServlet#0" expanded="false" />
+            <element signature="e#13203#13326#0" expanded="false" />
+            <element signature="method#addType#0;class#ProductServlet#0" expanded="false" />
+            <element signature="method#delType#0;class#ProductServlet#0" expanded="false" />
+            <element signature="method#updateType#0;class#ProductServlet#0" expanded="false" />
+            <element signature="e#18005#18021#0" expanded="false" />
+            <element signature="method#mulDel#0;class#ProductServlet#0" expanded="false" />
+            <element signature="e#25041#25057#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/dao/implement/ProductDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shengdiyage/servlet/OrderServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="322" column="60" lean-forward="true" selection-start-line="322" selection-start-column="60" selection-end-line="322" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bootstrap/bootstrap-product.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="74" column="27" lean-forward="false" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/order/order.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        <state relative-caret-position="38">
+          <caret line="17" column="92" lean-forward="false" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order/order-add-product.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order/orderlist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="55" column="29" lean-forward="true" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order/js/orderlist-custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
           <folding />
         </state>
       </provider>

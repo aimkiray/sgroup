@@ -24,10 +24,28 @@
     <script src="${root}/bootstrap/js/bootstrap-table-zh-CN.js" type="text/javascript"></script>
     <script src="${root}/bootstrap/extension/editable/bootstrap-editable.js" type="text/javascript"></script>
     <script src="${root}/bootstrap/extension/editable/bootstrap-table-editable.js" type="text/javascript"></script>
-    <script src="${root}/bootstrap/js/product-custom.js" type="text/javascript"></script>
+
     <script src="${root}/js/bootbox.min.js" type="text/javascript"></script>
     <script src="${root}/bootstrap/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
     <script src="${root}/bootstrap/js/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
+    <script src="${root}/bootstrap/js/product-custom.js" type="text/javascript"></script>
+    <%--<link type="text/css" rel="stylesheet" href="${root}/content/bootstrap/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="${root}/content/bootstrap/bootstrap-theme.css">
+    <link type="text/css" rel="stylesheet" href="${root}/content/bootstrap-table/bootstrap-table.css">
+    <link type="text/css" rel="stylesheet" href="${root}/content/bootstrap3-editable/css/bootstrap-editable.css">
+    <link type="text/css" rel="stylesheet" href="${root}/bootstrap/css/product-custom.css">
+    <link type="text/css" rel="stylesheet" href="${root}/content/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+
+    <script src="${root}/content/jQuery/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="${root}/content/bootstrap/bootstrap.js" type="text/javascript"></script>
+    <script src="${root}/content/bootstrap-table/bootstrap-table.js" type="text/javascript"></script>
+    <script src="${root}/content/bootstrap-table/locale/bootstrap-table-zh-CN.min.js" type="text/javascript"></script>
+    <script src="${root}/content/bootstrap-table/extensions/editable/bootstrap-table-editable.min.js" type="text/javascript"></script>
+    <script src="${root}/content/bootstrap3-editable/js/bootstrap-editable.min.js" type="text/javascript"></script>
+    <script src="${root}/bootstrap/js/product-custom.js" type="text/javascript"></script>
+    <script src="${root}/js/bootbox.min.js" type="text/javascript"></script>
+    <script src="${root}/content/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="${root}/content/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>--%>
 </head>
 
 <body>

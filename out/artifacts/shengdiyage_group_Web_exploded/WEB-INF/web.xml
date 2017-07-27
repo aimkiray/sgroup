@@ -39,16 +39,16 @@
         </init-param>
     </servlet>
     <servlet>
-        <servlet-name>BootstrapProductServlet</servlet-name>
-        <servlet-class>com.shengdiyage.servlet.BootstrapProductServlet</servlet-class>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.shengdiyage.servlet.OrderServlet</servlet-class>
         <init-param>
             <param-name>charset</param-name>
             <param-value>utf-8</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
-        <servlet-name>BootstrapProductServlet</servlet-name>
-        <url-pattern>/bootstrapproductservlet.do</url-pattern>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/orderservlet.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>FileManageServlet</servlet-name>

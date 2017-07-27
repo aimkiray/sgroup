@@ -4,7 +4,7 @@ import com.shengdiyage.dao.ProductTypeDao;
 import com.shengdiyage.entity.Product;
 import com.shengdiyage.entity.ProductType;
 import com.shengdiyage.service.ProductTypeService;
-import com.shengdiyage.service.serrviceImplement.ProductTypeServiceImpl;
+import com.shengdiyage.service.serviceImplement.ProductTypeServiceImpl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
