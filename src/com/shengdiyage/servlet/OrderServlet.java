@@ -95,7 +95,72 @@ public class OrderServlet extends HttpServlet {
         doGet(req, resp);
     }
 
-    protected void delOrderByOrderId(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    /**
+     * 修改订单
+     * @param req
+     * @param resp
+     */
+    protected void editOrder(HttpServletRequest req, HttpServletResponse resp) {
+        int customerId = Integer.parseInt(req.getParameter("customerId"));
+        int employeeId = Integer.parseInt(req.getParameter("empId"));
+        String realDate = req.getParameter("orderDate");
+//        如果没传日期，就用当前日期
+        Date orderDate = realDate == null ? new Date() : DateTools.getDateByStr(realDate, "yyyy-MM-dd HH:mm:ss");
+//        添加Order
+        Order order = new Order();
+        order.setOrderId(DateTools.getOrderId());
+        Customer customer = customerService.queryCustomer(customerId);
+        order.setCustomer(customer);
+        Employee employee = employeeService.queryEmployee(employeeId);
+        order.setEmployee(employee);
+        order.setOrderDate(orderDate);
+        orderService.editOrder(order);
+    }
+
+    /**
+     * 通过订单id删除订单
+     * @param req
+     * @param resp
+     * @throws IOException
+     */
+    protected void delOrderByOrderId(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        String orderId = req.getParameter("orderId");
+        List<OrderDetail> orderDetails = orderDetailService.queryOrderDetailByOrderId(orderId);
+        int result = 0;
+//        int count = 0;
+        for(OrderDetail orderDetail : orderDetails) {
+//            删除所有订单详情
+            result += orderDetailService.delOrderDetail(orderDetail.getId());
+        }
+        PrintWriter out = resp.getWriter();
+//        判断删除还是修改
+        String flag = req.getParameter("flag");
+//        没抛异常的话
+        if (result > -1) {
+            if (flag != null && "edit".equals(flag)) {
+//                不是删除的话只删除订单详情
+                out.print("true");
+            } else {
+//                若是删除则顺便也删掉订单
+                if (orderService.delOrder(orderId) > 0) {
+//                    转跳到产品详情
+                    OrderList(req, resp);
+                } else {
+                    out.print("<script>alert('删除失败！');history.back();</script>");
+                }
+//                resp.sendRedirect("/orderservlet.do?operate=OrderList");
+            }
+        } else {
+            if (flag != null && "edit".equals(flag)) {
+                out.print("false");
+            } else {
+                out.print("<script>alert('删除失败！');history.back();</script>");
+            }
+        }
+//        resp.getWriter().print("true");
+    }
+
+    protected void OrderDetail(HttpServletRequest req, HttpServletResponse resp) {
         String orderId = req.getParameter("orderId");
         List<OrderDetail> orderDetails = orderDetailService.queryOrderDetailByOrderId(orderId);
         int result = 0;
@@ -103,23 +168,6 @@ public class OrderServlet extends HttpServlet {
         for(OrderDetail orderDetail : orderDetails) {
             result += orderDetailService.delOrderDetail(orderDetail.getId());
         }
-        result += orderService.delOrder(orderId);
-        PrintWriter out = resp.getWriter();
-        String flag = req.getParameter("flag");
-        if (result > 1) {
-            if (flag != null && "ajax".equals(flag)) {
-                out.print("true");
-            } else {
-                resp.sendRedirect("/orderservlet.do?operate=OrderList");
-            }
-        } else {
-            if (flag != null && "ajax".equals(flag)) {
-                out.print("false");
-            } else {
-                out.print("<script>alert('修改失败！');history.back();</script>");
-            }
-        }
-//        resp.getWriter().print("true");
     }
 
     /**
@@ -203,20 +251,27 @@ public class OrderServlet extends HttpServlet {
         Date orderDate = realDate == null ? new Date() : DateTools.getDateByStr(realDate, "yyyy-MM-dd HH:mm:ss");
 //        添加Order
         Order order = new Order();
-        order.setOrderId(DateTools.getOrderId());
         Customer customer = customerService.queryCustomer(customerId);
         order.setCustomer(customer);
         Employee employee = employeeService.queryEmployee(employeeId);
         order.setEmployee(employee);
         order.setOrderDate(orderDate);
-        orderService.addOrder(order);
+        String flag = req.getParameter("flag");
+        if (flag != null && "edit".equals(flag)) {
+            String orderId = req.getParameter("orderId");
+            order.setOrderId(orderId);
+            orderService.editOrder(order);
+        } else {
+            order.setOrderId(DateTools.getOrderId());
+            orderService.addOrder(order);
+        }
 
         String[] discounts = req.getParameterValues("discount");
         String jsonData = req.getParameter("jsonData");
 //        jsonData = jsonData.substring(1,jsonData.length()-1);
 //        JSON转产品对象列表
         List<Product> products = JSON.parseArray(jsonData, Product.class);
-        int flag = 0;
+        int mark = 0;
 //        List<OrderDetail> orderDetails = new ArrayList<OrderDetail>();
         for(Product product : products) {
 //            往订单详情中加值
@@ -225,10 +280,10 @@ public class OrderServlet extends HttpServlet {
 //            Product realProduct = productService.queryProduct(product.getProductId());
             orderDetail.setProduct(product);
             orderDetail.setQuantity(product.getQuantity());
-            orderDetail.setDiscount(Integer.parseInt(discounts[flag]));
+            orderDetail.setDiscount(Integer.parseInt(discounts[mark]));
 //            orderDetails.add(orderDetail);
             orderDetailService.addOrderDetail(orderDetail);
-            flag++;
+            mark++;
         }
 
 ////        查询客户和员工名称
@@ -252,7 +307,7 @@ public class OrderServlet extends HttpServlet {
      * @param resp
      */
     protected void OrderList(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //        查询订单列表
+//        查询订单列表
         List<Order> orders = orderService.queryOrder(0, orderService.queryOrderNum());
 
         req.setAttribute("orders", orders);

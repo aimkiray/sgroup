@@ -183,7 +183,7 @@ var TableInit = function () {
         });
     };
 
-    orderDetailTableInit.getOrderDetail = function () {
+    /*orderDetailTableInit.getOrderDetail = function () {
         $.ajax({
             url: "/orderservlet.do?operate=queryProductById&productId=",
             type: "post",
@@ -197,7 +197,7 @@ var TableInit = function () {
                 alert("通信失败");
             }
         });
-    }
+    }*/
     /*orderDetailTableInit.queryParams = function (params) {
         var param = {
             //键名与servlet要相同
@@ -293,13 +293,13 @@ var ButtonInit = function () {
             var orderId = $("#thisOrderId")[0].value;
 
             $.ajax({
-                url: "/orderservlet.do?operate=delOrderByOrderId&flag=ajax&orderId="+orderId,
+                url: "/orderservlet.do?operate=delOrderByOrderId&flag=edit&orderId="+orderId,
                 type: "post",
                 dataType: "text",
                 success: function (value) {
                     // alert(value);
                     if(value == "true") {
-                        alert("修改成功");
+                        // alert("修改成功");
                         $("#orderEditData").submit();
                         return true;
                     } else {

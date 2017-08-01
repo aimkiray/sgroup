@@ -12,6 +12,11 @@ import java.util.List;
  * Created by Akari on 2017/6/27.
  */
 public class AdminDaoImpl extends BaseDao implements AdminDao{
+    /**
+     * 增加管理员
+     * @param admin
+     * @return
+     */
     @Override
     public int addAdmin(Admin admin) {
         int result = 0;
@@ -21,6 +26,11 @@ public class AdminDaoImpl extends BaseDao implements AdminDao{
         return result;
     }
 
+    /**
+     * 修改密码
+     * @param admin
+     * @return
+     */
     @Override
     public int UpdateAdmin(Admin admin) {
         int result = 0;
@@ -30,6 +40,11 @@ public class AdminDaoImpl extends BaseDao implements AdminDao{
         return result;
     }
 
+    /**
+     * 删除管理员
+     * @param adminId
+     * @return
+     */
     @Override
     public int deleteAdmin(int adminId) {
         int result = 0;
@@ -39,6 +54,10 @@ public class AdminDaoImpl extends BaseDao implements AdminDao{
         return result;
     }
 
+    /**
+     * 管理员列表
+     * @return
+     */
     @Override
     public List<Admin> queryAdmin() {
         List<Admin> admins = new ArrayList<Admin>();
@@ -49,15 +68,19 @@ public class AdminDaoImpl extends BaseDao implements AdminDao{
             while (rs.next()) {
                 admins.add(new Admin(rs.getInt("aid"), rs.getString("aname"), rs.getString("apassword")));
             }
-            super.closeAll();
         } catch (SQLException e) {
             e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } finally {
+            super.closeAll();
         }
         return admins;
     }
 
+    /**
+     * 通过名字查找管理员
+     * @param adminName
+     * @return
+     */
     @Override
     public Admin queryAdminByName(String adminName) {
         String sql = "SELECT * FROM admin WHERE aname = ?";
@@ -70,10 +93,16 @@ public class AdminDaoImpl extends BaseDao implements AdminDao{
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            super.closeAll();
         }
         return admin;
     }
 
+    /**
+     * 管理员登陆验证
+     * @return
+     */
     @Override
     public boolean verifyAdmin(Admin admin) {
         boolean result = false;
@@ -86,6 +115,8 @@ public class AdminDaoImpl extends BaseDao implements AdminDao{
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            closeAll();
         }
         return result;
     }

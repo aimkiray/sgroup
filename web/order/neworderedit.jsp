@@ -34,7 +34,7 @@
 </head>
 <body>
 <div class="panel-body">
-    <form class="form-group" id="orderEditData" action="/orderservlet.do?operate=toOrderList" method="post">
+    <form class="form-group" id="orderEditData" action="/orderservlet.do?operate=toOrderList&flag=edit&orderId=${requestScope.order.orderId}" method="post">
         <%--客户选择--%>
         <div class="form-group">
             <label for="customerName">客户：</label>

@@ -15,7 +15,7 @@ As we know，在网页中上传文件需要用`<input type="fileDemo">`来实现
 java中常用的来自Apache的开源工具commons-fileupload实现上传功能，它依赖于commons-io，在开始之前我们先下载这两个jar包，导入项目：
 - 下载上面两个jar包，可以用Google搜索Maven commons-fileupload下载最新版
 - 打开File > Project Structure
-- 在Modules中导入jar包，下方会有提示发布目录缺少jar包，fix一下或手动加入即可
+- 在Modules中导入jar包，下方会有提示发布目录缺少jar包，fix一下或手动导入即可
 
 ##### 1.2. mariaDB数据库配置
 
@@ -55,7 +55,7 @@ create table <数据库名>.file_catalog
 
 ##### 1.4. HTML代码
 
-用户交互界面咱用的是jsp动态生成HTML，包含上传，下载，删除，文件列表等功能，时间允许的话还会加入翻页功能。
+用户交互界面咱用的是jsp，有上传、下载、删除、文件列表等功能，时间允许的话还会加上翻页。
 
 简易的jsp代码如下，用于测试：
 

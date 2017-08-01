@@ -3,9 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <welcome-fileDemo-list>
-        <welcome-fileDemo>/admin/login.jsp</welcome-fileDemo>
-    </welcome-fileDemo-list>
+    <welcome-file-list>
+        <welcome-file>/admin/login.jsp</welcome-file>
+    </welcome-file-list>
+    <listener>
+        <listener-class>com.shengdiyage.Listener.NewServletContextListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.shengdiyage.Listener.NewSessionListener</listener-class>
+    </listener>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
     <filter>
         <filter-name>AuthFilter</filter-name>
         <filter-class>com.shengdiyage.filter.AuthFilter</filter-class>

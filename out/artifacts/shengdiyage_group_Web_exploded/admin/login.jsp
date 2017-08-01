@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.net.URLDecoder" %><%--
   Created by IntelliJ IDEA.
   User: Akari
   Date: 2017/7/4
@@ -17,6 +18,19 @@
     <link rel="stylesheet" type="text/css" href="/css/login.css">
 </head>
 <body>
+<%
+    Cookie[] cookies = request.getCookies();
+    String admin = null;
+    if (cookies != null) {
+        for (int i = 0; i < cookies.length; i++) {
+            if ("admin".equals(cookies[i].getName().toString())) {
+                admin = cookies[i].getValue();
+                admin = URLDecoder.decode(admin, "utf-8");
+            }
+            out.print(cookies[i].getName() + ":" + cookies[i].getValue() + "<br/>");
+        }
+    }
+%>
 <form class="login-content" name="login" action="/loginservlet.do" method="post">
     <table class="login-table">
         <tr>
@@ -24,7 +38,7 @@
         </tr>
         <tr>
             <td class="login-text">用户名：</td>
-            <td colspan="2"><input type="text" name="userName" id="userName" onblur="checkRegular('username',this)"></td>
+            <td colspan="2"><input type="text" value="<%= admin%>" name="userName" id="userName" onblur="checkRegular('username',this)"></td>
             <td class="login-prompt"><span style="color: #00FFFF">&nbsp;中文</span></td>
         </tr>
         <tr>

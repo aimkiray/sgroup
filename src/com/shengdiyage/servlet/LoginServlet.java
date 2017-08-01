@@ -6,12 +6,10 @@ import com.shengdiyage.service.serviceImplement.AdminServiceImpl;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLEncoder;
 
 /**
  * Created by Akari on 2017/7/10.
@@ -33,6 +31,11 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = req.getSession();
             admin = adminService.queryAdminByName(adminName);
             session.setAttribute("admin",admin);
+            String codeAdminName = URLEncoder.encode(admin.getAdminName(),"utf-8");
+            Cookie cookieAdminName = new Cookie("admin",codeAdminName);
+            cookieAdminName.setMaxAge(60*60*24*7);
+            cookieAdminName.setPath("/");
+            resp.addCookie(cookieAdminName);
             resp.sendRedirect("/admin/main.jsp");
         } else {
             PrintWriter out = resp.getWriter();
