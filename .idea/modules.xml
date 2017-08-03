@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/shengdiyage-group.iml" filepath="$PROJECT_DIR$/shengdiyage-group.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sgroup.iml" filepath="$PROJECT_DIR$/sgroup.iml" />
     </modules>
   </component>
 </project>

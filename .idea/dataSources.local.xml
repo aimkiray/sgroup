@@ -11,7 +11,7 @@
       <user-name>root</user-name>
       <introspection-schemas>*:*</introspection-schemas>
     </data-source>
-    <data-source name="@Oracle" uuid="9c144ee9-03c1-44a8-86a6-5a1d03770ce7">
+    <data-source name="@oracle" uuid="70068939-b692-4691-a29b-f450871a136e">
       <database-info product="Oracle" version="Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production" jdbc-version="4.0" driver-name="Oracle JDBC driver" driver-version="12.1.0.2.0">
         <extra-name-characters>$#</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>
@@ -19,7 +19,7 @@
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>SYSTEM</user-name>
-      <introspection-schemas>*:SYSTEM</introspection-schemas>
+      <introspection-schemas>*:AKARI,SYSTEM</introspection-schemas>
     </data-source>
   </component>
 </project>
